@@ -1,0 +1,38 @@
+@mixin CeraPro {
+  $path: "../assets/fonts";
+
+  @font-face {
+    font-family: "CeraPro";
+    src: url(#{$path}/CeraPro-regular.eot);
+    src: local("CeraPro-regular"), local("CeraPro-regular"),
+      url(#{$path}/CeraPro-regular.eot?#iefix) format("embedded-opentype"),
+      url(#{$path}/CeraPro-regular.woff) format("woff"),
+      url(#{$path}/CeraPro-regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "CeraPro";
+    src: url(#{$path}/CeraPro-500.eot);
+    src: local("CeraPro-700"), local("CeraPro-500"),
+      url(#{$path}/CeraPro-500.eot?#iefix) format("embedded-opentype"),
+      url(#{$path}/CeraPro-500.woff) format("woff"),
+      url(#{$path}/CeraPro-500.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "CeraPro";
+    src: url(#{$path}/CeraPro-700.eot);
+    src: local("CeraPro-700"), local("CeraPro-700"),
+      url(#{$path}/CeraPro-700.eot?#iefix) format("embedded-opentype"),
+      url(#{$path}/CeraPro-700.woff) format("woff"),
+      url(#{$path}/CeraPro-700.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+@include CeraPro();
