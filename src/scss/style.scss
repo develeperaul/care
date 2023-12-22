@@ -425,6 +425,17 @@ video {
   display: none;
 }
 
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -523,4 +534,42 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 769px) {
+  .container {
+    max-width: 769px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1660px) {
+  .container {
+    max-width: 1660px;
+  }
+}
+
+.container {
+  max-width: 1530px;
+  padding: 0 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1660px) {
+  .container {
+    max-width: 1920px;
+    padding: 0 195px;
+  }
 }

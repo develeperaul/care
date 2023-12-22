@@ -1,5 +1,6 @@
-@tailwind base;
+@import './base.scss';
 @tailwind components;
 @tailwind utilities;
+
 @import '../sections/header/index.scss';
 @import './sprite.scss';

@@ -1,0 +1,61 @@
+.footer {
+  &__wrapper {
+    @apply py-10 bg-blue  text-white;
+  }
+  &__top {
+    @apply hidden lg2:block mb-30;
+  }
+  &__top nav {
+    @apply flex gap-2.5;
+    & > div {
+      flex-basis: 12.05rem;
+
+      & > svg,
+      & > .title {
+        @apply mb-10;
+      }
+      & > .title {
+        @apply inline-block text-d14 font-medium;
+      }
+      & > ul {
+        @apply grid gap-3 text-d17;
+      }
+    }
+  }
+  &__bottom {
+    @apply lg2:grid lg2:grid-cols-[749px,_1fr] lg2:pt-7;
+    &-left {
+      @apply grid gap-2.5 lg2:flex lg2:justify-between;
+
+      .developer {
+        @apply lg2:hidden;
+      }
+    }
+    &-right {
+      @apply hidden lg2:flex lg2:justify-end;
+    }
+    .phone,
+    .email {
+      @apply text-d16 text-white_darken;
+    }
+
+    .developer {
+      @apply font-light text-d20;
+      & > span {
+        @apply font-medium;
+      }
+    }
+
+    .current {
+      @apply text-d19 lg2:order-1;
+    }
+
+    .phone {
+      @apply lg2:order-2;
+    }
+
+    .email {
+      @apply lg2:order-3;
+    }
+  }
+}

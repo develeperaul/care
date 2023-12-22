@@ -1,0 +1,65 @@
+.sidebar {
+  @apply bg-blue
+      
+      fixed
+      w-screen
+      h-screen
+      transform
+      -translate-x-full
+      lg2:!-translate-x-full
+      trans-300;
+
+  z-index: 10000;
+
+  &__head {
+    @apply flex 
+    justify-between 
+    items-center;
+    @apply pt-7.5 pb-10;
+  }
+}
+
+.sidebar.active {
+  @apply translate-x-0;
+}
+
+.sidebar .logo svg {
+  @apply w-28 h-[1.92rem] lg2:w-[14.4rem] lg2:h-[3.94rem] text-white;
+}
+.sidebar .close {
+  padding: 5px;
+  border-radius: 999px;
+  & svg {
+    @apply w-[1.15063rem] h-[1.15063rem] text-white;
+  }
+}
+
+.sidebar nav.sidebar__content {
+  @apply grid gap-6;
+
+  & a {
+    @apply text-d18 font-medium flex items-center gap-2 text-white py-2;
+  }
+}
+
+.header .header__wrapper {
+  @apply flex items-center justify-between relative;
+  @apply pt-[2.1rem] pb-[1.9rem]  lg2:py-10 lg2:px-0;
+}
+.header .header__wrapper .logo svg {
+  @apply w-28 h-[1.92rem] lg2:w-[14.4rem] lg2:h-[3.94rem] text-blue;
+}
+.header .header__wrapper .burger {
+  @apply lg2:hidden;
+  padding: 5px;
+  border-radius: 999px;
+}
+.header .header__wrapper nav {
+  @apply hidden lg2:flex text-d16 text-blue uppercase;
+  gap: 4.94rem;
+}
+
+.header .header__wrapper .call {
+  @apply hidden   bg-blue  w-11.5 h-11.5 lg2:grid place-content-center rounded-full;
+  @apply absolute -right-24;
+}

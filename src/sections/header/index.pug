@@ -1,1 +1,53 @@
-h1 sdklsdjfsdlkf
+include ../../components/svg.pug
+.sidebar#sidebar
+  .container
+    .sidebar__head 
+      a(href="#" class='logo' data-target='sidebar' data-action='close') 
+        +svg("logo")
+      button.close(data-target='sidebar' data-action='close') 
+        +svg("close")
+    nav.sidebar__content 
+      a(href="#" data-target='sidebar' data-action='close')  
+        +svg("child" ,17,15)
+        span Дети
+
+      a(href="#" data-target='sidebar' data-action='close')  
+        +svg("health" ,17,17)
+        span Здоровье
+
+      a(href="#" data-target='sidebar' data-action='close')  
+        +svg("rest" ,17,14)
+        span Отдых
+
+      a(href="#" data-target='sidebar' data-action='close')  
+        +svg("nutrition" ,17,17)
+        span Питание
+
+      a(href="#" data-target='sidebar' data-action='close')  
+        +svg("sport" ,17,17)
+        span Спорт
+
+      a(href="#" data-target='sidebar' data-action='close')  
+        +svg("culture" ,17,15)
+        span Культура
+
+      a(href="#" data-target='sidebar' data-action='close')  
+        +svg("about" ,17,17)
+        span О компании
+header.header  
+  .container
+    .header__wrapper 
+      a(href="#" class='logo') 
+        +svg("logo")
+      button.burger( data-target='sidebar' data-action='open')
+        +svg("burger", 35)
+      nav
+        a(href="#") О компании
+        a(href="#") Здоровье
+        a(href="#") Дети
+        a(href="#") Спорт
+        a(href="#") Отдых
+        a(href="#") Питание
+        a(href="#") Культура 
+      button.call 
+        +svg("phone", 24)
