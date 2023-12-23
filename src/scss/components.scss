@@ -1,0 +1,121 @@
+@tailwind components;
+
+@layer components {
+  
+  .button {
+    @apply w-full px-4 h-[3.125rem] text-d16 lg2:text-d14 uppercase flex gap-2 justify-center items-center;
+
+    &_green {
+      @apply bg-green text-white;
+    }
+    &_blue-light {
+      @apply bg-blue-light text-white;
+    }
+    &_orange {
+      @apply bg-orange text-white;
+    }
+
+    &_border {
+      @apply bg-transparent border border-white text-white;
+    }
+  }
+
+  .field {
+    @apply w-full;
+    & input {
+      @apply border border-blue px-3.5 text-d19 h-[3.25rem] w-full lg2:text-d16 lg2:px-5;
+      @apply placeholder:text-blue focus:outline-blue/80 focus:bg-white_darken/10;
+      @apply trans-300;
+    }
+    &__invalid input {
+      @apply border-orange;
+    }
+  }
+
+  .checkbox-other {
+    @apply text-blue block cursor-pointer  relative;
+    user-select: none;
+    opacity: 0.8;
+  }
+  
+  .checkbox-other input[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+  }
+  
+  .checkbox-other p {
+    @apply inline-block text-d21 lg2:text-d18 relative;
+    padding: 0 0 0 28px;
+  }
+  
+  .checkbox-other p:before {
+    content: "";
+    @apply w-5 h-5 absolute top-0 left-0 border border-blue rounded-full;
+    
+  }
+  
+  input.checkbox_invalid + p:before {
+    border: 1px solid red;
+  }
+  
+  /* Checked */
+  .checkbox-other input[type="checkbox"] + p:after {
+    content: "";
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .checkbox-other input[type="checkbox"]:checked + p:after {
+    @apply absolute w-2.5 h-2 left-[0.3rem] top-1.5;
+    position: absolute;
+    content: "";
+    
+    background-image: url(../assets/icons/other/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 1;
+  }
+
+  .checkbox-other input[type="checkbox"]:checked + p:before {
+    background: theme(colors.blue);
+  }
+  
+  /* Focus */
+  .focused p:before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Hover */
+  .checkbox-other p:hover:after {
+    filter: brightness(110%);
+  }
+  
+  /* Active */
+  .checkbox-other p:active:before,
+  .checkbox-other p:active:after {
+    /* filter: brightness(30%); */
+  }
+  
+  /* Disabled */
+  .checkbox-other input[type="checkbox"]:disabled + p {
+    color: #666;
+    cursor: default;
+  }
+  
+  .checkbox-other input[type="checkbox"]:disabled + p:before,
+  .checkbox-other input[type="checkbox"]:disabled + p:after {
+    filter: grayscale(100%);
+    opacity: 0.6;
+  }
+  
+  .checkbox__link {
+    text-decoration: underline;
+  }
+  
+
+}

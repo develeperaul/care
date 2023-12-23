@@ -1,4 +1,20 @@
 .footer {
+  &__form {
+    @apply py-[3.75rem];
+    @apply grid lg2:grid-cols-2 gap-5;
+    & h3.title {
+      @apply mb-5 lg2:mb-[3.94rem];
+    }
+    & p.text {
+      @apply lg2:max-w-[38.75rem] lg2:text-d13_1;
+    }
+    & form {
+      @apply grid gap-4 lg2:gap-10 lg2:mt-5;
+      & button {
+        @apply lg2:w-[16.25rem];
+      }
+    }
+  }
   &__wrapper {
     @apply py-10 bg-blue  text-white;
   }

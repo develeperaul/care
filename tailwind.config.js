@@ -9,6 +9,9 @@ module.exports = {
         30: '7.5rem',
       },
     },
+    fontFamily: {
+      cerapro: 'CeraPro',
+    },
     colors: {
       green: '#61E354',
       orange: '#FF5A02',
@@ -18,6 +21,7 @@ module.exports = {
       'blue-light': '#00BEFA',
       white: '#ffffff',
       white_darken: '#E1E1E1',
+      transparent: 'transparent',
     },
     screens: {
       lg: '769px',
@@ -44,6 +48,7 @@ module.exports = {
       d11: ['1.5rem', ' 2.25rem'],
       d12: ['1.5rem', ' 2.125rem'],
       d13: ['1.5rem', ' 1.875rem'],
+      d13_1: ['1.5rem', 'normal'],
       d14: ['1.25rem', ' normal'],
       d15: ['1.125rem', ' 1.875rem'],
       d16: ['1.125rem', ' normal'],
@@ -51,6 +56,8 @@ module.exports = {
       d18: ['1rem', ' normal'],
       d19: ['0.875rem', ' 1.5rem'],
       d20: ['0.875rem', 'normal'],
+      d21: ['0.75rem', 'normal'],
+      d22: ['1.75rem', 'normal'],
     },
   },
 

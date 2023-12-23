@@ -1,6 +1,21 @@
 include ../../components/svg.pug
+include ../../components/input.pug
+include ../../components/button.pug
 footer.footer 
-  .footer__form 
+  .footer__form.container 
+      div 
+        h3.title Позвольте окружить <br/> вас заботой
+        p.text Каждый день мы меняемся и становимся лучше. Здесь вы можете оставить предложения, замечания и вопросы.
+      form#footer-form(novalidate)
+        +input('name', 'Ведите имя')
+        +input('email', 'Ваша почта')
+        +input('phone', '+7 (999)-999 99-99')(data-mask="+{7}(000)-000-00-00")
+        label.checkbox-other
+          input(data-special-offer='' checked='checked' data-type='checkbox' type='checkbox')
+          p Я согласен c политикой конфиденциальности
+            
+
+        +button('Отправить','green')(type='submit')
   .footer__wrapper
     .container 
       .footer__content

@@ -4,6 +4,9 @@ import '../index.pug';
 import '../sections/header/index';
 import '../sections/footer/index';
 
+import './validate-form-footer';
+// console.log(validate({ creditCardNumbertt: '4' }, constraints));
+
 const btns = document.querySelectorAll('[data-action]');
 [...btns].forEach((btn) => {
   btn.onclick = clickBtn;

@@ -1,3 +1,60 @@
+@mixin CeraPro {
+  $path: '../fonts';
+
+  @font-face {
+    font-family: 'CeraPro';
+
+    src: url(#{$path}/CeraPro-Regular.eot);
+
+    src: local('CeraPro-Regular'), local('CeraPro-Regular'),
+      url(#{$path}/CeraPro-Regular.eot?#iefix) format('embedded-opentype'),
+      url(#{$path}/CeraPro-Regular.woff) format('woff'),
+      url(#{$path}/CeraPro-Regular.ttf) format('truetype');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'CeraPro';
+
+    src: url(#{$path}/CeraPro-500.eot);
+
+    src: local('CeraPro-700'), local('CeraPro-500'),
+      url(#{$path}/CeraPro-500.eot?#iefix) format('embedded-opentype'),
+      url(#{$path}/CeraPro-500.woff) format('woff'),
+      url(#{$path}/CeraPro-500.ttf) format('truetype');
+
+    font-weight: 500;
+
+    font-style: normal;
+
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'CeraPro';
+
+    src: url(#{$path}/CeraPro-700.eot);
+
+    src: local('CeraPro-700'), local('CeraPro-700'),
+      url(#{$path}/CeraPro-700.eot?#iefix) format('embedded-opentype'),
+      url(#{$path}/CeraPro-700.woff) format('woff'),
+      url(#{$path}/CeraPro-700.ttf) format('truetype');
+
+    font-weight: 700;
+
+    font-style: normal;
+
+    font-display: swap;
+  }
+}
+
+@include CeraPro();
+
 /*
 ! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
 */
@@ -434,6 +491,21 @@ body {
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
+  font-family: CeraPro;
+  --tw-text-opacity: 1;
+  color: rgb(38 52 114 / var(--tw-text-opacity));
+}
+
+h3 {
+  font-size: 1.75rem;
+  line-height: normal;
+}
+
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 3.125rem;
+    line-height:  3.75rem;
+  }
 }
 
 *, ::before, ::after {
@@ -572,4 +644,229 @@ body {
     max-width: 1920px;
     padding: 0 195px;
   }
+}
+
+.button {
+  display: flex;
+  height: 3.125rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.125rem;
+  line-height:  normal;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .button {
+    font-size: 1.25rem;
+    line-height:  normal;
+  }
+}
+
+.button {
+  &_green {
+    --tw-bg-opacity: 1;
+    background-color: rgb(97 227 84 / var(--tw-bg-opacity));
+  }
+  &_green {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  &_blue-light {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 190 250 / var(--tw-bg-opacity));
+  }
+  &_blue-light {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  &_orange {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 90 2 / var(--tw-bg-opacity));
+  }
+  &_orange {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+  &_border {
+    border-width: 1px;
+  }
+  &_border {
+    --tw-border-opacity: 1;
+    border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  }
+  &_border {
+    background-color: transparent;
+  }
+  &_border {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+.field {
+  width: 100%;
+  & input {
+    height: 3.25rem;
+  }
+  & input {
+    width: 100%;
+  }
+  & input {
+    border-width: 1px;
+  }
+  & input {
+    --tw-border-opacity: 1;
+    border-color: rgb(38 52 114 / var(--tw-border-opacity));
+  }
+  & input {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+  & input {
+    font-size: 0.875rem;
+    line-height:  1.5rem;
+  }
+  @media (min-width: 1024px) {
+    & input {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    & input {
+      font-size: 1.125rem;
+      line-height:  normal;
+    }
+  }
+  & input::placeholder {
+    --tw-text-opacity: 1;
+    color: rgb(38 52 114 / var(--tw-text-opacity));
+  }
+  & input:focus {
+    background-color: rgb(225 225 225 / 0.1);
+  }
+  & input:focus {
+    outline-color: rgb(38 52 114 / 0.8);
+  }
+  & input {
+    transition: all 0.3s ease;
+  }
+  &__invalid input {
+    --tw-border-opacity: 1;
+    border-color: rgb(255 90 2 / var(--tw-border-opacity));
+  }
+}
+
+.checkbox-other {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(38 52 114 / var(--tw-text-opacity));
+  -webkit-user-select: none;
+          user-select: none;
+  opacity: 0.8;
+}
+
+.checkbox-other input[type="checkbox"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-other p {
+  position: relative;
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: normal;
+}
+
+@media (min-width: 1024px) {
+  .checkbox-other p {
+    font-size: 1rem;
+    line-height:  normal;
+  }
+}
+
+.checkbox-other p {
+  padding: 0 0 0 28px;
+}
+
+.checkbox-other p:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 9999px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(38 52 114 / var(--tw-border-opacity));
+}
+
+/* Checked */
+
+.checkbox-other input[type="checkbox"] + p:after {
+  content: "";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.checkbox-other input[type="checkbox"]:checked + p:after {
+  left: 0.3rem;
+  top: 0.375rem;
+  height: 0.5rem;
+  width: 0.625rem;
+  position: absolute;
+  content: "";
+  background-image: url(../assets/icons/other/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 1;
+}
+
+.checkbox-other input[type="checkbox"]:checked + p:before {
+  background: #263472;
+}
+
+/* Focus */
+
+/* Hover */
+
+.checkbox-other p:hover:after {
+  filter: brightness(110%);
+}
+
+/* Active */
+
+.checkbox-other p:active:before,
+  .checkbox-other p:active:after {
+  /* filter: brightness(30%); */
+}
+
+/* Disabled */
+
+.checkbox-other input[type="checkbox"]:disabled + p {
+  color: #666;
+  cursor: default;
+}
+
+.checkbox-other input[type="checkbox"]:disabled + p:before,
+  .checkbox-other input[type="checkbox"]:disabled + p:after {
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+.border {
+  border-width: 1px;
 }

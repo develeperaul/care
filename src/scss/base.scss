@@ -6,6 +6,10 @@
   }
 
   body {
-    @apply grid grid-rows-[auto_1fr_auto] min-h-screen;
+    @apply grid grid-rows-[auto_1fr_auto] min-h-screen text-blue font-cerapro;
+  }
+
+  h3 {
+    @apply text-d22 lg2:text-d02;
   }
 }

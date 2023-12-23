@@ -1,0 +1,31 @@
+include ./svg.pug
+mixin button(text, color, afterIcon, beforeIcon, iconSize)
+  if color=== 'green'
+    button(class="button button_green")&attributes(attributes)
+      if afterIcon
+        +svg(afterIcon, iconSize ? iconSize : 15)
+      span #{text}
+      if beforeIcon
+        +svg(beforeIcon, iconSize ? iconSize : 15)
+  if color=== 'blue-light'
+    button(class="button button_blue-light")&attributes(attributes)
+      if afterIcon
+        +svg(afterIcon, iconSize ? iconSize : 15)
+      span #{text}
+      if beforeIcon
+        +svg(beforeIcon, iconSize ? iconSize : 15)
+  if color=== 'orange'
+    button(class="button button_orange")&attributes(attributes)
+      if afterIcon
+        +svg(afterIcon, iconSize ? iconSize : 15)
+      span #{text}
+      if beforeIcon
+        +svg(beforeIcon, iconSize ? iconSize : 15)
+  if color=== 'border'
+    button(class="button button_border")&attributes(attributes)
+      if afterIcon
+        +svg(afterIcon, iconSize ? iconSize : 15)
+      span #{text}
+      if beforeIcon
+        +svg(beforeIcon, iconSize ? iconSize : 15)
+    
