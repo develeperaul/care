@@ -1,0 +1,21 @@
+include ../svg.pug
+.second-slider
+  .swiper-wrapper
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-1.jpg')
+      .content
+        .container
+          h2.title Каждый <br class=' hidden lg2:block'/> гость в центре <br class=' hidden lg2:block'/> нашей заботы
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-2.jpg')
+      
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-3.jpg')
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-4.jpg')
+  .btn-controls
+    .btn-prev
+      +svg('back-line')
+    .btn-next
+      +svg('forward-line')
+  //- .swiper-pagination

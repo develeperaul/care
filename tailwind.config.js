@@ -5,8 +5,16 @@ module.exports = {
     extend: {
       spacing: {
         7.5: '1.875rem',
+        9.5: '2.375rem',
         11.5: '2.875rem',
+        14.25: '3.63rem',
+        15: '3.75rem',
+        22: '5.5rem',
         30: '7.5rem',
+      },
+      height: {
+        height_bg: '46.6rem',
+        'height_bg-sect': '56.25rem',
       },
     },
     fontFamily: {
@@ -22,11 +30,14 @@ module.exports = {
       white: '#ffffff',
       white_darken: '#E1E1E1',
       transparent: 'transparent',
+      pickup: '#E1EEFC',
     },
+
     screens: {
       lg: '769px',
       lg2: '1024px',
       xl: '1660px',
+      xl2: '1920px',
     },
     container: {
       center: true,
@@ -34,6 +45,7 @@ module.exports = {
     fontSize: {
       h1: ['7.5rem', '7.5rem'],
       h2: ['5.625rem', '5.625rem'],
+      h2_2: ['5rem', '5.625rem'],
       h3: ['5rem', 'normal'],
       d00: ['4.375rem', ' 5rem '],
       d01: ['4.375rem', ' 4.375rem'],
@@ -58,6 +70,13 @@ module.exports = {
       d20: ['0.875rem', 'normal'],
       d21: ['0.75rem', 'normal'],
       d22: ['1.75rem', 'normal'],
+      d23: ['1.25rem', '1.875rem'],
+      d24: ['3.3125rem', '2.875rem'],
+      d25: ['5rem', '4.375rem'],
+      d26: ['1.6875rem', '1.75rem'],
+      d27: ['2.5rem', 'normal'],
+      base_m: ['1.125rem', '1.4375rem'],
+      base: ['1.875rem', '2.8125rem'],
     },
   },
 
@@ -67,6 +86,16 @@ module.exports = {
         '.container': {
           maxWidth: '1530px',
           padding: '0 40px',
+          marginRight: 'auto',
+          marginLeft: 'auto',
+          '@screen xl': {
+            maxWidth: '1920px',
+            padding: '0 195px',
+          },
+        },
+        '.container2': {
+          maxWidth: '1530px',
+          padding: '0 20px',
           marginRight: 'auto',
           marginLeft: 'auto',
           '@screen xl': {

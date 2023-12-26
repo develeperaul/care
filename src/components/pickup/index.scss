@@ -1,0 +1,7 @@
+.pickup {
+  @apply grid gap-[1.3rem] p-5 bg-pickup/60 backdrop-blur;
+  @apply lg2:flex lg2:px-[8.12rem] lg2:py-[3.44rem];
+  & > * {
+    @apply w-full;
+  }
+}

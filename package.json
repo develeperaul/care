@@ -64,6 +64,7 @@
     "sass-loader": "^13.3.2",
     "smoothscroll-polyfill": "^0.4.4",
     "svg-spritemap-webpack-plugin": "^4.5.0",
+    "swiper": "^11.0.5",
     "terser-webpack-plugin": "^5.3.9",
     "url-loader": "^4.1.1",
     "validate.js": "^0.13.1",

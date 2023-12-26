@@ -1,0 +1,12 @@
+@tailwind utilities;
+@layer utilities {
+  main {
+    @apply grid gap-15;
+  }
+
+  .section {
+    & h2 {
+      @apply mb-5 lg2:mb-0;
+    }
+  }
+}

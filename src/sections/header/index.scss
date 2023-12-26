@@ -41,7 +41,9 @@
     @apply text-d18 font-medium flex items-center gap-2 text-white py-2;
   }
 }
-
+.header {
+  @apply mb-15 lg2:mb-[8.81rem];
+}
 .header .header__wrapper {
   @apply flex items-center justify-between relative;
   @apply pt-[2.1rem] pb-[1.9rem]  lg2:py-10 lg2:px-0;
@@ -62,4 +64,12 @@
 .header .header__wrapper .call {
   @apply hidden   bg-blue  w-11.5 h-11.5 lg2:grid place-content-center rounded-full;
   @apply absolute -right-24;
+}
+
+.header .pickup {
+  @apply mt-15 lg2:mt-[3.92rem];
+}
+
+.header.header__second .pickup {
+  @apply mt-15 lg2:mt-[-7.375rem] relative z-10;
 }

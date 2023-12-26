@@ -1,16 +1,16 @@
-const path = require('path')
-const fs = require('fs')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const OptimizCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
-const TerserWebpackPlugin = require('terser-webpack-plugin')
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
-const { extendDefaultPlugins } = require('svgo')
-const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin')
-const isDev = process.env.NODE_ENV === 'development'
-const idProd = !isDev
+const path = require('path');
+const fs = require('fs');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const OptimizCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const { extendDefaultPlugins } = require('svgo');
+const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
+const isDev = process.env.NODE_ENV === 'development';
+const idProd = !isDev;
 
 const PATHS = {
   // Path to main app dir
@@ -19,7 +19,7 @@ const PATHS = {
   dist: path.join(__dirname, 'dist'),
   // Path to Second Output dir (js/css/fonts etc folder)
   assets: 'assets/',
-}
+};
 
 const PATHSPAGE = {
   // Path to main app dir
@@ -28,27 +28,27 @@ const PATHSPAGE = {
   dist: path.join(__dirname, 'dist/pages'),
   // Path to Second Output dir (js/css/fonts etc folder)
   assets: 'assets/',
-}
+};
 
-const PAGES_DIR = PATHS.src
+const PAGES_DIR = PATHS.src;
 const PAGES = fs
   .readdirSync('./src/pages')
-  .filter((fileName) => fileName.endsWith('.pug'))
+  .filter((fileName) => fileName.endsWith('.pug'));
 // const PAGES_DIR = `${PATHS.src}/pug/pages/`;
 // const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
 
-let p = {}
+let p = {};
 PAGES.forEach((page) => {
-  const name = page.replace(' ', '')
-  console.log({ [name]: `./js/pages/${name}.js` })
-  p = { [name]: `./js/pages/${name}.js`, ...p }
-})
-console.log(PAGES)
-const fileName = (ext) => (isDev ? `[name].${ext}` : `[name].${ext}`)
+  const name = page.replace(' ', '');
+  console.log({ [name]: `./js/pages/${name}.js` });
+  p = { [name]: `./js/pages/${name}.js`, ...p };
+});
+console.log(PAGES);
+const fileName = (ext) => (isDev ? `[name].${ext}` : `[name].${ext}`);
 const optimization = () => {
   const confObj = {
     splitChunks: { chunks: 'all' },
-  }
+  };
 
   if (idProd)
     confObj.minimizer = [
@@ -86,10 +86,10 @@ const optimization = () => {
           },
         },
       }),
-    ]
+    ];
 
-  return confObj
-}
+  return confObj;
+};
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -150,13 +150,13 @@ module.exports = {
     //   chunks: ["main", "index2"],
     // }),
     ...PAGES.map((page) => {
-      console.log(page)
+      console.log(page);
       return new HTMLWebpackPlugin({
         template: path.resolve(__dirname, `src/pages/${page}`),
         filename: page.replace('.pug', '.html'),
         minify: { collapseWhitespace: false },
         chunks: ['main', page.replace('.pug', '')],
-      })
+      });
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
@@ -209,7 +209,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               publicPath: (resourcePath, context) => {
-                return path.relative(path.dirname(resourcePath), context) + '/'
+                return path.relative(path.dirname(resourcePath), context) + '/';
               },
             },
           },
@@ -245,4 +245,4 @@ module.exports = {
       },
     ],
   },
-}
+};

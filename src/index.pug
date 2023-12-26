@@ -1,6 +1,3 @@
-include ./components/button.pug
-include ./components/input.pug
-
 doctype html
 html(lang="ru")
   head
@@ -11,8 +8,8 @@ html(lang="ru")
   body
     include ./sections/header/index.pug
     main
-      +button('test','green', 'back')
-      
+      include ./sections/descriptionFirst/index
+          
     include ./sections/footer/index.pug
     //- div()
     //-   svg(width='20' height='20' )

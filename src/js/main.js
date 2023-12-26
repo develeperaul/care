@@ -1,10 +1,21 @@
 import '../scss/style.scss';
+
+import '../components/select';
+
+import '../components/generalSlider';
+import '../components/secondSlider';
+import '../components/pickup';
+
 import '../index.pug';
 
 import '../sections/header/index';
 import '../sections/footer/index';
 
+import '../sections/descriptionFirst';
+import '../sections/descriptionFirst/index.pug';
+
 import './validate-form-footer';
+import 'swiper/css/bundle';
 // console.log(validate({ creditCardNumbertt: '4' }, constraints));
 
 const btns = document.querySelectorAll('[data-action]');

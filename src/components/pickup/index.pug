@@ -1,0 +1,8 @@
+include ../select/index.pug
+include ../button.pug
+form.pickup 
+  +select('Место отдыха', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+  +select('Название', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+  +select('Даты отдыха', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+  +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+  +button('Найти','orange')(type='submit')

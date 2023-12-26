@@ -1,6 +1,6 @@
 .footer {
   &__form {
-    @apply py-[3.75rem];
+    @apply py-15;
     @apply grid lg2:grid-cols-2 gap-5;
     & h3.title {
       @apply mb-5 lg2:mb-[3.94rem];

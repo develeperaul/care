@@ -1,0 +1,21 @@
+.general-slider {
+  position: relative;
+  .swiper-slide {
+    @apply grid gap-5 lg2:gap-[7.94rem] lg2:h-[51.438rem] content-start;
+    & img {
+      @apply h-[12.625rem] w-full object-cover lg2:w-[63.1rem] lg2:h-[42.5rem] lg2:absolute lg2:bottom-0 lg2:right-0;
+    }
+    & h1.title {
+      @apply relative;
+    }
+    & .text {
+      @apply relative lg2:text-d05;
+    }
+  }
+
+  & .btn-controls {
+    @apply flex gap-2 text-white lg2:text-blue lg2:gap-5;
+    @apply absolute top-2.5 left-2.5 lg2:top-auto lg2:bottom-11;
+    z-index: 1;
+  }
+}

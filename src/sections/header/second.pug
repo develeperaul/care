@@ -34,7 +34,7 @@ include ../../components/svg.pug
       a(href="#" data-target='sidebar' data-action='close')  
         +svg("about" ,17,17)
         span О компании
-header.header  
+header.header.header__second  
   .container
     .header__wrapper 
       a(href="#" class='logo') 
@@ -51,6 +51,6 @@ header.header
         a(href="#") Культура 
       button.call 
         +svg("phone", 24)
-    include ../../components/generalSlider/index.pug
-    
+  include ../../components/secondSlider/index2.pug
+  .container
     include ../../components/pickup/index.pug

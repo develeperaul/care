@@ -1,0 +1,21 @@
+include ../svg.pug
+.general-slider
+  .swiper-wrapper
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-1.jpg')
+      h1.title ОКРУЖИТЕ СЕБЯ <br/> ЗАБОТОЙ
+      p.text Открытие нового <br/> санатория, актуальные <br/> смены в детских лагерях
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-2.jpg')
+      h1.title ОКРУЖИТЕ СЕБЯ <br/> ЗАБОТОЙ
+      p.text Открытие нового <br/> санатория, актуальные 
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-3.jpg')
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-4.jpg')
+  .btn-controls
+    .btn-prev
+      +svg('back-line')
+    .btn-next
+      +svg('forward-line')
+  .swiper-pagination

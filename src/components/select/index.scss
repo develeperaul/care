@@ -1,0 +1,47 @@
+.select {
+  @apply relative;
+  &__head {
+    @apply h-[3.125rem] w-full bg-white px-5 flex items-center text-d16;
+  }
+  &__body {
+    @apply bg-white text-d16 shadow-sm absolute bottom-0 z-10 w-[15.375rem] overflow-hidden transform translate-y-full;
+    display: grid;
+    grid-template-rows: 0;
+    @apply trans-300;
+    &-top {
+      @apply top-0 transform -translate-y-full;
+    }
+    &-bottom {
+      @apply bottom-0 transform translate-y-full;
+    }
+  }
+  &__options {
+    @apply grid;
+    & > div {
+      @apply flex items-center cursor-pointer px-5 py-2.5;
+      @apply trans-300;
+      &:first-child {
+        @apply mt-2.5;
+      }
+      &:last-child {
+        @apply mb-2.5;
+      }
+      &.active {
+        @apply bg-white_darken;
+      }
+    }
+  }
+  @media (hover: hover) {
+    &__options > div:hover {
+      @apply bg-white_darken;
+    }
+  }
+  @media (hover: none) {
+    &__options > div:active {
+      @apply bg-white_darken;
+    }
+  }
+  &.active &__body {
+    grid-template-rows: 1fr;
+  }
+}

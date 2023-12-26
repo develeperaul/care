@@ -1,0 +1,27 @@
+.second-slider {
+  position: relative;
+  .swiper-slide {
+    @apply grid gap-5 lg2:gap-[7.94rem]  content-start;
+    & img {
+      @apply w-full object-cover max-w-screen-xl2 h-[15.625rem] lg2:h-height_bg;
+    }
+    & .content {
+      @apply grid gap-2.5 relative  lg2:top-[10.44rem] lg2:text-white lg2:absolute;
+      & .title {
+        @apply uppercase text-d23 lg2:text-h2_2;
+      }
+      .text {
+        @apply lg2:text-d05;
+      }
+      &__absolute {
+        @apply absolute bottom-[1.88rem] lg2:bottom-auto text-white;
+      }
+    }
+  }
+
+  & .btn-controls {
+    @apply flex gap-2 text-white  lg2:gap-5;
+    @apply absolute top-2.5 left-10 lg2:left-[12.19rem] lg2:top-auto lg2:bottom-[11.5rem];
+    z-index: 1;
+  }
+}

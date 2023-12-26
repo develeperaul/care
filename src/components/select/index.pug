@@ -1,0 +1,9 @@
+mixin select(placeholder, ...items)
+  .select 
+    .select__head #{placeholder}
+    .select__body  
+      .select__body-wrapper
+        .select__options 
+          each item in items
+            div(data-val=item.val) #{item.name}
+  
