@@ -944,6 +944,18 @@ h3 {
   opacity: 0.6;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -957,17 +969,45 @@ h3 {
   margin-left: 2.5rem;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-0 {
+  margin-right: 0px;
+}
+
 .mr-10 {
   margin-right: 2.5rem;
+}
+
+.block {
+  display: block;
+}
+
+.grid {
+  display: grid;
 }
 
 .hidden {
   display: none;
 }
 
+.h-\[80\%\] {
+  height: 80%;
+}
+
+.w-\[80\%\] {
+  width: 80%;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .border {
@@ -982,6 +1022,10 @@ h3 {
 .bg-green {
   --tw-bg-opacity: 1;
   background-color: rgb(97 227 84 / var(--tw-bg-opacity));
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 main {
@@ -1204,12 +1248,88 @@ main {
 .header.header__second .pickup {
   position: relative;
   z-index: 10;
-  margin-top: 3.75rem;
+  margin-top: 2.5rem;
 }
 
 @media (min-width: 1024px) {
   .header.header__second .pickup {
     margin-top: -7.375rem;
+  }
+}
+
+.header.header__accept .pickup {
+  position: relative;
+  z-index: 10;
+  margin-top: 3.75rem;
+}
+
+@media (min-width: 1024px) {
+  .header.header__accept .pickup {
+    margin-top: -7.375rem;
+  }
+}
+
+.header.header__single {
+  .single {
+    position: relative;
+  }
+  .single {
+    margin-bottom: 3.75rem;
+  }
+  .single {
+    max-width: 1920px;
+  }
+  .single {
+    img {
+      height: 15.625rem;
+    }
+    img {
+      width: 100%;
+    }
+    img {
+      object-fit: cover;
+    }
+    @media (min-width: 1024px) {
+      img {
+        height: 52.6rem;
+      }
+    }
+    @media (min-width: 1024px) {
+      img {
+        width: 104rem;
+      }
+    }
+    @media (min-width: 1024px) {
+      img {
+        padding-left: 4.06rem;
+      }
+    }
+    @media (min-width: 1024px) {
+      img {
+        padding-top: 4rem;
+      }
+    }
+    &__top {
+      position: absolute;
+    }
+    &__top {
+      top: 1.88rem;
+    }
+    &__top {
+      z-index: 10;
+    }
+    &__top {
+      text-transform: uppercase;
+    }
+    &__top {
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity));
+    }
+    &__top {
+      top: 7.88rem;
+    }
+    .title {
+    }
   }
 }
 
@@ -1244,6 +1364,18 @@ main {
 
   .lg2\:block {
     display: block;
+  }
+
+  .lg2\:h-\[46rem\] {
+    height: 46rem;
+  }
+
+  .lg2\:min-w-\[40rem\] {
+    min-width: 40rem;
+  }
+
+  .lg2\:max-w-\[46rem\] {
+    max-width: 46rem;
   }
 
   .lg2\:-translate-y-1\/2 {

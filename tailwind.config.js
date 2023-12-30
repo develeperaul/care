@@ -13,6 +13,7 @@ module.exports = {
         30: '7.5rem',
       },
       height: {
+        'height_bg-mob': '15.625rem',
         height_bg: '46.6rem',
         'height_bg-sect': '56.25rem',
       },
@@ -75,6 +76,7 @@ module.exports = {
       d25: ['5rem', '4.375rem'],
       d26: ['1.6875rem', '1.75rem'],
       d27: ['2.5rem', 'normal'],
+      d28: ['2.375rem', '2.5rem'],
       base_m: ['1.125rem', '1.4375rem'],
       base: ['1.875rem', '2.8125rem'],
     },

@@ -1,0 +1,44 @@
+.faq {
+  @apply grid gap-[1.87rem];
+  @apply gap-1;
+  .item {
+    @apply grid;
+    @apply lg2:py-5 lg2:px-[1.38rem];
+    &__head {
+      @apply flex gap-1.5 lg2:gap-7.5 cursor-pointer;
+      .icon {
+        @apply relative w-4 h-4 shrink-0 mt-0.5;
+        @apply lg2:w-[1.125rem]  lg2:h-[1.125rem] lg2:mt-1;
+        &::before {
+          content: '';
+          @apply absolute w-full h-[2px]  bg-blue top-1/2 left-0 transform -translate-y-1/2;
+        }
+        &::after {
+          content: '';
+          @apply absolute h-full w-[2px]  bg-blue left-1/2 top-0 transform -translate-x-1/2 trans-300;
+        }
+      }
+      h3 {
+        @apply text-base_m;
+        @apply lg2:text-d13;
+      }
+    }
+    .item__body {
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+      transition-duration: 0.5s;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      &-wrapper {
+        min-height: 0;
+      }
+    }
+    &.active .item__body {
+      grid-template-rows: 1fr;
+    }
+    &.active .item__head .icon::after {
+      @apply transform -translate-x-1/2 rotate-90;
+    }
+  }
+}

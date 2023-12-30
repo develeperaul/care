@@ -5,6 +5,7 @@ import '../components/select';
 import '../components/generalSlider';
 import '../components/secondSlider';
 import '../components/pickup';
+import '../components/faq';
 
 import '../index.pug';
 
@@ -12,7 +13,13 @@ import '../sections/header/index';
 import '../sections/footer/index';
 
 import '../sections/descriptionFirst';
-import '../sections/descriptionFirst/index.pug';
+import '../sections/cardsSection';
+import '../sections/teamSection';
+import '../sections/faqSection';
+import '../sections/documentsSection';
+
+import '../pages/health.pug';
+import '../pages/about.pug';
 
 import './validate-form-footer';
 import 'swiper/css/bundle';

@@ -1,0 +1,43 @@
+.cards-sect {
+  .links {
+    @apply flex flex-wrap gap-y-2.5 gap-x-5 mb-[1.88rem];
+    @apply lg2:gap-1.5 lg2:mb-15;
+    & > a {
+      @apply lg2:text-d10 lg2:px-5 lg2:py-3;
+    }
+  }
+  .cards {
+    @apply grid;
+    @apply lg2:gap-x-[1.87rem] lg2:gap-y-10 lg2:grid-cols-2;
+  }
+}
+.card {
+  @apply relative;
+  img {
+    @apply h-[12.5rem] w-full object-cover;
+    @apply lg2:h-full;
+  }
+  .content {
+    @apply grid gap-12 text-white bg-green p-4;
+    @apply lg2:absolute  lg:top-0 lg:left-0 lg2:w-full lg2:h-full  lg2:content-between lg2:px-[1.87rem] lg2:py-10;
+
+    .title {
+      @apply text-d14 mb-2 font-medium;
+      @apply lg2:text-d07 lg2:mb-5;
+    }
+    .text {
+      @apply text-d20;
+      @apply lg2:text-d11 lg2:w-[37.5rem];
+    }
+
+    .more-text {
+      @apply lg2:text-d13_1 lg2:mt-4 self-end;
+    }
+    .icon {
+      @apply absolute bottom-0 right-0;
+      @apply w-10 h-10;
+      @apply lg2:w-[5.875rem] lg2:h-[5.875rem];
+      background-image: url("data:image/svg+xml,%3Csvg  viewBox='0 0 94 94' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='94' height='94' fill='%23FF5A02'/%3E%3Cpath d='M33.9941 13L67.5925 46.5983L33.5981 80.5927L33.7301 59.14L46.2057 46.7304L33.8621 34.3868L33.9941 13Z' fill='%23FDD300'/%3E%3C/svg%3E%0A");
+    }
+  }
+}

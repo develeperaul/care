@@ -1,0 +1,22 @@
+.faq-sect {
+  &__wrapper {
+    @apply lg2:grid lg2:grid-cols-2;
+  }
+  .title {
+    @apply lg2:mb-[2.69rem];
+  }
+  &__top {
+    @apply mb-10;
+    @apply lg2:order-2;
+  }
+  &__bottom {
+    @apply self-center;
+    .text {
+      @apply mb-5;
+      @apply lg2:order-1 lg2:w-[30.625rem] lg2:mb-15;
+    }
+    .button {
+      @apply lg2:w-fit;
+    }
+  }
+}

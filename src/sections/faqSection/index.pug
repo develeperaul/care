@@ -1,0 +1,11 @@
+include ../../components/button.pug
+
+.section.faq-sect 
+  .container 
+    h2.title Часто задаваемые <br class=" hidden lg2:block"/> вопросы
+    .faq-sect__wrapper 
+      .faq-sect__top
+        include ../../components/faq/index.pug
+      .faq-sect__bottom
+        p.text Нам важно, чтобыу вас не осталось вопросов. Не стесняйтесь задать ещё один
+        +button("Задать вопрос", 'blue-light', 'plus')(class='uppercase')

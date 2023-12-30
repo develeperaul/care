@@ -1,0 +1,16 @@
+- var listLink = ["Джалильский","Иволга", "Космос", "Лениногорский", "Ромашкино", "ЯН", "Шифалы", "Вишнёвая Поляна"]
+  section.cards-sect
+    .container 
+      div(class="links ")
+        each item in listLink
+          a(href="#")= item 
+      .cards
+        each item in [1,1,1,1,1,1]
+          .card
+            img(src=require("/assets/images/test.png"), alt="")
+            .content 
+              .content__top
+                h3.title Джалильский
+                p.text Уютный санаторий с семейными традициями неоднократно признавался лучшей здравницей на региональном и всероссийском уровнях.
+              .more-text подробнее
+              .icon

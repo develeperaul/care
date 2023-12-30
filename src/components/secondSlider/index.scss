@@ -3,7 +3,7 @@
   .swiper-slide {
     @apply grid gap-5 lg2:gap-[7.94rem]  content-start;
     & img {
-      @apply w-full object-cover max-w-screen-xl2 h-[15.625rem] lg2:h-height_bg;
+      @apply w-full object-cover max-w-screen-xl2 h-height_bg-mob lg2:h-height_bg;
     }
     & .content {
       @apply grid gap-2.5 relative  lg2:top-[10.44rem] lg2:text-white lg2:absolute;

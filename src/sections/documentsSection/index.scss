@@ -1,0 +1,47 @@
+.document-sect {
+  .text {
+    @apply mb-[1.88rem];
+  }
+  .docs-mob {
+    @apply bg-orange py-10  text-white grid gap-5;
+    @apply lg2:hidden;
+    .item {
+      @apply flex justify-between items-center gap-4;
+
+      &__left {
+        @apply flex gap-2 items-center;
+        & > span {
+          @apply line-clamp-1;
+        }
+      }
+      &__right {
+        @apply shrink-0;
+      }
+    }
+  }
+
+  .docs-desc {
+    @apply hidden lg2:grid lg2:gap-[1.87rem] grid-cols-3 mb-15;
+    .item {
+      @apply pt-[2.63rem] px-[2.63rem] pb-6 bg-[#EDF5FD] grid content-between h-[16.25rem];
+      @apply hover:bg-green hover:text-white;
+      @apply trans-300;
+      &__title {
+        @apply text-d28;
+      }
+      &__bottom {
+        @apply flex justify-between items-center text-d16 opacity-0 text-white;
+        @apply trans-300;
+      }
+      &__open {
+        @apply flex items-center gap-5  uppercase;
+      }
+      &__info {
+        @apply flex items-center gap-5 uppercase;
+      }
+      &:hover .item__bottom {
+        @apply opacity-100;
+      }
+    }
+  }
+}

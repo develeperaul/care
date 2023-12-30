@@ -1,0 +1,25 @@
+include ../../components/svg.pug
+section.section.document-sect 
+    .container
+      h2.title Документы
+      p.text В этом разделе вы найдёте все необходимые документы и бланки. Если заметили, что чего-то не хватает, напишите — мы обязательно поможем.
+      .docs-desc
+        each item in [1,1,1,1,1,1]
+          a(href="#").item 
+            h3.item__title Правила поведения
+            .item__bottom 
+              .item__open
+                span открыть
+                +svg('forward-line', 15)
+              div.item__info 
+                span PDF 356 КБ
+                +svg('download', 18)
+    .docs-mob
+      .container
+        a(href="#").item
+          div(class="item__left") 
+            +svg('list', 20)
+            span Правила поведенияПравила поведения
+          .item__right
+            +svg('forward-line', 12)
+      

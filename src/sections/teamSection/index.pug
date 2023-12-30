@@ -1,0 +1,27 @@
+include ../../components/svg.pug
+section.team-sec
+  .container
+    p.text  Забота — всегда про людей. Тех, кто встречает васв оздоровительных учреждениях, спортивных комплексах и базах отдыха. Тех, кто подбираем вам лучшее лечение и создаёт все детали комфорта, спокойствия, уюта и веселья.
+    p.text Мы собрали специалистов, которые показали свой профессионализм и заботу не только гостям, но и защитили звание «лучший» в специализированных премияхи конкурсах.
+    .team(class='grid grid-cols-2') 
+      .item(class=' col-span-2') 
+        div.item-wrapper(class='relative lg2:min-w-[40rem] lg2:max-w-[46rem] lg2:h-[46rem]')
+          +svg('about')(class='absolute top-10 w-[80%] h-[80%] ')
+          img(src=require("/assets/images/doctors/1.png"), alt="" class='relative')
+      .item(class=' col-span-2 mr-0 ml-auto')  
+        div.item-wrapper(class='relative lg2:min-w-[40rem] lg2:max-w-[46rem] lg2:h-[46rem]')
+          +svg('single-circle')(class='absolute top-10 w-[80%] h-[80%] ')
+          img(src=require("/assets/images/doctors/4.png"), alt="" class='relative')
+      .item(class=' col-span-2')  
+        div.item-wrapper(class='relative lg2:min-w-[40rem] lg2:max-w-[46rem] lg2:h-[46rem]')
+          +svg('health')(class='absolute top-10 w-[80%] h-[80%]')
+          img(src=require("/assets/images/doctors/5.png"), alt="" class='relative')
+      .item(class=' col-span-2 mr-0 ml-auto')  
+        div.item-wrapper(class='relative lg2:min-w-[40rem] lg2:max-w-[46rem] lg2:h-[46rem]')
+          +svg('circle')(class='absolute top-10 w-[80%] h-[80%] ')
+          img(src=require("/assets/images/doctors/3.png"), alt="" class='relative')
+      .item(class=' col-span-2')  
+        div.item-wrapper(class='relative lg2:min-w-[40rem] lg2:max-w-[46rem] lg2:h-[46rem]')
+          +svg('rest')(class='absolute top-10 w-[80%] h-[80%]')
+          img(src=require("/assets/images/doctors/2.png"), alt="" class='relative')
+      

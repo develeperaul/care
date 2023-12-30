@@ -69,7 +69,25 @@
 .header .pickup {
   @apply mt-15 lg2:mt-[3.92rem];
 }
-
 .header.header__second .pickup {
+  @apply mt-10 lg2:mt-[-7.375rem] relative z-10;
+}
+.header.header__accept .pickup {
   @apply mt-15 lg2:mt-[-7.375rem] relative z-10;
+}
+
+.header.header__single {
+  .single {
+    @apply relative mb-15 max-w-screen-xl2;
+    img {
+      @apply h-height_bg-mob w-full object-cover;
+      @apply lg2:w-[104rem] lg2:h-[52.6rem] lg2:pl-[4.06rem] lg2:pt-16;
+    }
+    &__top {
+      @apply absolute  top-[1.88rem] uppercase text-white z-10;
+      @apply top-[7.88rem];
+    }
+    .title {
+    }
+  }
 }
