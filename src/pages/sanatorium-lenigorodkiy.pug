@@ -1,0 +1,180 @@
+
+include ../components/svg.pug
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    .sidebar#sidebar
+      .container
+        .sidebar__head 
+          a(href="#" class='logo' data-target='sidebar' data-action='close') 
+            +svg("logo")
+          button.close(data-target='sidebar' data-action='close') 
+            +svg("close")
+        nav.sidebar__content 
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("child" ,17,15)
+            span Дети
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("health" ,17,17)
+            span Здоровье
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("rest" ,17,14)
+            span Отдых
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("nutrition" ,17,17)
+            span Питание
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("sport" ,17,17)
+            span Спорт
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("culture" ,17,15)
+            span Культура
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("about" ,17,17)
+            span О компании
+    header.header.header__sanatorium
+      .container
+        .header__wrapper 
+          a(href="#" class='logo') 
+            +svg("logo")
+          button.burger( data-target='sidebar' data-action='open')
+            +svg("burger", 35)
+          nav
+            a(href="#") О компании
+            a(href="#") Здоровье
+            a(href="#") Дети
+            a(href="#") Спорт
+            a(href="#") Отдых
+            a(href="#") Питание
+            a(href="#") Культура 
+          button.call 
+            +svg("phone", 24)
+        .header__bg
+          img(src=require('/assets/images/bg/lenigorodskiy.png') alt="")
+      
+        
+    main
+      .section
+        .introduction-type-1.introduction-dzhalilskiy 
+          .container
+            h2.title Лениногорский
+            .introduction__wrapper
+              .introduction__top
+                h3.introduction__title С заботой о всей семье
+              .introduction__bottom
+                p.introduction__text Современный и комфортный санаторий, весь комплекс услуг которого расположены одном комплексе: жилые номера от стандартных до класса люкс, более 30 лечебных кабинетов, обеденный зал, современный тренажерный зал, конференц-зал, бильярдная и сауна с плавательным бассейном.
+                
+              div(class='overflow-hidden introduction__slider')
+                include ../components/acceptSlider/index.pug
+              include ../components/book/index.pug    
+      .sectoin.directions-care 
+        .container
+          
+          h2.title Программы лечения
+          p.text В санатории «Лениногорский» можно пройти курс лечебно-оздоровительных процедур на современном медицинском и спортивном оборудовании для восстановления и улучшения качества жизни после заболеваний:
+          div(class=' grid gap-5 lg2:gap-8 lg2:grid-cols-3')
+            
+            .trend 
+              +svg('star').trend__icon
+              h4.trend__title Центральной и периферической нервной системы
+            .trend 
+              +svg('sun2').trend__icon
+              h4.trend__title Опорно-двигательного аппарата
+            .trend 
+              +svg('heart').trend__icon
+              h4.trend__title Сердечно-сосудистой системы
+            .trend 
+              +svg('intesine').trend__icon
+              h4.trend__title Желудочно-кишечного тракта
+            .trend 
+              +svg('grass-blue').trend__icon
+              h4.trend__title Дыхательной системы 
+            .trend 
+              +svg('circle').trend__icon
+              h4.trend__title Сосудистых заболеваний рук и ног
+            .trend 
+              +svg('rest2').trend__icon
+              h4.trend__title ЛОР-заболеваний
+            .trend 
+              +svg('intesine').trend__icon
+              h4.trend__title Cахарного диабета
+            .trend 
+              +svg('child').trend__icon
+              h4.trend__title Реабилитационное лечения часто болеющих детей
+              
+      .section
+        .container
+          .grid
+            include ../components/otherSlider/index.pug
+      .section
+        .container
+          .grid
+            include ../components/otherSlider/index2.pug
+      include ../sections/team/index.pug
+      .section.select-programm 
+        .container
+          .select-programm__top
+            h2.title Выбрать <br/> программу
+            p.text В санатории «Лениногорский» вы можете пройти курс оздоровления или реабилитаци по стандартной или уникальной программе.
+          .list
+            each item in [1,1,1,1,1,1]
+              .item 
+                h4.item__title Стандарт
+                h5.item__duration 7 дней
+                p.item__descr Стандартная программа лечения
+          
+      include ../sections/virtualtTour/index.pug
+      .section.documents
+        .container 
+          h2.title Документы 
+          .documents__wrapper
+            .special-programs__list
+              .item 
+                .item__icon
+                  +svg('forward-line')
+                .item__title Лицензия  
+              .item 
+                .item__icon
+                  +svg('forward-line')
+                .item__title Выписка из реестра к лицензии 
+              .item 
+                .item__icon
+                  +svg('forward-line')
+                .item__title Уведомление к лицензии 
+              .item 
+                .item__icon
+                  +svg('forward-line')
+                .item__title Патент №2158578
+            .special-programs__list(class='lg2:justify-center')
+              .item 
+                  .item__icon
+                    +svg('forward-line')
+                  .item__title Патент №2142772 
+              .item 
+                .item__icon
+                  +svg('forward-line')
+                .item__title Патент №2158574
+              .item 
+                .item__icon
+                  +svg('forward-line')
+                .item__title Патент №2158575
+              .item 
+                .item__icon
+                  +svg('forward-line')
+                .item__title Патент №2158578
+              
+
+      include ../sections/contacts/index.pug
+      include ../sections/merit/index.pug
+    include ../sections/footer/index.pug

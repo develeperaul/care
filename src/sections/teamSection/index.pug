@@ -1,27 +1,48 @@
 include ../../components/svg.pug
 section.team-sec
   .container
-    p.text  Забота — всегда про людей. Тех, кто встречает васв оздоровительных учреждениях, спортивных комплексах и базах отдыха. Тех, кто подбираем вам лучшее лечение и создаёт все детали комфорта, спокойствия, уюта и веселья.
-    p.text Мы собрали специалистов, которые показали свой профессионализм и заботу не только гостям, но и защитили звание «лучший» в специализированных премияхи конкурсах.
-    .team(class='grid grid-cols-2') 
-      .item(class=' col-span-2') 
-        div.item-wrapper(class='relative lg2:min-w-[40rem] lg2:max-w-[46rem] lg2:h-[46rem]')
-          +svg('about')(class='absolute top-10 w-[80%] h-[80%] ')
-          img(src=require("/assets/images/doctors/1.png"), alt="" class='relative')
-      .item(class=' col-span-2 mr-0 ml-auto')  
-        div.item-wrapper(class='relative lg2:min-w-[40rem] lg2:max-w-[46rem] lg2:h-[46rem]')
-          +svg('single-circle')(class='absolute top-10 w-[80%] h-[80%] ')
-          img(src=require("/assets/images/doctors/4.png"), alt="" class='relative')
-      .item(class=' col-span-2')  
-        div.item-wrapper(class='relative lg2:min-w-[40rem] lg2:max-w-[46rem] lg2:h-[46rem]')
-          +svg('health')(class='absolute top-10 w-[80%] h-[80%]')
-          img(src=require("/assets/images/doctors/5.png"), alt="" class='relative')
-      .item(class=' col-span-2 mr-0 ml-auto')  
-        div.item-wrapper(class='relative lg2:min-w-[40rem] lg2:max-w-[46rem] lg2:h-[46rem]')
-          +svg('circle')(class='absolute top-10 w-[80%] h-[80%] ')
-          img(src=require("/assets/images/doctors/3.png"), alt="" class='relative')
-      .item(class=' col-span-2')  
-        div.item-wrapper(class='relative lg2:min-w-[40rem] lg2:max-w-[46rem] lg2:h-[46rem]')
-          +svg('rest')(class='absolute top-10 w-[80%] h-[80%]')
-          img(src=require("/assets/images/doctors/2.png"), alt="" class='relative')
-      
+    .team-sec__textcontent
+      p.text  Забота — всегда про людей. Тех, кто встречает васв оздоровительных учреждениях, спортивных комплексах и базах отдыха. Тех, кто подбираем вам лучшее лечение и создаёт все детали комфорта, спокойствия, уюта и веселья.
+      p.text Мы собрали специалистов, которые показали свой профессионализм и заботу не только гостям, но и защитили звание «лучший» в специализированных премияхи конкурсах.
+  .team 
+    .container 
+      .team__wrapper 
+        
+        .list
+          .item(class='lg2:col-span-2')
+            .item__wrapper
+              +svg('about')(class='icon')
+              img(src=require("/assets/images/doctors/1.png"), alt="" class='img')
+            .item__content
+              h4 Оптик - оптометрист
+              h5 Кристина Загвоздина
+          .item(class='lg2:col-span-2 lg2:justify-self-end')
+            .item__wrapper
+              +svg('single-circle')(class='icon')
+              img(src=require("/assets/images/doctors/4.png"), alt="" class='img')
+            .item__content
+              h4 Врач - офтальмолог
+              h5 Екатерина Середкина
+          .item(class='lg2:col-span-2')
+            .item__wrapper
+              +svg('health')(class='icon')
+              img(src=require("/assets/images/doctors/5.png"), alt="" class='img')
+            .item__content
+              h4 Врач - офтальмолог
+              h5 Серафима Субботина
+          
+          .item(class='lg2:col-span-2 lg2:justify-self-end')
+            .item__wrapper
+              +svg('circle')(class='icon')
+              img(src=require("/assets/images/doctors/3.png"), alt="" class='img')
+            .item__content
+              h4 Врач - офтальмолог
+              h5 Алина
+          .item(class='lg2:col-span-2')
+            .item__wrapper
+              +svg('rest')(class='icon')
+              img(src=require("/assets/images/doctors/2.png"), alt="" class='img')
+            .item__content
+              h4 Врач - офтальмолог
+              h5 Игнатьев Артём
+          

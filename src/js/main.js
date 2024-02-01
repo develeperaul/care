@@ -4,9 +4,11 @@ import '../components/select';
 
 import '../components/generalSlider';
 import '../components/secondSlider';
+import '../components/acceptSlider';
+import '../components/otherSlider';
 import '../components/pickup';
 import '../components/faq';
-
+import '../components/book';
 import '../index.pug';
 
 import '../sections/header/index';

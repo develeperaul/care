@@ -1,0 +1,36 @@
+.introduction-type-2 {
+  .title {
+    @apply mb-10 uppercase;
+    @apply lg2:mb-[2.81rem];
+  }
+  .introduction {
+    &__title {
+      @apply text-base_m;
+      @apply lg2:text-d05;
+    }
+    &__text {
+      @apply text-d30;
+      @apply lg2:text-d11  lg2:mr-0 lg2:ml-auto lg2:w-[46.875rem];
+    }
+    &__wrapper {
+      @apply grid gap-5;
+      @apply lg2:grid-cols-2;
+    }
+    &__slider {
+      @apply -mx-10;
+      @apply lg2:mx-[-195px];
+      .btn-next {
+        @apply hidden;
+        @apply lg2:grid lg2:mr-[195px];
+      }
+      .btn-prev {
+        @apply hidden;
+        @apply lg2:grid lg2:ml-[195px];
+      }
+    }
+  }
+  .book {
+    @apply -mx-5;
+    @apply lg2:mx-0;
+  }
+}

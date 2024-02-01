@@ -1,0 +1,32 @@
+.directions-care {
+  .title {
+    @apply mb-5;
+    @apply lg2:mb-20;
+  }
+  .text {
+    @apply mb-10 text-d30;
+    @apply lg2:mb-22 lg2:w-[750px] lg2:text-d11;
+  }
+  &__top {
+    @apply grid gap-5 mb-15;
+    @apply lg2:grid-cols-2 lg2:gap-7.5;
+    .title,
+    .text {
+      @apply m-0;
+    }
+    .title {
+      letter-spacing: 0.01rem;
+    }
+  }
+  .content-other {
+    @apply grid lg2:grid-cols-2;
+  }
+  .text-other {
+    @apply text-d30 mt-10;
+    @apply lg2:mt-28 lg2:text-d11  lg2:mr-0 lg2:ml-auto lg2:col-start-2;
+  }
+  .list {
+    @apply grid grid-cols-2 gap-5;
+    @apply lg2:grid-cols-4;
+  }
+}

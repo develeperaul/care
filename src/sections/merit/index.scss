@@ -1,0 +1,22 @@
+.merit {
+  .title {
+    @apply mb-5;
+    @apply lg2:mb-[5.5rem];
+  }
+  .list {
+    @apply grid gap-2.5;
+    @apply lg2:grid-cols-3 lg2:gap-[1.88rem];
+    .item {
+      @apply py-[0.88rem] px-6 bg-[#EDF5FD];
+      @apply lg2:p-[1.88rem] lg2:pb-10 lg2:h-[16.25rem] lg2:grid lg2:content-between;
+      &__title {
+        @apply text-d20;
+        @apply lg2:text-d11;
+      }
+      &__name {
+        @apply hidden;
+        @apply lg2:block lg2:text-d14 lg2:leading-[180%];
+      }
+    }
+  }
+}

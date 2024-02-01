@@ -1,0 +1,33 @@
+include ../../components/svg.pug
+.section.select-programm 
+  .container
+    .select-programm__top
+      h2.title Путёвки <br/> и программы
+      p.text В санатории «Джалильский» вы можете подобрать программы разной продолжительности и интенсивности в зависимости от ваших потребностей и возможностей.
+    .list
+      each item in [1,1,1,1,1,1]
+        .item 
+          h4.item__title Стандарт
+          h5.item__duration 7 дней
+          p.item__descr Стандартная программа лечения
+    .special-programs
+      .special-programs__descr 
+        +svg('calendar').special-programs__descr-icon
+        p.special-programs__descr-text Помимо стандартных путевок, «Джалильский» предлагает специальные выгодные программы продолжительностью от 5 дней.
+      .special-programs__list
+        .item 
+          .item__icon
+            +svg('forward-line')
+          .item__title Здоровая спина
+        .item 
+          .item__icon
+            +svg('forward-line')
+          .item__title Подвижные суставы
+        .item 
+          .item__icon
+            +svg('forward-line')
+          .item__title Здоровый ребенок
+        .item 
+          .item__icon
+            +svg('forward-line')
+          .item__title Оздоровление после вирусной пневмонии

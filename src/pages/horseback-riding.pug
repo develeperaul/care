@@ -1,0 +1,54 @@
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    include ../sections/header/horseback-riding.pug
+    main
+      - var listLink = ['ПАО «Татнефть» г. Альметьевск','Спорткомплекс им. И.И.Хасанова','Спорткомплекс им. М.Хузина','Шинник','Стиль жизни', 'Юбилейный','Актюба','Рангоут','Кентавр']
+      section.cards-sect
+        .container 
+          div(class="links ")
+            each item in listLink
+              a(href="#")= item 
+          .cards
+            .card
+              img(src=require("/assets/images/horseback-riding/1qr.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/horseback-riding/2qr.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/horseback-riding/3qr.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/horseback-riding/4qr.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/horseback-riding/5qr.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/horseback-riding/6qr.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/horseback-riding/7qr.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/horseback-riding/8qr.png"), alt="")
+              
+            .card
+              img(src=require("/assets/images/horseback-riding/9qr.png"), alt="")
+
+            .card
+              img(src=require("/assets/images/horseback-riding/10qr.png"), alt="")
+
+                
+  
+          
+    include ../sections/footer/index.pug
+
+  

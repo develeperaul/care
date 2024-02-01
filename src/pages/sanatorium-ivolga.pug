@@ -1,0 +1,172 @@
+
+include ../components/svg.pug
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    .sidebar#sidebar
+      .container
+        .sidebar__head 
+          a(href="#" class='logo' data-target='sidebar' data-action='close') 
+            +svg("logo")
+          button.close(data-target='sidebar' data-action='close') 
+            +svg("close")
+        nav.sidebar__content 
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("child" ,17,15)
+            span Дети
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("health" ,17,17)
+            span Здоровье
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("rest" ,17,14)
+            span Отдых
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("nutrition" ,17,17)
+            span Питание
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("sport" ,17,17)
+            span Спорт
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("culture" ,17,15)
+            span Культура
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("about" ,17,17)
+            span О компании
+    header.header.header__sanatorium
+      .container
+        .header__wrapper 
+          a(href="#" class='logo') 
+            +svg("logo")
+          button.burger( data-target='sidebar' data-action='open')
+            +svg("burger", 35)
+          nav
+            a(href="#") О компании
+            a(href="#") Здоровье
+            a(href="#") Дети
+            a(href="#") Спорт
+            a(href="#") Отдых
+            a(href="#") Питание
+            a(href="#") Культура 
+          button.call 
+            +svg("phone", 24)
+        .header__bg
+          img(src=require('/assets/images/bg/ivolga.png') alt="")
+      
+        
+    main
+
+  
+      .section.introduction-type-2.introduction-ivolga
+        .container
+          h2.title иволга
+          .introduction__wrapper
+            
+              h3.introduction__title В окружении <br/> нетронутой природы
+            
+              p.introduction__text «Иволга» — это современный санаторий, вмещающий одновременно до 75 гостей. Помимо жилого и лечебного корпуса, расположенных в одном здании, посетителей ждут:
+          .directions-care 
+            .list 
+              
+              .trend 
+                +svg('pool').trend__icon
+                h4.trend__title Крытый бассейн 
+              .trend 
+                +svg('dumbbell').trend__icon
+                h4.trend__title Современный тренажерный зал
+              .trend 
+                +svg('terrencur').trend__icon
+                h4.trend__title Терренкур
+              .trend 
+                +svg('sun').trend__icon
+                h4.trend__title Корт для большого тенниса
+              .trend 
+                +svg('child').trend__icon
+                h4.trend__title Детская игровая площадка
+              .trend 
+                +svg('volleyball-net').trend__icon
+                h4.trend__title Волейбольное поле
+              .trend 
+                +svg('sport').trend__icon
+                h4.trend__title Футбольное поле
+              .trend 
+                +svg('tennis2').trend__icon
+                h4.trend__title Настольный теннис
+          .grid.introduction__slider
+            div(class='overflow-hidden ')
+                include ../components/acceptSlider/index.pug
+          include ../components/book/index.pug  
+      .section.directions-care
+        .container       
+          h2.title Направления <br/> заботы
+          p.text В лечебно-оздоровительном блоке санатория «Джалильский» оказывают более 90 видов услуг, основанных на методах классической и нетрадиционной медицин.
+          .list 
+            .trend 
+              +svg('heart').trend__icon
+              h4.trend__title Сердечно-сосудистой системы
+            .trend 
+              +svg('sun2').trend__icon
+              h4.trend__title Мочеполовой системы
+            .trend 
+              +svg('grass-blue').trend__icon
+              h4.trend__title Бронхо-легочной системы
+            .trend 
+              +svg('semi-circle-yellow').trend__icon
+              h4.trend__title Желудочно-кишечного тракта
+            
+          div(class='content-other')
+            p.text-other(class=' text-other ') Особенность санатория — в уникальных методиках лечения заболеваний позвоночника под присмотром квалифицированного врача-невролога. Комплексный подход, высококвалифицированные специалисты и современное оборудование позволяют улучшить качество жизни без хирургического вмешательства.
+      .section 
+        .container  
+          .grid
+            include ../components/otherSlider/index.pug   
+
+      include ../sections/team/index.pug
+      .section.select-programm 
+        .container
+          .select-programm__top
+            h2.title Выбор путевок
+            p.text Санаторий «Иволга» предлагает на выбор несколько программ на выбор, вы можете подобрать направление в зависимости от вашего запроса.
+          .list
+            each item in [1,1,1]
+              .item 
+                h4.item__title Стандарт
+                h5.item__duration 7 дней
+                p.item__descr Стандартная программа лечения
+          .special-programs
+            .special-programs__descr 
+              +svg('calendar').special-programs__descr-icon
+              p.special-programs__descr-text Помимо стандартных путевок, «Джалильский» предлагает специальные выгодные программы продолжительностью от 5 дней.
+            .special-programs__list
+              .item 
+                .item__icon
+                  +svg('forward-line')
+                .item__title Здоровая спина
+              .item 
+                .item__icon
+                  +svg('forward-line')
+                .item__title Подвижные суставы
+              .item 
+                .item__icon
+                  +svg('forward-line')
+                .item__title Здоровый ребенок
+              .item 
+                .item__icon
+                  +svg('forward-line')
+                .item__title Оздоровление после вирусной пневмонии
+      include ../sections/documents/index.pug
+      include ../sections/virtualtTour/index.pug
+      include ../sections/merit/index.pug
+      include ../sections/contacts/index.pug
+    include ../sections/footer/index.pug
+      

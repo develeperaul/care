@@ -1,0 +1,40 @@
+.contacts {
+  &__wrapper {
+    @apply grid gap-5;
+    @apply lg2:grid-cols-2;
+  }
+  .title {
+    @apply text-d32;
+    @apply lg2:text-d01;
+  }
+  &__top {
+    @apply grid gap-5;
+    @apply lg2:gap-12 lg2:w-[34.5rem];
+  }
+  &__link {
+    @apply text-base_m block;
+    @apply lg2:text-d08;
+  }
+  &__text {
+    @apply text-d30;
+    @apply lg2:text-d11;
+  }
+  &__soc {
+    @apply flex gap-2.5;
+    @apply lg2:gap-7.5;
+    .soc {
+      @apply w-full flex gap-4 items-center h-10 text-[0.875rem] text-white px-[0.44rem];
+      @apply lg2:gap-5 lg2:text-d12 lg2:px-2.5  lg2:h-[4.06rem] lg2:w-[14.375rem];
+      & > svg {
+        @apply lg2:w-12 lg2:h-12;
+      }
+    }
+  }
+  &__bottom {
+    @apply -mx-10 h-[18.125rem];
+    @apply lg2:mx-0 lg2:h-[41.5rem] lg2:w-full;
+    & > img {
+      @apply w-full h-full object-cover;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.documents {
+  &__wrapper {
+    @apply grid lg2:grid-cols-2 lg2:gap-6;
+  }
+  .title {
+    @apply mb-5;
+    @apply lg2:mb-15;
+  }
+}

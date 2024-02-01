@@ -1,0 +1,18 @@
+include ../svg.pug
+.accept-slider
+  .swiper-wrapper
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-1.jpg')
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-2.jpg')
+      
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-3.jpg')
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-4.jpg')
+  
+  button.btn-prev
+    +svg('back-line')
+  button.btn-next
+    +svg('forward-line')
+  //- .swiper-pagination

@@ -1,0 +1,25 @@
+include ../../components/svg.pug
+.sectoin.contacts
+  .container
+    .contacts__wrapper
+      .contacts__top
+        h4.title До встречи!
+        
+        p.contacts__text  423368, Республика Татарстан, Сармановский район, п. Джалиль, ул. Лесная, 6.
+        p.contacts__text Телефоны для бронирования <br/> пн-пт 07:30—16:30, обед 13:00—13:30
+        div
+          a(href="tel:+7 (85559) 678-83").contacts__link +7 (85559) 678-83
+          a(href="tel:+7 (919) 640-71-93").contacts__link +7 (919) 640-71-93
+        div.contacts__text
+          span E-mail: 
+          a(href="mailto:sanat_djalil@tatneft.tatar") sanat_djalil@tatneft.tatar
+        div.contacts__soc 
+          a(href="" class="soc bg-green")
+            +svg('whatsapp',  33)
+            span WhatsApp
+          a(href="" class="soc bg-[#5181B8]")
+            +svg('vk',  33)
+            span Вконтакте
+      .contacts__bottom
+        img(src=require('/assets/images/map.png'), alt="")
+        

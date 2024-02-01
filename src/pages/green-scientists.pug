@@ -1,0 +1,55 @@
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    include ../sections/header/green-scientists.pug
+    main
+      - var listLink = ['Берёзка','Вишнёвая поляна','Иволга','Космос','Ландыш','Ромашкино','Солнечный','Факел','Чайка','Юбилейный','Юность']
+      section.cards-sect
+        .container 
+          div(class="links ")
+            each item in listLink
+              a(href="#")= item 
+          .cards
+            .card
+              img(src=require("/assets/images/green-scientists/1q.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/green-scientists/2q.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/green-scientists/3q.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/green-scientists/4q.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/green-scientists/5q.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/green-scientists/6q.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/green-scientists/7q.png"), alt="")
+          
+            .card
+              img(src=require("/assets/images/green-scientists/8q.png"), alt="")
+              
+            .card
+              img(src=require("/assets/images/green-scientists/9q.png"), alt="")
+
+            .card
+              img(src=require("/assets/images/green-scientists/10q.png"), alt="")
+
+            .card
+              img(src=require("/assets/images/green-scientists/11q.png"), alt="")
+                
+          
+    include ../sections/footer/index.pug
+
+  

@@ -4,9 +4,39 @@
     @apply grid gap-15;
   }
 
-  .section {
-    & h2 {
-      @apply mb-5 lg2:mb-0;
+  .introduction-dzhalilskiy,
+  .introduction-kosmos {
+    .introduction {
+      &__top {
+        @apply mb-5;
+      }
+      &__bottom {
+        @apply mb-10;
+      }
+
+      &__slider {
+        @apply mt-[90px] mb-10;
+        @apply lg2:mt-15 lg2:mb-[164px];
+      }
+    }
+  }
+
+  .introduction-ivolga {
+    .introduction {
+      &__wrapper {
+        @apply mb-6;
+        @apply lg2:mb-24;
+      }
+      &__slider {
+        @apply mb-10;
+        @apply lg2:mb-[164px];
+      }
+    }
+    .directions-care {
+      .list {
+        @apply mb-10;
+        @apply lg2:mb-[164px];
+      }
     }
   }
 }

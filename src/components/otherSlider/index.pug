@@ -1,0 +1,25 @@
+include ../svg.pug
+.other-slider
+  .content
+    h2.title Расширяя <br/> спектр пользы
+    p.text Мы постоянно ищем новые технологии и методики, чтобы сделать наши программы еще более эффективными. Так, за последние годы мы приобрели несколько современных аппаратов, благодаря которым расширили перечень услуг и теперь можем предложить еще больше методик лечения.
+    .btn-controls
+      button.btn-prev
+        +svg('back-line')
+      button.btn-next
+        +svg('forward-line')
+  .swiper-wrapper
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-1.jpg')
+      .slide-content 
+        h4.slide-content__title Магнитотурботрон
+        p.slide-content__text Уникальный аппарат для лечения сердечно сосудистой и нервной систем.
+
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-2.jpg')
+      
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-3.jpg')
+    .swiper-slide
+      img(src='https://swiperjs.com/demos/images/nature-4.jpg')
+  //- .swiper-pagination

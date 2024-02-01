@@ -1,0 +1,32 @@
+include ../../components/svg.pug
+.sectoin.directions-care 
+  .container
+    h2.title Направления <br/> заботы
+    p.text В лечебно-оздоровительном блоке санатория «Джалильский» оказывают более 90 видов услуг, основанных на методах классической и нетрадиционной медицин.
+    .list 
+      div(class=" bg-orange py-4 px-3.5 text-white text-d31 lg2:text-d11 lg2:px-7.5 lg2:pt-8")
+        p Основные программы составлены для профилактики и лечения заболеваний:
+      .trend 
+        +svg('sun2').trend__icon
+        h4.trend__title Опорно-двигательного аппарата
+      .trend 
+        +svg('heart').trend__icon
+        h4.trend__title Сердечно-сосудистой системы
+      .trend 
+        +svg('star').trend__icon
+        h4.trend__title Нервной и эндокринной систем
+      .trend 
+        +svg('rest2').trend__icon
+        h4.trend__title Органов дыханияи пищеварения
+      .trend 
+        +svg('sex2').trend__icon
+        h4.trend__title Урологических заболеваний
+      .trend 
+        +svg('sex').trend__icon
+        h4.trend__title Гинекологических заболеваний
+      .trend 
+        +svg('lock').trend__icon
+        h4.trend__title Стимуляции иммунного статуса
+
+    
+        

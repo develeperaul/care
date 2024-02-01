@@ -7,7 +7,7 @@
     }
   }
   .cards {
-    @apply grid;
+    @apply grid gap-5;
     @apply lg2:gap-x-[1.87rem] lg2:gap-y-10 lg2:grid-cols-2;
   }
 }
@@ -15,7 +15,8 @@
   @apply relative;
   img {
     @apply h-[12.5rem] w-full object-cover;
-    @apply lg2:h-full;
+    @apply lg2:h-full relative;
+    z-index: 1;
   }
   .content {
     @apply grid gap-12 text-white bg-green p-4;

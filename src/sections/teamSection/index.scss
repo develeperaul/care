@@ -1,0 +1,29 @@
+.team-sec {
+  @apply grid gap-[3.75rem];
+  @apply lg2:gap-[1.31rem];
+  &__textcontent {
+    & > :first-child {
+      @apply lg2:col-span-2 lg2:w-[46.875rem];
+    }
+    & > :last-child {
+      @apply lg2:col-span-2 lg2:w-[38.75rem] lg2:ml-[46.875rem];
+    }
+    @apply grid gap-5;
+    @apply lg2:gap-y-[14.44rem] lg2:grid-cols-2;
+  }
+  .team {
+    .list {
+      @apply grid-cols-2;
+      @apply lg2:gap-0;
+      .item {
+        @apply lg2:w-[46.875rem] lg2:h-[46.875rem];
+        .icon {
+          @apply lg2:w-[33.76913rem] lg2:h-[33.76913rem];
+        }
+        img {
+          @apply lg2:mx-auto;
+        }
+      }
+    }
+  }
+}

@@ -123,4 +123,83 @@
   .checkbox__link {
     text-decoration: underline;
   }
+
+  .drop {
+    @apply bg-[#EDF5FD] py-[1.94rem] pl-[1.81rem] pr-[1.19rem] grid gap-4 content-start w-full text-d30;
+    @apply lg2:max-w-[38.75rem] lg2:text-d11 lg2:gap-[1.81rem] lg2:py-[3.19rem] lg2:pl-[3.5rem] lg2:pr-[3.13rem];
+    &__icon {
+      @apply w-[2.625rem] h-[2.9325rem];
+      @apply lg2:w-[6.25rem] lg2:h-[7.125rem];
+    }
+  }
+
+  .trend {
+    @apply pt-[1.69rem] pb-[1.31rem] px-3 bg-[#EDF5FD] grid gap-4;
+    @apply lg2:gap-10 lg2:content-between lg2:px-7.5;
+    &__icon {
+      @apply w-8 h-8;
+      @apply lg2:w-14 lg2:h-14;
+    }
+    &__title {
+      @apply text-d31;
+      @apply lg2:text-d11;
+    }
+  }
+
+  .special-programs {
+    @apply grid gap-6 mt-24;
+    @apply lg2:grid-cols-2 lg2:gap-7.5 lg2:mt-30;
+    &__descr {
+      @apply bg-[#EDF5FD] pt-8 px-7.5 pb-7.5 grid gap-5 content-start;
+      @apply lg2:w-[620px] lg2:px-14 lg2:py-[50px] lg2:gap-10;
+      &-icon {
+        width: 50px;
+        height: 50px;
+        @screen lg2 {
+          width: 104px;
+          height: 104px;
+        }
+      }
+      &-text {
+        @apply text-d30;
+        @apply lg2:text-d11;
+      }
+    }
+    &__list {
+      @apply grid gap-5;
+
+      .item {
+        @apply flex gap-9;
+        @apply lg2:gap-12 lg2:py-4;
+        &__icon {
+          flex-shrink: 0;
+          width: 31px;
+          height: 31px;
+          @apply rounded-full border border-blue grid place-content-center;
+          @screen lg2 {
+            width: 58px;
+            height: 58px;
+          }
+          & > svg {
+            width: 12px;
+            height: 10px;
+            @screen lg2 {
+              width: 20px;
+              height: 18px;
+            }
+          }
+        }
+        &__title {
+          @apply pt-1 text-base_m;
+          @apply lg2:text-base;
+        }
+      }
+    }
+  }
+
+  .directions {
+    @apply flex;
+    .item {
+    }
+  }
 }

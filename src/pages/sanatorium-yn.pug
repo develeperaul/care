@@ -1,0 +1,132 @@
+
+include ../components/svg.pug
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    .sidebar#sidebar
+      .container
+        .sidebar__head 
+          a(href="#" class='logo' data-target='sidebar' data-action='close') 
+            +svg("logo")
+          button.close(data-target='sidebar' data-action='close') 
+            +svg("close")
+        nav.sidebar__content 
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("child" ,17,15)
+            span Дети
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("health" ,17,17)
+            span Здоровье
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("rest" ,17,14)
+            span Отдых
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("nutrition" ,17,17)
+            span Питание
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("sport" ,17,17)
+            span Спорт
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("culture" ,17,15)
+            span Культура
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("about" ,17,17)
+            span О компании
+    header.header.header__sanatorium
+      .container
+        .header__wrapper 
+          a(href="#" class='logo') 
+            +svg("logo")
+          button.burger( data-target='sidebar' data-action='open')
+            +svg("burger", 35)
+          nav
+            a(href="#") О компании
+            a(href="#") Здоровье
+            a(href="#") Дети
+            a(href="#") Спорт
+            a(href="#") Отдых
+            a(href="#") Питание
+            a(href="#") Культура 
+          button.call 
+            +svg("phone", 24)
+        .header__bg
+          img(src=require('/assets/images/bg/yn.png') alt="")
+      
+        
+    main
+      .section
+        .introduction-type-1.introduction-dzhalilskiy 
+          .container
+            h2.title Ян
+            .introduction__wrapper
+              .introduction__top
+                h3.introduction__title Формируем культуру здорового человека
+              .introduction__bottom
+                p.introduction__text Санаторий «Ян» оказывает полный комплекс услуг для активного отдыха, развлечения, лечения, восстановления физических и духовных сил для всей семьи.
+                
+              div(class='overflow-hidden introduction__slider')
+                include ../components/acceptSlider/index.pug
+              include ../components/book/index.pug    
+              
+      .sectoin.directions-care 
+        .container
+          
+          h2.title Формируем программы <br/> под любой запрос
+          p.text «Ян» — многопрофильный санаторий.Поэтому наши специалисты работают с большинством актуальных в наше время заболеваний:
+          div(class=' grid gap-5 lg2:gap-8 lg2:grid-cols-3')
+            
+            .trend 
+              +svg('sun2').trend__icon
+              h4.trend__title Заболевания опорно-двигательного аппарата
+            .trend 
+              +svg('heart').trend__icon
+              h4.trend__title Заболевания сердечно-сосудистой системы
+            .trend 
+              +svg('star').trend__icon
+              h4.trend__title Заболевания нервной и эндокринной системы
+            .trend 
+              +svg('sex2').trend__icon
+              h4.trend__title Урологические заболевания
+            .trend 
+              +svg('lock').trend__icon
+              h4.trend__title Стимуляция иммунного статуса
+            .trend 
+              +svg('grass-blue').trend__icon
+              h4.trend__title Заболевания органов дыхания и пищеварения
+            
+              
+      .section
+        .container
+          .grid
+            include ../components/otherSlider/index.pug
+      include ../sections/team/index.pug
+      .section.select-programm 
+        .container
+          .select-programm__top
+            h2.title Выбрать <br/> программу
+            p.text В «Шифалы» можно пройти оздоровительный курс лечения, остановившись в самом санатории или в режиме дневного стационара. Санаторий предоставляет гостиничные и арендные услуги.
+          .list
+            each item in [1,1,1]
+              .item 
+                h4.item__title Стандарт
+                h5.item__duration 7 дней
+                p.item__descr Стандартная программа лечения
+          
+      include ../sections/virtualtTour/index.pug
+      
+              
+
+      include ../sections/merit/index.pug
+      include ../sections/contacts/index.pug
+    include ../sections/footer/index.pug

@@ -5,17 +5,19 @@
     & img {
       @apply w-full object-cover max-w-screen-xl2 h-height_bg-mob lg2:h-height_bg;
     }
-    & .content {
-      @apply grid gap-2.5 relative  lg2:top-[10.44rem] lg2:text-white lg2:absolute;
-      & .title {
-        @apply uppercase text-d23 lg2:text-h2_2;
-      }
-      .text {
-        @apply lg2:text-d05;
-      }
-      &__absolute {
-        @apply absolute bottom-[1.88rem] lg2:bottom-auto text-white;
-      }
+  }
+  .content {
+    @apply relative grid gap-2.5 mt-5 lg2:mt-0 lg2:top-[10.44rem] lg2:text-white lg2:absolute;
+    z-index: 1;
+
+    & .title {
+      @apply uppercase text-d23 lg2:text-h2_2;
+    }
+    .text {
+      @apply lg2:text-d05;
+    }
+    &__absolute {
+      @apply absolute bottom-[1.88rem] lg2:bottom-auto text-white;
     }
   }
 

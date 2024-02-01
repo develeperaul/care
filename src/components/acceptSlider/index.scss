@@ -1,0 +1,29 @@
+.accept-slider {
+  position: relative;
+  .swiper-slide {
+    & img {
+      @apply w-full object-cover max-w-screen-xl2 h-height_bg-mob lg2:h-height_bg;
+    }
+  }
+  .btn-prev,
+  .btn-next {
+    @apply rounded-full bg-white/50;
+    width: 58px;
+    height: 58px;
+    &:disabled {
+      display: none;
+    }
+  }
+  .btn-prev > svg,
+  .btn-next > svg {
+    width: 20px;
+  }
+  .btn-prev {
+    @apply absolute top-1/2 left-0 transform -translate-y-1/2;
+    z-index: 1;
+  }
+  .btn-next {
+    @apply absolute top-1/2 right-0 transform -translate-y-1/2;
+    z-index: 1;
+  }
+}

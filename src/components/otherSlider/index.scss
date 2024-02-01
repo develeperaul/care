@@ -1,0 +1,62 @@
+.other-slider {
+  overflow: hidden;
+  position: relative;
+  @apply lg2:grid lg2:gap-5  lg2:grid-cols-[auto_880px];
+  .swiper-slide {
+    @apply h-[14.31rem];
+    @apply lg2:h-[35.75rem];
+    & img {
+      @apply w-full h-full object-cover;
+    }
+    .slide-content {
+      @apply absolute bottom-6 text-white grid gap-2 left-5 bottom-6;
+      @apply lg2:left-10 lg2:bottom-10;
+      &__title {
+        @apply uppercase text-d16;
+        @apply lg2:text-base;
+      }
+      &__text {
+        @apply text-d33;
+        @apply lg2:text-d12 lg2:w-[36.25rem];
+      }
+    }
+  }
+
+  .content {
+    @apply lg2:pr-7.5;
+  }
+  .title {
+    @apply text-d32 uppercase mb-5;
+    @apply lg2:text-d01 lg2:mb-14 lg2:normal-case;
+  }
+  .text {
+    @apply text-d30 mb-5;
+    @apply lg2:text-d11 lg2:mb-8;
+  }
+
+  & .btn-controls {
+    @apply absolute left-1.5 right-1.5 bottom-[7.155rem] transform translate-y-1/2 flex justify-between gap-4 text-white lg2:gap-5;
+    @apply lg2:static lg2:justify-start lg2:text-blue;
+
+    z-index: 2;
+    & svg {
+      @apply w-4 h-4;
+    }
+  }
+  .btn-prev,
+  .btn-next {
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+.other-slider2 {
+  @apply lg2:grid-cols-[880px_auto];
+  .content {
+    @apply lg2:order-2;
+  }
+  .swiper-wrapper {
+    @apply lg2:order-1;
+  }
+}

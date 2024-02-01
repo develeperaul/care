@@ -1,0 +1,17 @@
+include ../../components/svg.pug
+.section
+  .introduction-type-1.introduction-dzhalilskiy 
+    .container
+      h2.title Джалильский
+      .introduction__wrapper
+        .introduction__top
+          h3.introduction__title Островок спокойствия <br/> и всеобъемлющей заботы
+        .introduction__bottom
+          p.introduction__text Санаторий «Джалильский» — идеальный вариант для тех, кто ценит размеренный уединенный отдых. Одновременно профилакторий вмещает не более 60 гостей, которые могут пройти здесь программы оздоровления, восстановления или просто отдохнуть и набраться сил.
+          .drop
+            +svg('drop').drop__icon
+            p Собственная скважина йодо-бромной воды и современное оборудование обеспечивают эффективное лечение различных групп заболеваний.
+        div(class='overflow-hidden introduction__slider')
+          include ../../components/acceptSlider/index.pug
+        include ../../components/book/index.pug       
+      

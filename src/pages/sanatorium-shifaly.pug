@@ -1,0 +1,134 @@
+
+include ../components/svg.pug
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    .sidebar#sidebar
+      .container
+        .sidebar__head 
+          a(href="#" class='logo' data-target='sidebar' data-action='close') 
+            +svg("logo")
+          button.close(data-target='sidebar' data-action='close') 
+            +svg("close")
+        nav.sidebar__content 
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("child" ,17,15)
+            span Дети
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("health" ,17,17)
+            span Здоровье
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("rest" ,17,14)
+            span Отдых
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("nutrition" ,17,17)
+            span Питание
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("sport" ,17,17)
+            span Спорт
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("culture" ,17,15)
+            span Культура
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("about" ,17,17)
+            span О компании
+    header.header.header__sanatorium
+      .container
+        .header__wrapper 
+          a(href="#" class='logo') 
+            +svg("logo")
+          button.burger( data-target='sidebar' data-action='open')
+            +svg("burger", 35)
+          nav
+            a(href="#") О компании
+            a(href="#") Здоровье
+            a(href="#") Дети
+            a(href="#") Спорт
+            a(href="#") Отдых
+            a(href="#") Питание
+            a(href="#") Культура 
+          button.call 
+            +svg("phone", 24)
+        .header__bg
+          img(src=require('/assets/images/bg/shifaly.png') alt="")
+      
+        
+    main
+      .section
+        .introduction-type-1.introduction-dzhalilskiy 
+          .container
+            h2.title Шифалы
+            .introduction__wrapper
+              .introduction__top
+                h3.introduction__title Всесторонний подход к здоровью
+              .introduction__bottom
+                p.introduction__text В санатории «Шифалы» созданы все условия для полноценного восстановления и и отдыха. Расположенный в лесопарковой зоне и в пешей близости от Камы и Святого Ключа, он помогает забыть о суете дел. Высококвалифицированные специалисты, внимательные сотрудники, современное оборудование и сбалансированное питание помогают гостям вернуть здоровье и силы.
+                
+              div(class='overflow-hidden introduction__slider')
+                include ../components/acceptSlider/index.pug
+              include ../components/book/index.pug    
+      .sectoin.directions-care 
+        .container
+          
+          h2.title Направления заботы
+          p.text У санатория большой и разнообразный спектр программ лечения, на которых он специализируются:
+          div(class=' grid gap-5 lg2:gap-8 lg2:grid-cols-3')
+            
+            .trend 
+              +svg('sun2').trend__icon
+              h4.trend__title Заболевания опорно-двигательного аппарата
+            .trend 
+              +svg('grass-blue').trend__icon
+              h4.trend__title Заболевания дыхательной системы
+            .trend 
+              +svg('star').trend__icon
+              h4.trend__title Заболевания нервной системы
+            .trend 
+              +svg('intesine').trend__icon
+              h4.trend__title Желудочно-кишечного тракта
+            .trend 
+              +svg('child').trend__icon
+              h4.trend__title Заболевания оздоровление беременных женщин
+            .trend 
+              +svg('heart').trend__icon
+              h4.trend__title Заболевания сердечно-сосудистой системы
+            
+              
+      .section
+        .container
+          .grid
+            include ../components/otherSlider/index.pug
+      .section
+        .container
+          .grid
+            include ../components/otherSlider/index2.pug
+      include ../sections/team/index.pug
+      .section.select-programm 
+        .container
+          .select-programm__top
+            h2.title Выбрать <br/> программу
+            p.text В «Шифалы» можно пройти оздоровительный курс лечения, остановившись в самом санатории или в режиме дневного стационара. Санаторий предоставляет гостиничные и арендные услуги.
+          .list
+            each item in [1,1,1,]
+              .item 
+                h4.item__title Стандарт
+                h5.item__duration 7 дней
+                p.item__descr Стандартная программа лечения
+          
+      include ../sections/virtualtTour/index.pug
+      
+              
+
+      include ../sections/contacts/index.pug
+    include ../sections/footer/index.pug

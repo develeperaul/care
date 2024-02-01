@@ -1,0 +1,7 @@
+include ../select/index.pug
+include ../button.pug
+form.book 
+  +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+  +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+  +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+  +button('Забронировать','orange')(type='submit')

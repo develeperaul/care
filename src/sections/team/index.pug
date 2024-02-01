@@ -1,0 +1,30 @@
+include ../../components/svg.pug
+.section.team 
+  .container 
+    .team__wrapper 
+      .team__wrapper-top
+        h2.title Мы собрали <br/> для вас команду <br/> профессионалов
+        p.text Наша задача сделать ваш отдых не только приятным, но и помочь восстановить здоровье. Поэтому мы тщательно подходим в выбору персонала, особое внимание уделяя квалификации специалистов в области медицины. Для каждого гостя составляется индивидуальная программа лечения, которая учитывает не только ваши показатели, но и образ жизни. Каждый гость получает персональный план процедур.
+      .list 
+        .item
+          .item__wrapper
+            +svg('about')(class='icon')
+            img(src=require("/assets/images/doctors/1.png"), alt="" class='img')
+          .item__content
+            h4 Оптик - оптометрист
+            h5 Кристина Загвоздина
+        .item
+          .item__wrapper
+            +svg('single-circle')(class='icon')
+            img(src=require("/assets/images/doctors/4.png"), alt="" class='img')
+          .item__content
+            h4 Врач - офтальмолог
+            h5 Екатерина Середкина
+        .item
+          .item__wrapper
+            +svg('health')(class='icon')
+            img(src=require("/assets/images/doctors/5.png"), alt="" class='img')
+          .item__content
+            h4 Врач - офтальмолог
+            h5 Серафима Субботина
+        

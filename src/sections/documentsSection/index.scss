@@ -1,6 +1,11 @@
 .document-sect {
+  .title {
+    @apply mb-5;
+    @apply lg2:mb-[5.19rem];
+  }
   .text {
     @apply mb-[1.88rem];
+    @apply lg2:w-[46.875rem] lg2:text-base lg2:mb-[5.25rem];
   }
   .docs-mob {
     @apply bg-orange py-10  text-white grid gap-5;

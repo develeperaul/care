@@ -32,6 +32,7 @@ module.exports = {
       white_darken: '#E1E1E1',
       transparent: 'transparent',
       pickup: '#E1EEFC',
+      gray: '#E1EEFC99',
     },
 
     screens: {
@@ -77,6 +78,11 @@ module.exports = {
       d26: ['1.6875rem', '1.75rem'],
       d27: ['2.5rem', 'normal'],
       d28: ['2.375rem', '2.5rem'],
+      d29: ['2rem', '2.25rem'],
+      d30: ['0.875rem', ' 1.3125rem'],
+      d31: ['0.75rem', '0.875rem'],
+      d32: ['1.375rem', '1.75rem'],
+      d33: ['0.625rem', 'normal'],
       base_m: ['1.125rem', '1.4375rem'],
       base: ['1.875rem', '2.8125rem'],
     },

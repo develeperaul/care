@@ -1,5 +1,5 @@
 include ../../components/svg.pug
-.sidebar#sidebar
+.sidebar#sidebar 
   .container
     .sidebar__head 
       a(href="#" class='logo' data-target='sidebar' data-action='close') 
@@ -34,7 +34,7 @@ include ../../components/svg.pug
       a(href="#" data-target='sidebar' data-action='close')  
         +svg("about" ,17,17)
         span О компании
-header.header.header__accept
+header.header.header__second  
   .container
     .header__wrapper 
       a(href="#" class='logo') 
@@ -51,6 +51,18 @@ header.header.header__accept
         a(href="#") Культура 
       button.call 
         +svg("phone", 24)
-  include ../../components/secondSlider/index2.pug
-  .container
-    include ../../components/pickup/index.pug
+  .second-slider
+    .swiper-wrapper
+      .swiper-slide
+        img(src=require("/assets/images/bg/horseback-riding.png"))
+    .container
+      .content
+        h2.title Конный спорт
+    .btn-controls
+      .btn-prev
+        +svg('back-line')
+      .btn-next
+        +svg('forward-line')
+    //- .swiper-pagination
+
+  

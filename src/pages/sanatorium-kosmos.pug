@@ -1,0 +1,135 @@
+
+include ../components/svg.pug
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    .sidebar#sidebar
+      .container
+        .sidebar__head 
+          a(href="#" class='logo' data-target='sidebar' data-action='close') 
+            +svg("logo")
+          button.close(data-target='sidebar' data-action='close') 
+            +svg("close")
+        nav.sidebar__content 
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("child" ,17,15)
+            span Дети
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("health" ,17,17)
+            span Здоровье
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("rest" ,17,14)
+            span Отдых
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("nutrition" ,17,17)
+            span Питание
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("sport" ,17,17)
+            span Спорт
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("culture" ,17,15)
+            span Культура
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("about" ,17,17)
+            span О компании
+    header.header.header__sanatorium
+      .container
+        .header__wrapper 
+          a(href="#" class='logo') 
+            +svg("logo")
+          button.burger( data-target='sidebar' data-action='open')
+            +svg("burger", 35)
+          nav
+            a(href="#") О компании
+            a(href="#") Здоровье
+            a(href="#") Дети
+            a(href="#") Спорт
+            a(href="#") Отдых
+            a(href="#") Питание
+            a(href="#") Культура 
+          button.call 
+            +svg("phone", 24)
+        .header__bg
+          img(src=require('/assets/images/bg/kosmos.png') alt="")
+      
+        
+    main
+      .section
+        .introduction-type-1.introduction-dzhalilskiy 
+          .container
+            h2.title Космос
+            .introduction__wrapper
+              .introduction__top
+                h3.introduction__title Шишкинские места <br/> и высокий берег Камы
+              .introduction__bottom
+                p.introduction__text Благодаря хвойному лесу, окружающему санаторий «Космос», местный воздух богат фитонцидами — натуральными антибиотиками. Они убивают микробы и бактерии. Поэтому, даже обычные прогулки здесь особенно полезны для здоровья.
+                .drop
+                  +svg('drop').drop__icon
+                  p Еще одно преимущество — собственная артезианская скважина, вода которой по составу, чистоте и вкусу близка к родниковой.
+              div(class='overflow-hidden introduction__slider')
+                include ../components/acceptSlider/index.pug
+              include ../components/book/index.pug    
+      .sectoin.directions-care 
+        .container
+          .directions-care__top
+            h2.title Тандем современных <br/> технологий и природы
+            p.text Одновременно санаторий «Космос» может принять до 75 гостей, обеспечив каждого должным уходом и индивидуальными программами лечения, включающими природные факторы и возможности методик современных технологий. 
+          .list 
+            div(class=" bg-orange py-4 px-3.5 text-white text-d31 lg2:text-d11 lg2:px-7.5 lg2:pt-8")
+              p Основные программы составлены для профилактики и лечения заболеваний:
+            .trend 
+              +svg('sun2').trend__icon
+              h4.trend__title Опорно-двигательного аппарата
+            .trend 
+              +svg('heart').trend__icon
+              h4.trend__title Сердечно-сосудистой системы
+            .trend 
+              +svg('rest2').trend__icon
+              h4.trend__title Хронических неспецифических заболеваний легких
+            div(class=' hidden lg2:block')
+            .trend 
+              +svg('health').trend__icon
+              h4.trend__title Эндо-кринологических
+            .trend 
+              +svg('intesine').trend__icon
+              h4.trend__title Желудочно-кишечного тракта
+            .trend 
+              +svg('professional').trend__icon
+              h4.trend__title Профессиональных патологий
+              
+      .section
+        .container
+          .grid
+            include ../components/otherSlider/index.pug
+      .section
+        .container
+          .grid
+            include ../components/otherSlider/index2.pug
+      include ../sections/team/index.pug
+      .section.select-programm 
+        .container
+          .select-programm__top
+            h2.title Выбрать <br/> программу
+            p.text В санатории «Космос» вы можете подобрать персональную программу, которая будет отвечать вашему запросу.
+          .list
+            each item in [1,1,1]
+              .item 
+                h4.item__title Стандарт
+                h5.item__duration 7 дней
+                p.item__descr Стандартная программа лечения
+          
+      include ../sections/virtualtTour/index.pug
+      include ../sections/contacts/index.pug
+      include ../sections/merit/index.pug
+    include ../sections/footer/index.pug
