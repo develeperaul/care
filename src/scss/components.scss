@@ -198,8 +198,52 @@
   }
 
   .directions {
-    @apply flex;
-    .item {
+    @apply overflow-hidden grid gap-[51px];
+    &__title {
+      @apply text-[0.88rem] leading-[1.31rem];
+      @screen lg2 {
+        font-size: 2.5rem;
+        line-height: 137%;
+      }
+    }
+    &__wrapper {
+      @apply flex gap-4 overflow-auto;
+      .item {
+        @apply border border-blue py-7 px-6  grid content-start gap-12 min-h-[161px] shrink-0;
+        @apply lg2:p-7.5 lg2:min-h-[223px] lg2:gap-7;
+        &__title {
+          @apply font-medium text-[1.13rem] leading-[1.38rem];
+          @apply lg2:text-d34;
+        }
+        &__date {
+          @apply text-[1.06rem] leading-[0.75rem];
+          @apply lg2:text-d34 lg2:font-medium;
+        }
+      }
+    }
+  }
+
+  .img-content {
+    position: relative;
+    height: 250px;
+    & .container {
+      padding: 0;
+    }
+    @screen lg2 {
+      height: 905px;
+    }
+    img {
+      @apply absolute w-full h-full object-cover;
+    }
+    .img-content__text {
+      @apply absolute text-white uppercase px-10;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      @screen lg2 {
+        padding-inline: 195px;
+        padding-top: 137px;
+        padding-bottom: 173px;
+      }
     }
   }
 }

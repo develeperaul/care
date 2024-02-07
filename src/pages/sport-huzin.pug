@@ -1,0 +1,136 @@
+include ../components/svg.pug
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    .sidebar#sidebar
+      .container
+        .sidebar__head 
+          a(href="#" class='logo' data-target='sidebar' data-action='close') 
+            +svg("logo")
+          button.close(data-target='sidebar' data-action='close') 
+            +svg("close")
+        nav.sidebar__content 
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("child" ,17,15)
+            span Дети
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("health" ,17,17)
+            span Здоровье
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("rest" ,17,14)
+            span Отдых
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("nutrition" ,17,17)
+            span Питание
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("sport" ,17,17)
+            span Спорт
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("culture" ,17,15)
+            span Культура
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("about" ,17,17)
+            span О компании
+    header.header.header__sanatorium
+      .container
+        .header__wrapper 
+          a(href="#" class='logo') 
+            +svg("logo")
+          button.burger( data-target='sidebar' data-action='open')
+            +svg("burger", 35)
+          nav
+            a(href="#") О компании
+            a(href="#") Здоровье
+            a(href="#") Дети
+            a(href="#") Спорт
+            a(href="#") Отдых
+            a(href="#") Питание
+            a(href="#") Культура 
+          button.call 
+            +svg("phone", 24)
+        .header__bg
+          img(src=require('/assets/images/sport/sport-huzin.png') alt="")
+    main
+      .section.sport
+        .container
+          h2.title Спорткомплекс <br/>им. М.Хузина
+          
+          p.subtitle Спортивный комплекс
+          p.text Спорткомплекс стал полноценным центром здоровья для жителей Нурлата, которые ведут активный образ жизни. Разнообразие занятий универсальных спортивных залов, собственный бассейн и вместимость до 150 человек — все это помогает зарядить хорошим настроением и жизненным тонусом всех желающих.
+
+
+          .accept.sport__slider
+            .grid.slider
+              div(class='overflow-hidden')
+                include ../components/acceptSlider/index.pug
+      
+      .sport-infrastructure
+        .container
+          h2.title Инфраструктура
+          .sport-infrastructure__wrapper.sport-infrastructure__wrapper-col2
+            .sport-infrastructure__item
+              p.text Под руководством чутких тренеров высшей категории, в спорткомплексе ведутся занятия с детьми и подростками по разным направлениям:
+
+              .sport-infrastructure__list 
+                .item
+                  .item__icon 
+                    +svg('river')
+                  .item__title Плавание
+                .item
+                  .item__icon 
+                    +svg('river')
+                  .item__title Волейбол
+                .item
+                  .item__icon 
+                    +svg('river')
+                  .item__title Футбол
+                .item
+                  .item__icon 
+                    +svg('river')
+                  .item__title Аэробика
+            .sport-infrastructure__item
+              p.text Кроме детских секций, жителям города доступны:
+
+              .sport-infrastructure__list 
+                .item
+                  .item__icon 
+                    +svg('river')
+                  .item__title Бассейн: 4 дорожки по 25 метров
+                .item
+                  .item__icon 
+                    +svg('river')
+                  .item__title Зал для аэробики и йоги
+                .item
+                  .item__icon 
+                    +svg('river')
+                  .item__title Тренажерный зал
+                .item
+                  .item__icon 
+                    +svg('river')
+                  .item__title 2 универсальных зала для волейбола, мини-футбола, бадминтона, большого или настольного тенниса
+
+                
+      include ../sections/coachingStaff/index.pug
+      .section.img-content
+        .container 
+          img(src=require("/assets/images/pool.png"), alt="")
+          
+      include ../sections/prices/index.pug
+      
+      include ../sections/contacts/index.pug
+    include ../sections/footer/index.pug
+
+    
+  
+  

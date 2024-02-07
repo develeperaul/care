@@ -1,0 +1,18 @@
+include ../../components/svg.pug
+.camp-homecomfort 
+  .container 
+    .camp-homecomfort__top  
+      h2.title Домашний уютДомашний уют
+      p.text В лагере продумано всё для комфортного отдыха детей разных возрастов, разных интересов и разных темпераментов.
+    .camp-homecomfort__img 
+    
+      img(src=require('/assets/images/camp/berezka-park.png'), alt="")
+    .camp-homecomfort__other-text 
+      p Воспитанники в лагере «Берёзка» живут в трехэтажных спальных корпусах. Есть варианты с 2-х, 3-х или четырехместным размещением. В каждом номере мягкие кровати, холодильники, душевые, шкафы, тумбочки и телевизоры. Все лоджии остеклены, а в холлах мягкие уголки и телевизоры — можно собираться отрядом на свечки или просто пообщаться.
+    .camp-homecomfort__shield
+      +svg('shield')
+      p Безопасность детей обеспечивается круглосуточным дежурством на территории лагеря сотрудников ООО ЧОП «СТРАЖ» и ОВД г. Азнакаево.
+    .camp-homecomfort__slider
+      .grid
+        div(class='overflow-hidden')
+          include ../../components/acceptSlider/index.pug

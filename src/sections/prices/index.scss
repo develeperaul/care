@@ -1,0 +1,94 @@
+.prices {
+  .title {
+    @apply mb-5;
+    @apply lg2:mb-15;
+  }
+  &__wrapper {
+    @apply grid gap-7.5;
+  }
+  &__content {
+    @apply grid gap-7.5;
+    &-list {
+      @apply flex gap-5 flex-nowrap overflow-auto;
+      @apply lg2:grid lg2:grid-cols-3 lg2:gap-7.5;
+      .item {
+        width: 215px;
+        min-height: 164px;
+        height: 100%;
+        border: 1px solid #263472;
+        padding: 1.75rem 0.75rem;
+        display: grid;
+        gap: 32px;
+        flex-shrink: 0;
+        @screen lg2 {
+          width: 100%;
+          padding: 30px;
+        }
+        &__top {
+          font-size: 1.12rem;
+          line-height: 122%;
+          @screen lg2 {
+            font-weight: 500;
+            font-size: 1.88rem;
+            line-height: 120%;
+          }
+        }
+        &__bottom {
+          font-size: 0.88rem;
+          line-height: 157%;
+          display: grid;
+          @screen lg2 {
+            font-weight: 500;
+            font-size: 1.62rem;
+            line-height: 138%;
+          }
+        }
+      }
+    }
+  }
+  &__bottom {
+    margin-top: 30px;
+    display: grid;
+    gap: 30px;
+    @screen lg2 {
+      margin-top: 80px;
+      grid-template-columns: auto minmax(880px, 1fr);
+    }
+  }
+  &__info {
+    backdrop-filter: blur(7px);
+    background: #edf5fd;
+    padding: 20px 23px;
+    display: grid;
+    gap: 22px;
+    font-size: 0.81rem;
+    line-height: 146%;
+    @screen lg2 {
+      display: flex;
+      align-items: center;
+      gap: 58px;
+      padding: 39px 50px;
+      font-size: 1.5rem;
+      line-height: 150%;
+    }
+    svg {
+      width: 74px;
+      height: 59px;
+      @screen lg2 {
+        flex-shrink: 0;
+        width: 145px;
+        height: 114px;
+      }
+    }
+  }
+  &__info-list {
+    font-size: 0.88rem;
+    line-height: 150%;
+    display: grid;
+    gap: 12px;
+    @screen lg2 {
+      font-size: 1.5rem;
+      line-height: 150%;
+    }
+  }
+}

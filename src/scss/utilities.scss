@@ -1,7 +1,7 @@
 @tailwind utilities;
 @layer utilities {
   main {
-    @apply grid gap-15;
+    @apply grid gap-15 overflow-x-hidden;
   }
 
   .introduction-dzhalilskiy,
@@ -36,6 +36,23 @@
       .list {
         @apply mb-10;
         @apply lg2:mb-[164px];
+      }
+    }
+  }
+
+  .accept {
+    .slider {
+      margin-inline: -40px;
+      @screen lg2 {
+        margin-inline: -195px;
+      }
+      .btn-next {
+        @apply hidden;
+        @apply lg2:grid lg2:mr-[195px];
+      }
+      .btn-prev {
+        @apply hidden;
+        @apply lg2:grid lg2:ml-[195px];
       }
     }
   }

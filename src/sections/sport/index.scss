@@ -1,0 +1,55 @@
+.sport {
+  .title {
+    @apply uppercase mb-5;
+  }
+  .subtitle {
+    font-size: 1.12rem;
+    line-height: 128%;
+    margin-bottom: 10px;
+    @screen lg2 {
+      font-size: 2.88rem;
+      line-height: 122%;
+      margin-bottom: 16px;
+    }
+  }
+
+  .text {
+    font-size: 0.88rem;
+    line-height: 150%;
+    @screen lg2 {
+      font-size: 1.5rem;
+      line-height: 150%;
+      width: 50%;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  &__list {
+    @apply grid gap-2.5 mt-10;
+    @apply lg2:grid-cols-3 lg2:mt-15 lg2:gap-7.5;
+    .item {
+      backdrop-filter: blur(9.545454978942871px);
+      background: rgba(225, 238, 252, 0.6);
+      padding: 32px;
+      min-height: 119px;
+      font-size: 1.38rem;
+      line-height: 100%;
+      display: grid;
+      align-content: center;
+      @screen lg2 {
+        justify-content: center;
+        min-height: 252px;
+        text-align: center;
+        font-size: 1.88rem;
+        line-height: 100%;
+      }
+    }
+  }
+  &__slider {
+    margin-top: 64px;
+    @screen lg2 {
+      margin-top: 164px;
+    }
+  }
+}

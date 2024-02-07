@@ -1,0 +1,12 @@
+include ../../components/button.pug
+.horse-routes
+  .container
+    .horse-routes__wrapper 
+      .horse-routes__wrapper-content 
+        h2.title Маршруты
+        .text Мы предлагаем 4 туристических маршрута:
+      .horse-routes__wrapper-img 
+        img(src=require("/assets/images/horse.png"), alt="")
+        .text с. Карабаш, База отдыха «Чайка» – <br/>КСШ пгт Актюбинский
+    .horse-routes__btn    
+      +button('Подробнее о маршрутах','blue-light')

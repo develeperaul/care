@@ -7,7 +7,8 @@
   }
   .btn-prev,
   .btn-next {
-    @apply rounded-full bg-white/50;
+    @apply hidden rounded-full bg-white/50;
+    @apply lg2:grid;
     width: 58px;
     height: 58px;
     &:disabled {

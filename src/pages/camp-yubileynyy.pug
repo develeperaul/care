@@ -1,0 +1,154 @@
+
+include ../components/svg.pug
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    .sidebar#sidebar
+      .container
+        .sidebar__head 
+          a(href="#" class='logo' data-target='sidebar' data-action='close') 
+            +svg("logo")
+          button.close(data-target='sidebar' data-action='close') 
+            +svg("close")
+        nav.sidebar__content 
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("child" ,17,15)
+            span Дети
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("health" ,17,17)
+            span Здоровье
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("rest" ,17,14)
+            span Отдых
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("nutrition" ,17,17)
+            span Питание
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("sport" ,17,17)
+            span Спорт
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("culture" ,17,15)
+            span Культура
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("about" ,17,17)
+            span О компании
+    header.header.header__sanatorium
+      .container
+        .header__wrapper 
+          a(href="#" class='logo') 
+            +svg("logo")
+          button.burger( data-target='sidebar' data-action='open')
+            +svg("burger", 35)
+          nav
+            a(href="#") О компании
+            a(href="#") Здоровье
+            a(href="#") Дети
+            a(href="#") Спорт
+            a(href="#") Отдых
+            a(href="#") Питание
+            a(href="#") Культура 
+          button.call 
+            +svg("phone", 24)
+        .header__bg
+          img(src=require('/assets/images/camp/camp-yubileynyy.png') alt="")
+    main
+      .section.camp 
+        .container 
+          .camp__top
+            h2.title Юбилейный
+            p.text Детский оздоровительный лагерь
+          .camp__directions.directions
+            p.directions__title Лето 2023 года — Лагерь креативных индустрий
+            .directions__wrapper
+              .item 
+                .item__title Первая
+                .item__date 1 июня — 21 июня
+              .item 
+                .item__title Первая
+                .item__date 1 июня — 21 июня
+              .item 
+                .item__title Первая
+                .item__date 1 июня — 21 июня
+          .camp__slider.grid
+              include ../components/otherSlider/index3.pug
+          .camp__req        
+            include ../components/book/index.pug
+      .camp-about
+        .container 
+          .camp-about__top  
+            h2.title О лагере
+            p.text «Юбилейный» находится в 10 км от города Лениногорск. За год здесь отдыхает около 800 детей. Его выбирают из-за бытовых условий: комфортабельные жилые корпуса, собственная котельная, обустроенная огороженная территория под круглосуточной охраной ЧОП «Витязь».
+          .camp-about__img 
+            img(src=require('/assets/images/about-yubileynyy.png'), alt="")
+      .camp-infrastructure 
+        .container 
+          .camp-infrastructure__top.camp-infrastructure__top-col2
+            h2.title Инфраструктура
+            p.text Для отличного и активного отдыха детей всех возрастов, в лагере создана разнообразная спортивная и культурная инфраструктура: 
+
+
+          .camp-infrastructure__list 
+            .item
+              .item__icon 
+                +svg('river')
+              .item__title Крытый бассейн
+            .item
+              .item__icon 
+                +svg('river')
+              .item__title Баскетбольная площадка
+            .item
+              .item__icon 
+                +svg('river')
+              .item__title Танцевальные площадки
+            .item
+              .item__icon 
+                +svg('river')
+              .item__title Многофункциональное футбольное поле с беговыми дорожками
+            .item
+              .item__icon 
+                +svg('river')
+              .item__title Флорбольная площадка
+            .item
+              .item__icon 
+                +svg('river')
+              .item__title Миниконюшня
+            .item
+              .item__icon 
+                +svg('river')
+              .item__title Крытый амфитеатр с возможностью кинопоказов
+            .item
+              .item__icon 
+                +svg('river')
+              .item__title Просторный спортзал
+            .item
+              .item__icon 
+                +svg('river')
+              .item__title Площадка для игр в волейбол и пионербол
+            .item
+              .item__icon 
+                +svg('river')
+              .item__title Спортивная площадка с уличными тренажерами
+      .section
+        .container
+          .grid
+            include ../components/otherSlider/index.pug
+      .section.accept
+        .container
+          .grid.slider
+            div(class='overflow-hidden introduction__slider')
+              include ../components/acceptSlider/index.pug
+      include ../sections/campInfo/index.pug
+      include ../sections/contacts/index.pug
+    include ../sections/footer/index.pug
+  

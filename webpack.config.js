@@ -124,7 +124,7 @@ module.exports = {
       output: {
         filename: './svg/sprite.svg',
         svg4everybody: true,
-        // svgo: true,
+        svgo: true,
       },
       sprite: {
         prefix: false,

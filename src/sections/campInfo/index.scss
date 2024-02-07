@@ -1,0 +1,13 @@
+.camp-info {
+  .title {
+    margin-bottom: 20px;
+    @screen lg2 {
+      margin-bottom: 77px;
+    }
+  }
+  .list {
+    @screen lg2 {
+      width: 1009px;
+    }
+  }
+}

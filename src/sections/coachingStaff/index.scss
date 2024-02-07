@@ -1,0 +1,45 @@
+.coaching-staff {
+  .title {
+    @apply mb-5;
+    @apply lg2:mb-15;
+  }
+  .list {
+    @apply grid gap-6;
+    @apply lg2:grid-cols-3 lg2:gap-x-7.5 lg2:gap-y-15;
+    .item {
+      @screen lg2 {
+        height: 490px;
+      }
+
+      &__wrapper {
+        @apply relative;
+        .icon {
+          @apply absolute w-full h-full bottom-0;
+          @apply lg2:top-1/2 lg2:bottom-auto lg2:left-1/2 lg2:transform lg2:-translate-x-1/2 lg2:-translate-y-1/2;
+
+          @screen lg2 {
+            width: 350px;
+            height: 350px;
+          }
+        }
+        .img {
+          position: relative;
+          height: 319px;
+          @screen lg2 {
+            height: auto;
+          }
+        }
+      }
+      &__content {
+        @apply relative p-4 bg-[#E1EEFC99] grid  gap-4;
+        @apply lg2:hidden;
+        &-title {
+          @apply text-d14;
+        }
+        &-name {
+          @apply text-d18;
+        }
+      }
+    }
+  }
+}

@@ -25,6 +25,10 @@ import '../pages/about.pug';
 
 import './validate-form-footer';
 import 'swiper/css/bundle';
+
+import '../pages/camp-berezka.pug';
+import "../pages/camp-vishnevaya-polyana.pug"
+
 // console.log(validate({ creditCardNumbertt: '4' }, constraints));
 
 const btns = document.querySelectorAll('[data-action]');

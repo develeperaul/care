@@ -1,0 +1,30 @@
+.camp-about {
+  &__top {
+    @apply mb-5;
+    @apply lg2:mb-20;
+    @screen lg2 {
+      width: 684px;
+    }
+  }
+  .title {
+    @apply mb-5;
+    @apply lg2:mb-15;
+  }
+  .text {
+    font-size: 0.88rem;
+    line-height: 150%;
+    @screen lg2 {
+      font-size: 1.88rem;
+      line-height: 150%;
+    }
+  }
+  &__img {
+    @apply mb-5;
+    @apply lg2:mb-20;
+    margin-inline: -40px;
+    @screen lg2 {
+      margin-inline: -195px;
+    }
+  }
+  
+}

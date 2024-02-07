@@ -1,0 +1,42 @@
+.horse-routes {
+  &__wrapper {
+    @apply grid gap-5 lg2:gap-7  lg2:grid-cols-[auto_993px];
+    &-content {
+      .title {
+        @apply mb-5;
+        @apply lg2:mb-15;
+      }
+      .text {
+        font-size: 0.88rem;
+        line-height: 150%;
+        @screen lg2 {
+          font-size: 1.5rem;
+          line-height: 150%;
+        }
+      }
+    }
+    &-img {
+      height: 249px;
+      position: relative;
+      @screen lg2 {
+        height: 598px;
+      }
+      & img {
+        @apply w-full h-full object-cover;
+      }
+      .text {
+        @apply absolute hidden bottom-7 left-7 text-white;
+        @apply lg2:block;
+        @screen lg2 {
+          font-size: 1.88rem;
+          line-height: 117%;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  &__btn {
+    @apply mt-5;
+    @apply lg2:w-fit lg2:mx-auto lg2:mt-15;
+  }
+}

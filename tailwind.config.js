@@ -83,6 +83,7 @@ module.exports = {
       d31: ['0.75rem', '0.875rem'],
       d32: ['1.375rem', '1.75rem'],
       d33: ['0.625rem', 'normal'],
+      d34: ['1.88rem', '2.25rem'],
       base_m: ['1.125rem', '1.4375rem'],
       base: ['1.875rem', '2.8125rem'],
     },

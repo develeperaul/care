@@ -60,3 +60,38 @@
     @apply lg2:order-1;
   }
 }
+
+.other-slider3 {
+  @apply lg2:grid-cols-[auto_66%] lg2:gap-0;
+  .title {
+    font-size: 1.38rem;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    @screen lg2 {
+      font-size: 2.5rem;
+      line-height: 3.13rem;
+      text-transform: none;
+      margin-top: 136px;
+      margin-bottom: 0px;
+    }
+  }
+  .content {
+    @apply lg2:pr-[70px];
+    & .btn-controls {
+      @apply hidden   text-white;
+      @apply lg2:absolute   lg2:bottom-10 lg2:flex lg2:gap-5 lg2:justify-start lg2:text-blue;
+
+      z-index: 2;
+      & svg {
+        @apply w-4 h-4;
+      }
+    }
+  }
+  .swiper-wrapper {
+    @apply w-full lg2:h-[680px];
+    .swiper-slide {
+      @apply h-full;
+    }
+  }
+}

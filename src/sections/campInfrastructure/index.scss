@@ -1,0 +1,33 @@
+.camp-infrastructure {
+  &__top {
+    @apply grid gap-7 mb-7.5;
+    @apply lg2:gap-15 lg2:w-[830px] lg2:mb-15;
+  }
+  &__list {
+    @apply grid gap-2.5;
+    @apply lg2:grid-cols-2;
+    .item {
+      @apply min-h-[119px] py-3.5 px-[18px] flex items-center gap-3.5;
+      backdrop-filter: blur(9.545454978942871px);
+      background: rgba(225, 238, 252, 0.6);
+      font-size: 1.12rem;
+      line-height: 122%;
+      @screen lg2 {
+        font-size: 1.88rem;
+        line-height: 150%;
+        backdrop-filter: none;
+        background: transparent;
+        min-height: auto;
+        gap: 42px;
+      }
+      svg {
+        width: 58px;
+        height: 58px;
+        @screen lg2 {
+          width: 91px;
+          height: 82px;
+        }
+      }
+    }
+  }
+}

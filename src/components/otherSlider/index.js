@@ -17,3 +17,20 @@ const swiper = new Swiper('.other-slider', {
     prevEl: '.btn-prev',
   },
 });
+
+const swiper3 = new Swiper('.other-slider.other-slider3', {
+  modules: [EffectFade, Navigation],
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+  breakpoints: {
+    1024: {
+      width: 1010,
+    },
+  },
+  navigation: {
+    nextEl: '.btn-next',
+    prevEl: '.btn-prev',
+  },
+});

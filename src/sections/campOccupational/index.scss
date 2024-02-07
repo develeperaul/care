@@ -1,0 +1,65 @@
+.camp-occupational {
+  .title,
+  .text {
+    @apply mb-5;
+    @apply lg2:mb-15;
+  }
+  .text {
+    @apply lg2:w-1/2 lg2:pr-4;
+    @screen lg2 {
+      font-size: 1.5rem;
+      line-height: 150%;
+    }
+  }
+  &__list {
+    @apply flex gap-5 flex-nowrap overflow-auto;
+    @apply lg2:grid lg2:grid-cols-4 lg2:gap-7.5;
+    &-wrapper {
+      @apply grid -mx-10 mb-6 lg2:mb-15 lg2:m-0;
+    }
+    .item {
+      border: 1px solid #263472;
+      padding: 1.75rem 0.75rem;
+      width: 13.44rem;
+      height: 10.25rem;
+      background: #fff;
+      font-size: 1.12rem;
+      line-height: 122%;
+      flex-shrink: 0;
+      @screen lg2 {
+        background: #edf5fd;
+        border: none;
+        font-size: 1.88rem;
+        line-height: 120%;
+        width: auto;
+        height: 18.75rem;
+        padding: 4rem 1.875rem;
+      }
+      &:first-child {
+        @apply ml-10 lg2:m-0;
+      }
+      &:last-child {
+        @apply mr-10 lg2:m-0;
+      }
+    }
+  }
+  &__content-other {
+    @apply grid gap-4;
+    @apply lg2:gap-6 lg2:w-1/2 lg2:mr-0 lg2:ml-auto lg2:pl-4;
+    .content-other__text {
+      font-size: 0.88rem;
+      line-height: 150%;
+      @screen lg2 {
+        font-size: 1.5rem;
+        line-height: 150%;
+      }
+    }
+    .content-other__info {
+      font-size: 1.12rem;
+      @screen lg2 {
+        font-weight: 700;
+        font-size: 1.88rem;
+      }
+    }
+  }
+}

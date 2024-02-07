@@ -1,8 +1,21 @@
 .section.camp 
-  h2.title Берёзка
-  p.subtitle Детский оздоровительный лагерь
-  p.text Направление летних смен — Биотехнологии
-  .directions
-    .item 
-      .item__title Первая
-      .item__date 1 июня — 21 июня
+  .container 
+    .camp__top
+      h2.title Берёзка
+      p.text Детский оздоровительный лагерь
+    .camp__directions.directions
+      p.directions__title Направление летних смен — Биотехнологии
+      .directions__wrapper
+        .item 
+          .item__title Первая
+          .item__date 1 июня — 21 июня
+        .item 
+          .item__title Первая
+          .item__date 1 июня — 21 июня
+        .item 
+          .item__title Первая
+          .item__date 1 июня — 21 июня
+    .camp__slider.grid
+        include ../../components/otherSlider/index3.pug
+    .camp__req        
+      include ../../components/book/index.pug

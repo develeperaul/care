@@ -1,0 +1,34 @@
+.camp {
+  &__top {
+    @apply grid gap-10 mb-5;
+    @apply lg2:gap-6 lg2:mb-[100px];
+  }
+  .text {
+    @apply text-[1.13rem] leading-[1.44rem] mb-5;
+    @screen lg2 {
+      font-size: 2.5rem;
+      line-height: 137%;
+      margin-bottom: 0;
+    }
+  }
+  &__directions {
+    margin-bottom: 92px;
+    @screen lg2 {
+      margin-bottom: 164px;
+    }
+  }
+
+  &__slider {
+    margin-bottom: 90px;
+    @screen lg2 {
+      margin-bottom: 206px;
+    }
+  }
+
+  &__req {
+    margin-inline: -20px;
+    @screen lg2 {
+      margin-inline: 0px;
+    }
+  }
+}
