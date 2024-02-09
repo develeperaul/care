@@ -1,0 +1,31 @@
+.restaurant-maintenance {
+  &__wrapper {
+    @apply lg2:grid lg2:grid-cols-[1fr_620px] lg2:gap-14;
+  }
+  &__content {
+    @apply grid gap-5;
+    &-descr {
+      @apply grid gap-5 content-start;
+      .text {
+        font-size: 0.88rem;
+        line-height: 150%;
+        @screen lg2 {
+          font-size: 1.5rem;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+  &__img {
+    @apply hidden;
+    @apply lg2:block;
+    @screen lg2 {
+      width: 620px;
+      height: 768px;
+      margin-top: 70px;
+    }
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+}

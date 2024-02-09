@@ -1,0 +1,22 @@
+include ../../components/svg.pug
+include ../../components/button.pug
+.restaurant
+  .container 
+    .restaurant__wrapper
+      .restaurant__top 
+        +svg('logo-rest')
+        p.text Наше разнообразное меню понравится как ценителю домашней еды, так и любителю нового и пикантного. Мы готовим сытные завтраки и полноценные обеды, а к пенному мы предлагаемкак фирменные пирожки, так и раков, сваренных по шведскому рецепту. В «Бьорке» каждый найдёт то, что ему по душе. 
+      .restaurant__bottom 
+        .accept
+            .grid.slider
+              div(class='overflow-hidden introduction__slider')
+                include ../../components/acceptSlider/index.pug
+        .restaurant__content  
+          .restaurant__content-left 
+            p Также в наших стенах можно организовать праздник любой сложности. Разделите радость дня рождения, банкета или свадьбы вместе с нами — мы поможем вам создать праздник, который запомнится на всю жизнь.
+            p Ресторан «Бьорк» - 2 зала на 53 места и на 72 места.
+          .restaurant__content-right 
+            button.btn.btn-menu Меню
+            button.btn.btn-book забронировать столик
+            
+

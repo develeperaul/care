@@ -1,0 +1,93 @@
+include ../components/svg.pug
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    .sidebar#sidebar
+      .container
+        .sidebar__head 
+          a(href="#" class='logo' data-target='sidebar' data-action='close') 
+            +svg("logo")
+          button.close(data-target='sidebar' data-action='close') 
+            +svg("close")
+        nav.sidebar__content 
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("child" ,17,15)
+            span Дети
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("health" ,17,17)
+            span Здоровье
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("rest" ,17,14)
+            span Отдых
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("nutrition" ,17,17)
+            span Питание
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("sport" ,17,17)
+            span Спорт
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("culture" ,17,15)
+            span Культура
+
+          a(href="#" data-target='sidebar' data-action='close')  
+            +svg("about" ,17,17)
+            span О компании
+    header.header.header__sanatorium
+      .container
+        .header__wrapper 
+          a(href="#" class='logo') 
+            +svg("logo")
+          button.burger( data-target='sidebar' data-action='open')
+            +svg("burger", 35)
+          nav
+            a(href="#") О компании
+            a(href="#") Здоровье
+            a(href="#") Дети
+            a(href="#") Спорт
+            a(href="#") Отдых
+            a(href="#") Питание
+            a(href="#") Культура 
+          button.call 
+            +svg("phone", 24)
+        .header__bg
+          img(src=require('/assets/images/bg/biork.png') alt="")
+    main 
+      .section
+        .introduction-type-1.introduction-dzhalilskiy 
+          .container
+            h2.title Иске Элмэт
+            .introduction__wrapper
+              .introduction__top
+                h3.introduction__title Дом культуры
+              .introduction__bottom
+                p.introduction__text В доме культуры проходят культурно-развлекательные и образовательные мероприятия. Всего в ДК занимается от 450-600 человек в возрасте от 3 до 70 лет. Для них работают:
+                
+              div(class='overflow-hidden ')
+                include ../components/otherSlider/index.pug
+      .section.accept
+        .container
+          .grid.slider
+            div(class='overflow-hidden')
+              include ../components/acceptSlider/index.pug
+      .section.img-content
+        .container 
+          img(src=require("/assets/images/restaurants/burger.png"), alt="")
+          h2.title.img-content__text(class="  bottom-0") зрительный зал на 258 <br/>посадочных мест
+      
+      
+          
+      include ../sections/contacts/index.pug
+      
+    include ../sections/footer/index.pug
+  
+  

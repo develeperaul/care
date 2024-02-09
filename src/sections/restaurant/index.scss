@@ -1,0 +1,68 @@
+.restaurant {
+  &__wrapper {
+    @apply grid gap-15;
+    @apply lg2:gap-[130px];
+  }
+  &__top {
+    @apply grid gap-15;
+    @apply lg2:grid-cols-[auto_1fr];
+    svg {
+      width: 221px;
+      height: 73px;
+      @screen lg2 {
+        width: 359px;
+        height: 121px;
+      }
+    }
+    .text {
+      font-size: 0.88rem;
+      line-height: 150%;
+      @screen lg2 {
+        font-size: 1.5rem;
+        line-height: 150%;
+        width: 750px;
+        justify-self: center;
+        margin-top: 35px;
+      }
+    }
+  }
+  &__bottom {
+    @apply grid gap-10;
+    @apply lg2:gap-[130px];
+  }
+  &__content {
+    @apply grid gap-10;
+    @apply lg2:grid-cols-2;
+    &-left {
+      @apply grid gap-10;
+    }
+    &-right {
+      @apply inline-flex gap-2.5 lg2:gap-7.5 lg2:justify-center;
+      @apply mt-[44px];
+      .btn {
+        font-size: 0.75rem;
+        line-height: 175%;
+        height: 34px;
+        text-transform: uppercase;
+        padding: 8px 16px;
+        min-width: 104px;
+        white-space: nowrap;
+        @screen lg2 {
+          font-size: 1.25rem;
+          line-height: normal;
+          height: 55px;
+          padding: 15px 30px;
+          min-width: 230px;
+        }
+      }
+      .btn-menu {
+        background: #61e354;
+        color: white;
+      }
+      .btn-book {
+        background: #ff5a02;
+        color: white;
+      }
+    }
+  }
+}

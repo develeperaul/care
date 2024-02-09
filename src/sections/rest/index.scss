@@ -1,0 +1,30 @@
+.rest {
+  &__top {
+    @apply grid gap-5;
+    @apply lg2:gap-[50px];
+    &-left {
+      .title {
+        @apply mb-5;
+      }
+      .text {
+        font-size: 1.12rem;
+        line-height: 128%;
+        @screen lg2 {
+          font-size: 2.88rem;
+          line-height: 122%;
+        }
+      }
+    }
+    &-right {
+      font-size: 0.88rem;
+      line-height: 150%;
+      @screen lg2 {
+        font-size: 1.5rem;
+        line-height: 150%;
+        width: 750px;
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+  }
+}
