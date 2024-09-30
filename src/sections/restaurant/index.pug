@@ -6,7 +6,8 @@ include ../../components/button.pug
       .restaurant__top 
         +svg('logo-rest')
         p.text Наше разнообразное меню понравится как ценителю домашней еды, так и любителю нового и пикантного. Мы готовим сытные завтраки и полноценные обеды, а к пенному мы предлагаемкак фирменные пирожки, так и раков, сваренных по шведскому рецепту. В «Бьорке» каждый найдёт то, что ему по душе. 
-      .restaurant__bottom 
+      .restaurant__bottom.relative
+        +svg('circle')(class=" w-[196px] h-[200px] lg2:hidden  absolute right-[-90px] top-[-40px]")   
         .accept
             .grid.slider
               div(class='overflow-hidden introduction__slider')

@@ -14,6 +14,9 @@
   .list {
     @apply flex overflow-auto  gap-5 -mx-10;
     @apply lg2:grid lg2:grid-cols-3 lg2:gap-x-[1.87rem] lg2:gap-[3.75rem] lg2:m-0;
+    &.col-4 {
+      @apply lg2:grid-cols-4;
+    }
     &::-webkit-scrollbar {
       display: none;
     }
@@ -27,7 +30,7 @@
     }
     .item {
       @apply border border-blue py-[1.75rem] px-[1.44rem] min-h-[14.875rem] grid content-start w-[13.4375rem] gap-6 shrink-0;
-      @apply lg2:p-[1.88rem] lg2:pt-12 lg2:w-auto lg2:h-[25.9375rem] lg2:grid-rows-[auto_1fr_auto];
+      @apply lg2:p-[1.88rem] lg2:pt-12 lg2:w-auto lg2:h-[auto] lg2:grid-rows-[auto_1fr_auto];
       &__title {
         @apply text-base_m min-h-[2.75rem];
         @apply lg2:font-medium lg2:text-d29;

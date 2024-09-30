@@ -10,62 +10,90 @@ html(lang="ru")
     .sidebar#sidebar
       .container
         .sidebar__head 
-          a(href="#" class='logo' data-target='sidebar' data-action='close') 
+          a(href="/" class='logo' data-target='sidebar' data-action='close') 
             +svg("logo")
           button.close(data-target='sidebar' data-action='close') 
             +svg("close")
         nav.sidebar__content 
-          a(href="#" data-target='sidebar' data-action='close')  
+          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
             +svg("child" ,17,15)
             span Дети
 
-          a(href="#" data-target='sidebar' data-action='close')  
+          a(href="/health.html" data-target='sidebar' data-action='close')  
             +svg("health" ,17,17)
             span Здоровье
 
-          a(href="#" data-target='sidebar' data-action='close')  
+          a(href="/rest.html" data-target='sidebar' data-action='close')  
             +svg("rest" ,17,14)
             span Отдых
 
-          a(href="#" data-target='sidebar' data-action='close')  
+          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
             +svg("nutrition" ,17,17)
             span Питание
 
-          a(href="#" data-target='sidebar' data-action='close')  
+          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
             +svg("sport" ,17,17)
             span Спорт
 
-          a(href="#" data-target='sidebar' data-action='close')  
+          a(href="/museum.html" data-target='sidebar' data-action='close')  
             +svg("culture" ,17,15)
             span Культура
 
-          a(href="#" data-target='sidebar' data-action='close')  
+          a(href="/about.html" data-target='sidebar' data-action='close')  
             +svg("about" ,17,17)
             span О компании
     header.header.header__sanatorium
       .container
         .header__wrapper 
-          a(href="#" class='logo') 
+          a(href="/" class='logo') 
             +svg("logo")
           button.burger( data-target='sidebar' data-action='open')
             +svg("burger", 35)
           nav
-            a(href="#") О компании
-            a(href="#") Здоровье
-            a(href="#") Дети
-            a(href="#") Спорт
-            a(href="#") Отдых
-            a(href="#") Питание
-            a(href="#") Культура 
+            a(href="/about.html") О компании
+            a(href="/health.html") Здоровье
+            a(href="/green-scientists.html") Дети
+            a(href="/sport-actuba.html") Спорт
+            a(href="/rest.html") Отдых
+            a(href="/restaurants.html") Питание
+            a(href="/museum.html") Культура 
           button.call 
             +svg("phone", 24)
+      .container.relative
+        +svg('figures')(class=" lg2:w-[470px] hidden lg2:block lg2:h-[517px] z-10 lg2:z-0 absolute lg2:right-0 lg2:top-0")    
         .header__bg
           img(src=require('/assets/images/field-childs.png') alt="")
     main
       include ../sections/camp/index.pug
       include ../sections/campHomeComfort/index.pug
-      include ../sections/campInfo/index.pug
-      include ../sections/contacts/index.pug
+      //- include ../sections/campInfo/index.pug
+      .section.contacts
+        .container
+          .contacts__wrapper
+            .contacts__top.relative
+              +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+              h4.title До встречи!
+              
+              p.contacts__text  Республика Татарстан, в 15 км. от г. Азнакаево, <br/> по трассе Азнакаево-Бугульма 1,5 км. <br/> от трассы в лесном массиве, ДОЛ «Берёзка».
+              
+              div
+                a(href="tel:+78559252821").contacts__link +7 (85592) 528-21
+                a(href="tel:+79196407202").contacts__link +7 (919) 640-72-02
+                
+
+              //- div.contacts__text
+                span E-mail: 
+                a(href="mailto:sanat_djalil@tatneft.tatar") sanat_djalil@tatneft.tatar
+              //- div.contacts__soc 
+                a(href="" class="soc bg-green")
+                  +svg('whatsapp',  33)
+                  span WhatsApp
+                a(href="" class="soc bg-[#5181B8]")
+                  +svg('vk',  33)
+                  span Вконтакте
+            .contacts__bottom
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+              //- img(src=require('/assets/images/map.png'), alt="")
     include ../sections/footer/index.pug
   
   

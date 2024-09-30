@@ -8,7 +8,7 @@
   }
   .content {
     @apply relative grid gap-2.5 mt-5 lg2:mt-0 lg2:top-[10.44rem] lg2:text-white lg2:absolute;
-    z-index: 1;
+    z-index: 10;
 
     & .title {
       @apply uppercase text-d23 lg2:text-h2_2;

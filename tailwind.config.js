@@ -93,7 +93,7 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         '.container': {
-          maxWidth: '1530px',
+          maxWidth: '1440px',
           padding: '0 40px',
           marginRight: 'auto',
           marginLeft: 'auto',
@@ -103,7 +103,7 @@ module.exports = {
           },
         },
         '.container2': {
-          maxWidth: '1530px',
+          maxWidth: '1440px',
           padding: '0 20px',
           marginRight: 'auto',
           marginLeft: 'auto',

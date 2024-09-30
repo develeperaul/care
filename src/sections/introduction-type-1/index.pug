@@ -12,6 +12,22 @@ include ../../components/svg.pug
             +svg('drop').drop__icon
             p Собственная скважина йодо-бромной воды и современное оборудование обеспечивают эффективное лечение различных групп заболеваний.
         div(class='overflow-hidden introduction__slider')
-          include ../../components/acceptSlider/index.pug
-        include ../../components/book/index.pug       
+          .accept-slider
+            .swiper-wrapper
+              .swiper-slide
+                img(src=require('/assets/images/wooman-bass.png'))
+              .swiper-slide
+                img(src=require('/assets/images/aerobika.png'))
+            
+            button.btn-prev
+              +svg('back-line')
+            button.btn-next
+              +svg('forward-line')
+        include ../../components/select/index.pug
+        include ../../components/button.pug
+        a(href="http://dzhalilskiy.tatneft.ru/?lang=ru").book 
+          +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+          +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+          +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+          +button('Забронировать','orange')(type='submit')       
       

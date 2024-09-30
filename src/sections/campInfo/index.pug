@@ -1,5 +1,7 @@
 include ../../components/svg.pug
-.camp-info 
+.camp-info.relative 
+  +svg('sun')(class=" lg2:w-[291px] hidden lg2:block lg2:h-[291px]  absolute lg2:right-[500px] lg2:top-[-100px]")    
+  +svg('health')(class=" lg2:w-[296px] hidden lg2:block lg2:h-[296px]  absolute lg2:right-[300px] lg2:top-[350px]")    
   .container
     h2.title Информация <br/> для родителей
     .list.special-programs__list

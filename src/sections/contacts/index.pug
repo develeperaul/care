@@ -1,8 +1,9 @@
 include ../../components/svg.pug
-.sectoin.contacts
+.section.contacts
   .container
     .contacts__wrapper
-      .contacts__top
+      .contacts__top.relative
+        +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
         h4.title До встречи!
         
         p.contacts__text  423368, Республика Татарстан, Сармановский район, п. Джалиль, ул. Лесная, 6.

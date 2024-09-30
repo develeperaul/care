@@ -1,4 +1,6 @@
-.section.camp 
+include ../../components/svg.pug
+.section.camp.relative
+  +svg('grass')(class=" w-[84px] h-[80px] lg2:w-[262px] lg2:h-[250px] z-10 lg2:z-0 absolute right-[42px] top-[-70px] lg2:right-[380px] lg2:top-[-40px]")     
   .container 
     .camp__top
       h2.title Берёзка
@@ -10,11 +12,14 @@
           .item__title Первая
           .item__date 1 июня — 21 июня
         .item 
-          .item__title Первая
-          .item__date 1 июня — 21 июня
+          .item__title Вторая
+          .item__date 24 июня — 14 июля
         .item 
-          .item__title Первая
-          .item__date 1 июня — 21 июня
+          .item__title Третья
+          .item__date 17 июля — 6 августа
+        .item 
+          .item__title Четвертая
+          .item__date 9 августа —29 августа
     .camp__slider.grid
         include ../../components/otherSlider/index3.pug
     .camp__req        

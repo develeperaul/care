@@ -58,12 +58,15 @@
 }
 .header .header__wrapper nav {
   @apply hidden lg2:flex text-d16 text-blue uppercase;
-  gap: 4.94rem;
+  gap: 2rem;
+  @screen xl {
+    gap: 4.94rem;
+  }
 }
 
 .header .header__wrapper .call {
   @apply hidden   bg-blue  w-11.5 h-11.5 lg2:grid place-content-center rounded-full;
-  @apply absolute -right-24;
+  @apply xl:absolute xl:-right-24;
 }
 
 .header .pickup {

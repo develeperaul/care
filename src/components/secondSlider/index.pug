@@ -1,8 +1,10 @@
 include ../svg.pug
-.second-slider
+.second-slider.relative
   .swiper-wrapper
     .swiper-slide
       img(src=require('/assets/images/bg/care.png'))
+  +svg('about')(class="hidden lg2:block absolute top-[176px] right-[200px] lg2:w-[176px] lg2:h-[176px] z-10")
+  +svg('health')(class="absolute bottom-10 right-[-20px] w-[100px] h-[100px] lg2:bottom-[37px] lg2:right-[400px] lg2:w-[258px] lg2:h-[258px] z-10")
   .container
     .content
       h2.title Каждый <br class=' hidden lg2:block'/> гость в центре <br class=' hidden lg2:block'/> нашей заботы

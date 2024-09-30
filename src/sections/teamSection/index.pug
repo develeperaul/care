@@ -1,10 +1,12 @@
 include ../../components/svg.pug
-section.team-sec
-  .container
+section.team-sec 
+  .container.relative
     .team-sec__textcontent
       p.text  Забота — всегда про людей. Тех, кто встречает васв оздоровительных учреждениях, спортивных комплексах и базах отдыха. Тех, кто подбираем вам лучшее лечение и создаёт все детали комфорта, спокойствия, уюта и веселья.
       p.text Мы собрали специалистов, которые показали свой профессионализм и заботу не только гостям, но и защитили звание «лучший» в специализированных премияхи конкурсах.
-  .team 
+    +svg('grass')(class=" w-[84px] h-[80px] lg2:w-[262px] lg2:h-[249px] z-10  absolute bottom-[-85px] right-[-10px] lg2:hidden  ")
+  .team.relative
+    +svg('health')(class=" hidden lg2:block lg2:w-[296px] lg2:h-[296px]  absolute bottom-[-75px] right-[300px] ") 
     .container 
       .team__wrapper 
         

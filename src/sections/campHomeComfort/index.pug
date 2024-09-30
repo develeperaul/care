@@ -1,8 +1,9 @@
 include ../../components/svg.pug
 .camp-homecomfort 
-  .container 
-    .camp-homecomfort__top  
-      h2.title Домашний уютДомашний уют
+  .container.relative 
+    +svg('home-people')(class=" lg2:w-[329px] hidden lg2:block lg2:h-[251px]  absolute right-[300px] lg2:top-[20px]")      
+    .camp-homecomfort__top
+      h2.title Домашний уют
       p.text В лагере продумано всё для комфортного отдыха детей разных возрастов, разных интересов и разных темпераментов.
     .camp-homecomfort__img 
     
