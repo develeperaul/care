@@ -56,4 +56,11 @@ header.header
     +svg('figures')(class=" w-[103px] h-[129px] lg2:w-[470px] lg2:h-[517px] z-10 lg2:z-0 absolute top-0 right-0")    
     include ../../components/generalSlider/index.pug
     +svg('health')(class=" w-[100px] h-[100px] lg2:w-[258px] lg2:h-[258px]  absolute  top-[350px] right-0 lg2:top-[720px] lg2:right-[164px]")    
-    include ../../components/pickup/index.pug
+    include ../../components/select/index.pug
+    include ../../components/button.pug
+    a(href="https://social.tatneft.ru/zdorove/?lang=ru").pickup 
+      +select('Место отдыха', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+      +select('Название', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+      +select('Даты отдыха', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+      +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+      +button('Найти','orange')(type='submit')

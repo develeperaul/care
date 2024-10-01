@@ -37,7 +37,7 @@ function selectOpt(opt, head, options, _this, e) {
 }
 function windowTarget(_this, e) {
   if (!e.composedPath().includes(_this)) {
-    console.log(_this);
+    // console.log(_this);
     _this.classList.remove('active');
   }
 }

@@ -86,7 +86,13 @@ html(lang="ru")
           .camp__slider.grid
               include ../components/otherSlider/index3.pug
           .camp__req        
-            include ../components/book/index.pug
+            include ../components/select/index.pug
+            include ../components/button.pug
+            a(href="https://social.tatneft.ru/deti/fakel").book 
+              +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+              +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+              +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+              +button('Забронировать','orange')(type='submit')  
       .camp-about
         .container.relative 
           +svg('home-people')(class=" lg2:w-[329px] hidden lg2:block lg2:h-[251px]  absolute right-[300px] lg2:top-[20px]")      
@@ -154,7 +160,32 @@ html(lang="ru")
           .grid.slider
             div(class='overflow-hidden introduction__slider')
               include ../components/acceptSlider/index.pug
-      include ../sections/contacts/index.pug
+      .section.contacts
+        .container
+          .contacts__wrapper
+            .contacts__top.relative
+              +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+              h4.title До встречи!
+              
+              p.contacts__text Республика Татарстан, Заинский район, с.Федотово
+
+              
+              div
+                a(href="tel:+78555828064").contacts__link 8 (85558) 2-80-64
+                
+
+              //- div.contacts__text
+                span E-mail: 
+                a(href="mailto:sanat_djalil@tatneft.tatar") sanat_djalil@tatneft.tatar
+              //- div.contacts__soc 
+                a(href="" class="soc bg-green")
+                  +svg('whatsapp',  33)
+                  span WhatsApp
+                a(href="" class="soc bg-[#5181B8]")
+                  +svg('vk',  33)
+                  span Вконтакте
+            .contacts__bottom
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
     include ../sections/footer/index.pug
   
   

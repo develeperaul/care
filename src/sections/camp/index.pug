@@ -23,4 +23,10 @@ include ../../components/svg.pug
     .camp__slider.grid
         include ../../components/otherSlider/index3.pug
     .camp__req        
-      include ../../components/book/index.pug
+      include ../../components/select/index.pug
+      include ../../components/button.pug
+      a(href="https://social.tatneft.ru/deti/berezka/?lang=ru").book 
+        +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+        +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+        +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+        +button('Забронировать','orange')(type='submit')   

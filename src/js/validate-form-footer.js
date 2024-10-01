@@ -1,12 +1,12 @@
 import validate from 'validate.js';
 import IMask from 'imask';
-const r = new RegExp(`^\\+7\\(\\d{3}\\)-\\d{3}\-\\d{2}\-\\d{2}$`)
-console.log(r);
+const r = new RegExp(`^\\+7\\(\\d{3}\\)-\\d{3}\-\\d{2}\-\\d{2}$`);
+// console.log(r);
 var constraints = {
   name: {
     presence: { message: 'поле обязательно для заполнения' },
   },
-  email : {
+  email: {
     presence: true,
     email: true,
   },
@@ -15,7 +15,7 @@ var constraints = {
 
     format: {
       pattern: new RegExp(`^\\+7\\(\\d{3}\\)-\\d{3}\-\\d{2}\-\\d{2}$`),
-      message:  'поле обязательно для заполнения' 
+      message: 'поле обязательно для заполнения',
     },
   },
   creditCardZip: function (
@@ -33,12 +33,13 @@ var constraints = {
   },
 };
 var form = document.querySelector('form#footer-form');
-form.addEventListener('submit', function (ev) {
-  ev.preventDefault();
-  const checkbox = form.querySelector("input[type='checkbox']")
-  if(checkbox.checked)
-    handleFormSubmit(form);
-});
+if (form) {
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    const checkbox = form.querySelector("input[type='checkbox']");
+    if (checkbox.checked) handleFormSubmit(form);
+  });
+}
 
 var inputs = document.querySelectorAll('input, textarea, select');
 for (var i = 0; i < inputs.length; ++i) {
@@ -78,12 +79,11 @@ function showErrors(form, errors) {
 
 function showErrorsForInput(input, errors) {
   const field = closestParent(input.parentNode, 'field');
-  if(field){
-
+  if (field) {
     if (errors) {
       field.classList.add('field__invalid');
-      console.log(input);
-      console.log(errors);
+      // console.log(input);
+      // console.log(errors);
     } else {
       field.classList.remove('field__invalid');
     }
