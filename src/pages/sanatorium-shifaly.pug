@@ -76,7 +76,12 @@ html(lang="ru")
                 p.introduction__text В санатории «Шифалы» созданы все условия для полноценного восстановления и и отдыха. Расположенный в лесопарковой зоне и в пешей близости от Камы и Святого Ключа, он помогает забыть о суете дел. Высококвалифицированные специалисты, внимательные сотрудники, современное оборудование и сбалансированное питание помогают гостям вернуть здоровье и силы.
                 
               div(class='overflow-hidden introduction__slider')
-                include ../components/acceptSlider/index.pug
+                .accept-slider
+                  .swiper-wrapper
+                    .swiper-slide
+                      img(src=require('/assets/images/sanatorium/shifaly/shifaly-slide-1.png'))
+                    .swiper-slide
+                      img(src=require('/assets/images/sanatorium/shifaly/shifaly-slide-2.png'))
               include ../components/select/index.pug
               include ../components/button.pug
               a(href="https://shifali.tatneft.ru/?lang=ru").book 
@@ -114,11 +119,38 @@ html(lang="ru")
       .section
         .container
           .grid
-            include ../components/otherSlider/index.pug
+            .other-slider
+              .content
+                h2.title Использую <br/> пользу природы
+                p.text В своих программах специалисты «Шифалы» щедро используют природные факторы:
+                .btn-controls
+                  button.btn-prev
+                    +svg('back-line')
+                  button.btn-next
+                    +svg('forward-line')
+              .swiper-wrapper
+                .swiper-slide
+                  img(src='/assets/images/sanatorium/shifalysu.png')
+                  .slide-content  
+                    h4.slide-content__title Минеральная вода «Шифалы Су»
+                    
       .section
         .container
           .grid
-            include ../components/otherSlider/index2.pug
+            .other-slider.other-slider2
+              .content
+                h2.title Технологии заботы
+                p.text Для комплексного воздействия на здоровье пациентов наши специалисты тщательно подбирают оборудование, процедуры и аппараты, которые безопасно и эффективно приведут к необходимому результату.
+                .btn-controls
+                  button.btn-prev
+                    +svg('back-line')
+                  button.btn-next
+                    +svg('forward-line')
+              .swiper-wrapper
+                .swiper-slide
+                  img(src='/assets/images/sanatorium/baroterapia.png')
+                  .slide-content  
+                    h4.slide-content__title Аппарат для локальной баротерапии Hadomer
       include ../sections/team/index.pug
       .section.select-programm 
         .container
@@ -126,13 +158,28 @@ html(lang="ru")
             h2.title Выбрать <br/> программу
             p.text В «Шифалы» можно пройти оздоровительный курс лечения, остановившись в самом санатории или в режиме дневного стационара. Санаторий предоставляет гостиничные и арендные услуги.
           .list
-            each item in [1,1,1,]
+            
               .item 
-                h4.item__title Стандарт
-                h5.item__duration 7 дней
-                p.item__descr Стандартная программа лечения
+                h4.item__title Санаторно-курортная путевка
+                h5.item__duration от 7 дней
+                p.item__descr Классический набор лечебных процедур при различных заболеваниях
+              .item 
+                h4.item__title Оздоровительная путевка
+                h5.item__duration от 1 дня
+                p.item__descr Оздоровительная программа лечения
+              .item 
+                h4.item__title Программа болезни дыхательных путей
+                h5.item__duration от 7 дней
+                p.item__descr Комплекс медицинских процедур по программе болезни дыхательной системы
           
-      include ../sections/virtualtTour/index.pug
+      .section.virtualt-tour
+        .container 
+          .virtualt-tour__wrapper
+            img(src=require('/assets/images/sanatorium/shifaly/shifaly3d.png'), alt="")
+            .tour 
+              +svg('compas').tour__icon
+              .tour__title Виртуальный тур <br/> по санаторию
+      
       
               
 
@@ -143,7 +190,7 @@ html(lang="ru")
               +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
               h4.title До встречи!
               
-              p.contacts__text Адрес: г.Нижнекамск, ул.Мурадьяна, д.7.
+              p.contacts__text г.Нижнекамск, ул.Мурадьяна, д.7.
 
               div
                 a(href="tel:+78555240324").contacts__link 8(8555) 24-03-24

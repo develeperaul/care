@@ -10,6 +10,7 @@
   &__top {
     @apply grid gap-5;
     @apply lg2:gap-12 lg2:w-[34.5rem];
+    align-content: start;
   }
   &__link {
     @apply text-base_m block;

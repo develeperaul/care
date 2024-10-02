@@ -1,5 +1,7 @@
 
 include ../components/svg.pug
+include ../components/select/index.pug
+include ../components/button.pug
 doctype html
 html(lang="ru")
   head
@@ -104,9 +106,19 @@ html(lang="ru")
                 h4.trend__title Настольный теннис
           .grid.introduction__slider
             div(class='overflow-hidden ')
-                include ../components/acceptSlider/index.pug
-          include ../components/select/index.pug
-          include ../components/button.pug
+              .accept-slider
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src=require('/assets/images/sanatorium/ivolga/slide-1.png'))
+                  .swiper-slide
+                    img(src=require('/assets/images/sanatorium/ivolga/slide-2.png'))
+                
+                button.btn-prev
+                  +svg('back-line')
+                button.btn-next
+                  +svg('forward-line')
+
+          
           a(href="http://ivolga.tatneft.ru/?lang=ru").book 
             +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
             +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
@@ -114,8 +126,8 @@ html(lang="ru")
             +button('Забронировать','orange')(type='submit')   
       .section.directions-care
         .container       
-          h2.title Направления <br/> заботы
-          p.text В лечебно-оздоровительном блоке санатория «Джалильский» оказывают более 90 видов услуг, основанных на методах классической и нетрадиционной медицин.
+          h2.title Повышаем качество <br/> вашей жизни
+          p.text Санаторий «Иволга» специализируется на лечении заболеваний органов дыхания, костно-мышечной и нервной систем, и сопутствующих заболеваний:
           .list 
             .trend 
               +svg('heart').trend__icon
@@ -135,7 +147,21 @@ html(lang="ru")
       .section 
         .container  
           .grid
-            include ../components/otherSlider/index.pug   
+            .other-slider
+              .content
+                h2.title Комплексный <br/> подход к заботе
+                p.text Специалисты санаторий-профилактория составляют индивидуальные планы лечения, которые направлены не только на решение основной проблемы здоровья, но и воздействуют на общее состояние организма гостя. Среди инструментов работы наших сотрудников достижения традиционной медицины и альтернативные методики:
+                .btn-controls
+                  button.btn-prev
+                    +svg('back-line')
+                  button.btn-next
+                    +svg('forward-line')
+              .swiper-wrapper
+                .swiper-slide
+                  img(src='/assets/images/sanatorium/medicinalbaths.png')
+                  .slide-content  
+                    h4.slide-content__title Лечебные ванны
+
 
       include ../sections/team/index.pug
       .section.select-programm 
@@ -144,35 +170,53 @@ html(lang="ru")
             h2.title Выбор путевок
             p.text Санаторий «Иволга» предлагает на выбор несколько программ на выбор, вы можете подобрать направление в зависимости от вашего запроса.
           .list
-            each item in [1,1,1]
-              .item 
-                h4.item__title Стандарт
-                h5.item__duration 7 дней
-                p.item__descr Стандартная программа лечения
+            
+            .item 
+              h4.item__title Стандарт
+              h5.item__duration 7 дней
+              p.item__descr Стандартная программа лечения
+            .item 
+              h4.item__title Оздоровительная путевка
+              h5.item__duration от 1 дня
+              p.item__descr Оздоровительная программа лечения
+            .item 
+              h4.item__title Курсовка
+              h5.item__duration от 5 дней
+              p.item__descr Лечение с питанием или без питания, с дневным пребыванием в санатории
           .special-programs
             .special-programs__descr 
               +svg('calendar').special-programs__descr-icon
-              p.special-programs__descr-text Помимо стандартных путевок, «Джалильский» предлагает специальные выгодные программы продолжительностью от 5 дней.
+              p.special-programs__descr-text Помимо стандартных путевок, «Иволга» предлагает специальные выгодные программы.
             .special-programs__list
               .item 
                 .item__icon
                   +svg('forward-line')
-                .item__title Здоровая спина
+                .item__title Программа «Дышу свободно»
               .item 
                 .item__icon
                   +svg('forward-line')
-                .item__title Подвижные суставы
+                .item__title Программа по заболеваниям нервной системы 
               .item 
                 .item__icon
                   +svg('forward-line')
-                .item__title Здоровый ребенок
-              .item 
-                .item__icon
-                  +svg('forward-line')
-                .item__title Оздоровление после вирусной пневмонии
+                .item__title Программа по костно-мышечной системе
+              
       //- include ../sections/documents/index.pug
-      include ../sections/virtualtTour/index.pug
-      include ../sections/merit/index.pug
+      .section.virtualt-tour
+        .container 
+          .virtualt-tour__wrapper
+            img(src=require('/assets/images/sanatorium/ivolga/ivolga3d.png'), alt="")
+            .tour 
+              +svg('compas').tour__icon
+              .tour__title Виртуальный тур <br/> по санаторию
+      .section.merit 
+        .container 
+          .merit__wrapper
+            h2.title Наши заслуги
+            .list 
+              .item 
+                h4.item__title Серебряная медаль и диплом в номинации «Лучший руководитель здравницы»
+                p.item__name Здравница-2012
       .section.contacts
         .container
           .contacts__wrapper
@@ -180,11 +224,11 @@ html(lang="ru")
               +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
               h4.title До встречи!
               
-              p.contacts__text  Адрес: 423368, Республика Татарстан, Сармановский район, п. Джалиль, ул. Лесная, дом 6.
-
+              p.contacts__text  423930, Республика Татарстан г.Бавлы, санаторий-профилакторий «Иволга»
               div
-                a(href="tel:+78556940903").contacts__link +7 (85569) 4-09-03
-                a(href="tel:+79872146716").contacts__link +7 (987)214-67-16
+                a(href="tel:+79872146716").contacts__link +7(987)214-67-16 (отдел бронирования)
+                a(href="tel:+78556940903").contacts__link +7(85569)4-09-03 (администратор)
+                a(href="tel:+78556940954").contacts__link +7(85569)4-09-54 (главная медсестра)
               div.contacts__text
                 span E-mail: 
                 a(href="mailto:ivolga.bavly@mail.ru") ivolga.bavly@mail.ru

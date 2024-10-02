@@ -2314,20 +2314,16 @@ main {
     }
     @media (min-width: 1024px) {
       .item {
-        grid-template-rows: auto 1fr auto;
+        grid-template-rows: minmax(72px,auto) auto 1fr;
       }
     }
     @media (min-width: 1024px) {
       .item {
-        padding: 1.88rem;
-      }
-    }
-    @media (min-width: 1024px) {
-      .item {
-        padding-top: 3rem;
+        padding: 1.875rem;
       }
     }
     .item {
+      align-content: start;
       &__title {
         min-height: 2.75rem;
       }
@@ -2346,10 +2342,11 @@ main {
           font-weight: 500;
         }
       }
-      @media (min-width: 1024px) {
-        &__title {
-          order: 1;
-        }
+      &__descr {
+        display: grid;
+      }
+      &__descr {
+        gap: 0.75rem;
       }
       &__descr {
         font-size: 0.875rem;
@@ -2357,23 +2354,19 @@ main {
       }
       @media (min-width: 1024px) {
         &__descr {
-          order: 2;
-        }
-      }
-      @media (min-width: 1024px) {
-        &__descr {
           font-size: 1.25rem;
           line-height: 1.875rem;
+        }
+      }
+      &__descr {
+        & span {
+          font-size: 20px;
+          line-height: 30px;
         }
       }
       &__duration {
         font-size: 0.875rem;
         line-height: normal;
-      }
-      @media (min-width: 1024px) {
-        &__duration {
-          order: 3;
-        }
       }
       @media (min-width: 1024px) {
         &__duration {
@@ -2887,6 +2880,9 @@ main {
     &__top {
       gap: 3rem;
     }
+  }
+  &__top {
+    align-content: start;
   }
   &__link {
     display: block;

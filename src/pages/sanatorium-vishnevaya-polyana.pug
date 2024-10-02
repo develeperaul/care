@@ -1,5 +1,7 @@
 
 include ../components/svg.pug
+include ../components/select/index.pug
+include ../components/button.pug
 doctype html
 html(lang="ru")
   head
@@ -76,9 +78,15 @@ html(lang="ru")
                 p.introduction__text Уютный санаторий «Вишневая Поляна» расположен в живописной парковой зоне Нурлата. Он рассчитан на единовременное пребывание всего 50 гостей,поэтому атмосфера здесь спокойная и семейная.
                 
               div(class='overflow-hidden introduction__slider')
-                include ../components/acceptSlider/index.pug
-              include ../components/select/index.pug
-              include ../components/button.pug
+                .accept-slider
+                    .swiper-wrapper
+                      .swiper-slide
+                        img(src=require('/assets/images/sanatorium/vishnevaya-polyana/vishnevaya-polyana-slide-1.png'))
+                      .swiper-slide
+                        img(src=require('/assets/images/sanatorium/vishnevaya-polyana/vishnevaya-polyana-slide-2.png'))
+              
+                
+              
               a(href="https://vishnevaya-polyana.tatneft.ru/?lang=ru").book 
                 +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
                 +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
@@ -97,12 +105,10 @@ html(lang="ru")
             .trend 
               +svg('heart').trend__icon
               h4.trend__title Заболевания органов системы кровообращения
-            .trend 
-              +svg('heart').trend__icon
-              h4.trend__title Сердечно-сосудистой системы
+            
             .trend 
               +svg('intesine').trend__icon
-              h4.trend__title Желудочно-кишечного тракта
+              h4.trend__title Заболевания желудочно-кишечного тракта
             div(class='hidden lg2:block') 
             .trend 
               +svg('grass-blue').trend__icon
@@ -112,14 +118,25 @@ html(lang="ru")
               h4.trend__title Заболевания неврологии, кардиологии, эндокринологии
             
               
+      
       .section
         .container
           .grid
-            include ../components/otherSlider/index.pug
-      .section
-        .container
-          .grid
-            include ../components/otherSlider/index2.pug
+            .other-slider
+              .content
+                h2.title Внимание как основа <br/>качества нашей работы
+                p.text Для составления программы лечения наши специалисты проводят диагностику пациентов — для этого у нас есть собственная клиническая и биохимическая лаборатория, аппараты ЭКГ. После чего уже специалист — физиотерапевт, терапевт, педиатр или травматолог, проводит консультацию. Каждый курс лечения включает до 10-15 процедур, которые подбираются индивидуально. Среди них могут быть:
+                .btn-controls
+                  button.btn-prev
+                    +svg('back-line')
+                  button.btn-next
+                    +svg('forward-line')
+              .swiper-wrapper
+                .swiper-slide
+                  img(src='/assets/images/sanatorium/phizioterapia.png')
+                  .slide-content  
+                    h4.slide-content__title физиотерапия
+      
       include ../sections/team/index.pug
       .section.select-programm 
         .container
@@ -127,13 +144,27 @@ html(lang="ru")
             h2.title Выбрать <br/> программу
             p.text Санаторий «Вишневая поляна» предоставляет возможность пройти оздоровительно-восстановительный курс сроком от 1 дня, как с проживанием в санатории, так и без.
           .list
-            each item in [1,1,1]
+            
               .item 
-                h4.item__title Стандарт
-                h5.item__duration 7 дней
-                p.item__descr Стандартная программа лечения
+                h4.item__title Санаторно-оздоровительная путевка
+                h5.item__duration  от 7 суток
+                p.item__descr Классический набор лечебных процедур при различных заболеваниях
+              .item 
+                h4.item__title Оздоровительная путевка
+                h5.item__duration от 1 дня
+                p.item__descr Курс общего оздоровления
+              .item 
+                h4.item__title Курсовка
+                h5.item__duration от 1 дня
+                p.item__descr Лечение с питанием или без питания, с дневным пребыванием в санатории
           
-      include ../sections/virtualtTour/index.pug
+      .section.virtualt-tour
+        .container 
+          .virtualt-tour__wrapper
+            img(src=require('/assets/images/sanatorium/vishnevaya-polyana/vishnevaya-polyana3d.png'), alt="")
+            .tour 
+              +svg('compas').tour__icon
+              .tour__title Виртуальный тур <br/> по санаторию
       //- .section.documents
         .container 
           h2.title Документы 
@@ -180,9 +211,9 @@ html(lang="ru")
             .contacts__top.relative
               +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
               h4.title До встречи!
-              
-              p.contacts__text  Адрес: 423040 Республика Татарстан, Нурлат, деревня Вишневая поляна
-
+              div
+                p.contacts__text  423040 Республика Татарстан, Нурлат, деревня Вишневая поляна 6
+                p.contacts__text Проезд: до города Нурлат – на поезде, автобусе или на автомашине; далее – до деревни Вишневая Поляна (25 км)
               div
                 a(href="tel:+79172602897").contacts__link 8-917-260-28-97
                 a(href="tel:+79196407196").contacts__link  8-919-640-71-96
@@ -192,5 +223,5 @@ html(lang="ru")
               
             .contacts__bottom
               <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-      include ../sections/merit/index.pug
+      
     include ../sections/footer/index.pug

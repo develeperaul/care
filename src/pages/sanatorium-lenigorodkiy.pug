@@ -76,7 +76,17 @@ html(lang="ru")
                 p.introduction__text Современный и комфортный санаторий, весь комплекс услуг которого расположены одном комплексе: жилые номера от стандартных до класса люкс, более 30 лечебных кабинетов, обеденный зал, современный тренажерный зал, конференц-зал, бильярдная и сауна с плавательным бассейном.
                 
               div(class='overflow-hidden introduction__slider')
-                include ../components/acceptSlider/index.pug
+                .accept-slider
+                  .swiper-wrapper
+                    .swiper-slide
+                      img(src=require('/assets/images/sanatorium/lenigorodkiy/lenigorodkiy-slide-1.png'))
+                    .swiper-slide
+                      img(src=require('/assets/images/sanatorium/lenigorodkiy/lenigorodkiy-slide-2.png'))
+                  
+                  button.btn-prev
+                    +svg('back-line')
+                  button.btn-next
+                    +svg('forward-line')
               
               include ../components/select/index.pug
               include ../components/button.pug
@@ -123,11 +133,38 @@ html(lang="ru")
       .section
         .container
           .grid
-            include ../components/otherSlider/index.pug
+            .other-slider
+              .content
+                h2.title Помимо этих программ, <br/> есть и более привычные:
+                
+                .btn-controls
+                  button.btn-prev
+                    +svg('back-line')
+                  button.btn-next
+                    +svg('forward-line')
+              .swiper-wrapper
+                .swiper-slide
+                  img(src='/assets/images/sanatorium/magnitoterapia.png')
+                  .slide-content  
+                    h4.slide-content__title Семейный оздоровительный отдых
+                    
       .section
         .container
           .grid
-            include ../components/otherSlider/index2.pug
+            .other-slider.other-slider2
+              .content
+                h2.title Процедуры, включенные <br/> в программы лечения, <br/> можно купить отдельно:
+                
+                .btn-controls
+                  button.btn-prev
+                    +svg('back-line')
+                  button.btn-next
+                    +svg('forward-line')
+              .swiper-wrapper
+                .swiper-slide
+                  img(src='/assets/images/sanatorium/medicinalbaths.png')
+                  .slide-content  
+                    h4.slide-content__title Бальнеотерапия
       include ../sections/team/index.pug
       .section.select-programm 
         .container
@@ -135,14 +172,39 @@ html(lang="ru")
             h2.title Выбрать <br/> программу
             p.text В санатории «Лениногорский» вы можете пройти курс оздоровления или реабилитаци по стандартной или уникальной программе.
           .list
-            each item in [1,1,1,1,1,1]
-              .item 
-                h4.item__title Стандарт
-                h5.item__duration 7 дней
-                p.item__descr Стандартная программа лечения
+            .item 
+              h4.item__title Оздоровительная путевка
+              h5.item__duration от 2-х суток
+              p.item__descr Программа общего оздоровления
+            .item 
+              h4.item__title Уникальная путевка 
+              h5.item__duration от 7 дней
+              p.item__descr  Набор лечебных процедур по уникальному направлению (восстановительное лечение на тренажерах С.М.Бубновского, восстановительное плавание по методике О.В. Максимовой)
+            .item 
+              h4.item__title Курсовка
+              h5.item__duration от 2-х дней
+              p.item__descr Лечение по одной из программ («Классическая», «Уникальная», «Премиум») питание, проживает гость не в санатории
+            .item 
+              h4.item__title Реабилитация
+              h5.item__duration от 7 суток
+              p.item__descr Программа с набором восстановительных лечебных процедур, комплексом диагностики и лабораторных исследований
+            .item 
+              h4.item__title Премиум
+              h5.item__duration от 7 суток
+              p.item__descr Классический набор лечебных процедур  и процедуры по уникальному направлению (восстановительное лечение на тренажерах С.М.Бубновского, восстановительное плавание по методике О.В. Максимовой), комплекс диагностики и лабораторных исследований
+            .item 
+              h4.item__title Классическая
+              h5.item__duration от 7 суток
+              p.item__descr Классический набор лечебных процедур
           
-      include ../sections/virtualtTour/index.pug
-      .section.documents
+      .section.virtualt-tour
+        .container 
+          .virtualt-tour__wrapper
+            img(src=require('/assets/images/sanatorium/lenigorodkiy/lenigorodkiy3d.png'), alt="")
+            .tour 
+              +svg('compas').tour__icon
+              .tour__title Виртуальный тур <br/> по санаторию
+      //- .section.documents
         .container 
           h2.title Документы 
           .documents__wrapper
@@ -189,13 +251,13 @@ html(lang="ru")
               +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
               h4.title До встречи!
               
-              p.contacts__text  Адрес: 423250, РТ, г.Лениногорск, ул.Заварыкина, стр.6
+              p.contacts__text  423250, РТ, г.Лениногорск, ул.Заварыкина, стр.6
 
               div
                 a(href="tel:+78559597049").contacts__link 8(85595) 9-70-49
-                a(href="tel:+79196217620").contacts__link  8-919-621-76-20
-                a(href="tel:+78559543060").contacts__link  8(85595) 4-30-60
-                a(href="tel:+79872107786").contacts__link  8-987-210-77-86
+                //- a(href="tel:+79196217620").contacts__link  8-919-621-76-20
+                //- a(href="tel:+78559543060").contacts__link  8(85595) 4-30-60
+                //- a(href="tel:+79872107786").contacts__link  8-987-210-77-86
 
               
               div.contacts__text
@@ -204,5 +266,5 @@ html(lang="ru")
               
             .contacts__bottom
               <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-      include ../sections/merit/index.pug
+      
     include ../sections/footer/index.pug
