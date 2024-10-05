@@ -8,263 +8,264 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    .sidebar#sidebar
-      .container
-        .sidebar__head 
-          a(href="/" class='logo' data-target='sidebar' data-action='close') 
-            +svg("logo")
-          button.close(data-target='sidebar' data-action='close') 
-            +svg("close")
-        nav.sidebar__content 
-          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
-            +svg("child" ,17,15)
-            span Дети
+    .wrapper
+      .sidebar#sidebar
+        .container
+          .sidebar__head 
+            a(href="/" class='logo' data-target='sidebar' data-action='close') 
+              +svg("logo")
+            button.close(data-target='sidebar' data-action='close') 
+              +svg("close")
+          nav.sidebar__content 
+            a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
+              +svg("child" ,17,15)
+              span Дети
 
-          a(href="/health.html" data-target='sidebar' data-action='close')  
-            +svg("health" ,17,17)
-            span Здоровье
+            a(href="/health.html" data-target='sidebar' data-action='close')  
+              +svg("health" ,17,17)
+              span Здоровье
 
-          a(href="/rest.html" data-target='sidebar' data-action='close')  
-            +svg("rest" ,17,14)
-            span Отдых
+            a(href="/rest.html" data-target='sidebar' data-action='close')  
+              +svg("rest" ,17,14)
+              span Отдых
 
-          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
-            +svg("nutrition" ,17,17)
-            span Питание
+            a(href="/restaurants.html" data-target='sidebar' data-action='close')  
+              +svg("nutrition" ,17,17)
+              span Питание
 
-          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
-            +svg("sport" ,17,17)
-            span Спорт
+            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+              +svg("sport" ,17,17)
+              span Спорт
 
-          a(href="/museum.html" data-target='sidebar' data-action='close')  
-            +svg("culture" ,17,15)
-            span Культура
+            a(href="/museum.html" data-target='sidebar' data-action='close')  
+              +svg("culture" ,17,15)
+              span Культура
 
-          a(href="/about.html" data-target='sidebar' data-action='close')  
-            +svg("about" ,17,17)
-            span О компании
-    header.header.header__sanatorium
-      .container
-        .header__wrapper 
-          a(href="/" class='logo') 
-            +svg("logo")
-          button.burger( data-target='sidebar' data-action='open')
-            +svg("burger", 35)
-          nav
-            a(href="/about.html") О компании
-            a(href="/health.html") Здоровье
-            a(href="/green-scientists.html") Дети
-            a(href="/sport-actuba.html") Спорт
-            a(href="/rest.html") Отдых
-            a(href="/restaurants.html") Питание
-            a(href="/museum.html") Культура 
-          button.call 
-            +svg("phone", 24)
-        .header__bg
-          img(src=require('/assets/images/bg/lenigorodskiy.png') alt="")
-      
+            a(href="/about.html" data-target='sidebar' data-action='close')  
+              +svg("about" ,17,17)
+              span О компании
+      header.header.header__sanatorium
+        .container
+          .header__wrapper 
+            a(href="/" class='logo') 
+              +svg("logo")
+            button.burger( data-target='sidebar' data-action='open')
+              +svg("burger", 35)
+            nav
+              a(href="/about.html") О компании
+              a(href="/health.html") Здоровье
+              a(href="/green-scientists.html") Дети
+              a(href="/sport-actuba.html") Спорт
+              a(href="/rest.html") Отдых
+              a(href="/restaurants.html") Питание
+              a(href="/museum.html") Культура 
+            button.call 
+              +svg("phone", 24)
+          .header__bg
+            img(src=require('/assets/images/bg/lenigorodskiy.png') alt="")
         
-    main
-      .section
-        .introduction-type-1.introduction-dzhalilskiy 
-          .container
-            h2.title Лениногорский
-            .introduction__wrapper
-              .introduction__top
-                h3.introduction__title С заботой о всей семье
-              .introduction__bottom
-                p.introduction__text Современный и комфортный санаторий, весь комплекс услуг которого расположены одном комплексе: жилые номера от стандартных до класса люкс, более 30 лечебных кабинетов, обеденный зал, современный тренажерный зал, конференц-зал, бильярдная и сауна с плавательным бассейном.
-                
-              div(class='overflow-hidden introduction__slider')
-                .accept-slider
-                  .swiper-wrapper
-                    .swiper-slide
-                      img(src=require('/assets/images/sanatorium/lenigorodkiy/lenigorodkiy-slide-1.png'))
-                    .swiper-slide
-                      img(src=require('/assets/images/sanatorium/lenigorodkiy/lenigorodkiy-slide-2.png'))
+          
+      main
+        .section
+          .introduction-type-1.introduction-dzhalilskiy 
+            .container
+              h2.title Лениногорский
+              .introduction__wrapper
+                .introduction__top
+                  h3.introduction__title С заботой о всей семье
+                .introduction__bottom
+                  p.introduction__text Современный и комфортный санаторий, весь комплекс услуг которого расположены одном комплексе: жилые номера от стандартных до класса люкс, более 30 лечебных кабинетов, обеденный зал, современный тренажерный зал, конференц-зал, бильярдная и сауна с плавательным бассейном.
                   
-                  button.btn-prev
-                    +svg('back-line')
-                  button.btn-next
-                    +svg('forward-line')
-              
-              include ../components/select/index.pug
-              include ../components/button.pug
-              a(href="https://leninogorskiy.tatneft.ru/?lang=ru").book 
-                +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +button('Забронировать','orange')(type='submit')   
-      .section.directions-care 
-        .container
-          
-          h2.title Программы лечения
-          p.text В санатории «Лениногорский» можно пройти курс лечебно-оздоровительных процедур на современном медицинском и спортивном оборудовании для восстановления и улучшения качества жизни после заболеваний:
-          div(class=' grid gap-5 lg2:gap-8 lg2:grid-cols-3')
-            
-            .trend 
-              +svg('star').trend__icon
-              h4.trend__title Центральной и периферической нервной системы
-            .trend 
-              +svg('sun2').trend__icon
-              h4.trend__title Опорно-двигательного аппарата
-            .trend 
-              +svg('heart').trend__icon
-              h4.trend__title Сердечно-сосудистой системы
-            .trend 
-              +svg('intesine').trend__icon
-              h4.trend__title Желудочно-кишечного тракта
-            .trend 
-              +svg('grass-blue').trend__icon
-              h4.trend__title Дыхательной системы 
-            .trend 
-              +svg('circle').trend__icon
-              h4.trend__title Сосудистых заболеваний рук и ног
-            .trend 
-              +svg('rest2').trend__icon
-              h4.trend__title ЛОР-заболеваний
-            .trend 
-              +svg('intesine').trend__icon
-              h4.trend__title Cахарного диабета
-            .trend 
-              +svg('child').trend__icon
-              h4.trend__title Реабилитационное лечения часто болеющих детей
-              
-      .section
-        .container
-          .grid
-            .other-slider
-              .content
-                h2.title Помимо этих программ, <br/> есть и более привычные:
-                
-                .btn-controls
-                  button.btn-prev
-                    +svg('back-line')
-                  button.btn-next
-                    +svg('forward-line')
-              .swiper-wrapper
-                .swiper-slide
-                  img(src='/assets/images/sanatorium/magnitoterapia.png')
-                  .slide-content  
-                    h4.slide-content__title Семейный оздоровительный отдых
+                div(class='overflow-hidden introduction__slider')
+                  .accept-slider
+                    .swiper-wrapper
+                      .swiper-slide
+                        img(src=require('/assets/images/sanatorium/lenigorodkiy/lenigorodkiy-slide-1.png'))
+                      .swiper-slide
+                        img(src=require('/assets/images/sanatorium/lenigorodkiy/lenigorodkiy-slide-2.png'))
                     
-      .section
-        .container
-          .grid
-            .other-slider.other-slider2
-              .content
-                h2.title Процедуры, включенные <br/> в программы лечения, <br/> можно купить отдельно:
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
                 
-                .btn-controls
-                  button.btn-prev
-                    +svg('back-line')
-                  button.btn-next
-                    +svg('forward-line')
-              .swiper-wrapper
-                .swiper-slide
-                  img(src='/assets/images/sanatorium/medicinalbaths.png')
-                  .slide-content  
-                    h4.slide-content__title Бальнеотерапия
-      include ../sections/team/index.pug
-      .section.select-programm 
-        .container
-          .select-programm__top
-            h2.title Выбрать <br/> программу
-            p.text В санатории «Лениногорский» вы можете пройти курс оздоровления или реабилитаци по стандартной или уникальной программе.
-          .list
-            .item 
-              h4.item__title Оздоровительная путевка
-              h5.item__duration от 2-х суток
-              p.item__descr Программа общего оздоровления
-            .item 
-              h4.item__title Уникальная путевка 
-              h5.item__duration от 7 дней
-              p.item__descr  Набор лечебных процедур по уникальному направлению (восстановительное лечение на тренажерах С.М.Бубновского, восстановительное плавание по методике О.В. Максимовой)
-            .item 
-              h4.item__title Курсовка
-              h5.item__duration от 2-х дней
-              p.item__descr Лечение по одной из программ («Классическая», «Уникальная», «Премиум») питание, проживает гость не в санатории
-            .item 
-              h4.item__title Реабилитация
-              h5.item__duration от 7 суток
-              p.item__descr Программа с набором восстановительных лечебных процедур, комплексом диагностики и лабораторных исследований
-            .item 
-              h4.item__title Премиум
-              h5.item__duration от 7 суток
-              p.item__descr Классический набор лечебных процедур  и процедуры по уникальному направлению (восстановительное лечение на тренажерах С.М.Бубновского, восстановительное плавание по методике О.В. Максимовой), комплекс диагностики и лабораторных исследований
-            .item 
-              h4.item__title Классическая
-              h5.item__duration от 7 суток
-              p.item__descr Классический набор лечебных процедур
-          
-      .section.virtualt-tour
-        .container 
-          .virtualt-tour__wrapper
-            img(src=require('/assets/images/sanatorium/lenigorodkiy/lenigorodkiy3d.png'), alt="")
-            .tour 
-              +svg('compas').tour__icon
-              .tour__title Виртуальный тур <br/> по санаторию
-      //- .section.documents
-        .container 
-          h2.title Документы 
-          .documents__wrapper
-            .special-programs__list
+                include ../components/select/index.pug
+                include ../components/button.pug
+                a(href="https://leninogorskiy.tatneft.ru/?lang=ru").book 
+                  +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +button('Забронировать','orange')(type='submit')   
+        .section.directions-care 
+          .container
+            
+            h2.title Программы лечения
+            p.text В санатории «Лениногорский» можно пройти курс лечебно-оздоровительных процедур на современном медицинском и спортивном оборудовании для восстановления и улучшения качества жизни после заболеваний:
+            div(class=' grid gap-5 lg2:gap-8 lg2:grid-cols-3')
+              
+              .trend 
+                +svg('star').trend__icon
+                h4.trend__title Центральной и периферической нервной системы
+              .trend 
+                +svg('sun2').trend__icon
+                h4.trend__title Опорно-двигательного аппарата
+              .trend 
+                +svg('heart').trend__icon
+                h4.trend__title Сердечно-сосудистой системы
+              .trend 
+                +svg('intesine').trend__icon
+                h4.trend__title Желудочно-кишечного тракта
+              .trend 
+                +svg('grass-blue').trend__icon
+                h4.trend__title Дыхательной системы 
+              .trend 
+                +svg('circle').trend__icon
+                h4.trend__title Сосудистых заболеваний рук и ног
+              .trend 
+                +svg('rest2').trend__icon
+                h4.trend__title ЛОР-заболеваний
+              .trend 
+                +svg('intesine').trend__icon
+                h4.trend__title Cахарного диабета
+              .trend 
+                +svg('child').trend__icon
+                h4.trend__title Реабилитационное лечения часто болеющих детей
+                
+        .section
+          .container
+            .grid
+              .other-slider
+                .content
+                  h2.title Помимо этих программ, <br/> есть и более привычные:
+                  
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src='/assets/images/sanatorium/magnitoterapia.png')
+                    .slide-content  
+                      h4.slide-content__title Семейный оздоровительный отдых
+                      
+        .section
+          .container
+            .grid
+              .other-slider.other-slider2
+                .content
+                  h2.title Процедуры, включенные <br/> в программы лечения, <br/> можно купить отдельно:
+                  
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src='/assets/images/sanatorium/medicinalbaths.png')
+                    .slide-content  
+                      h4.slide-content__title Бальнеотерапия
+        include ../sections/team/index.pug
+        .section.select-programm 
+          .container
+            .select-programm__top
+              h2.title Выбрать <br/> программу
+              p.text В санатории «Лениногорский» вы можете пройти курс оздоровления или реабилитаци по стандартной или уникальной программе.
+            .list
               .item 
-                .item__icon
-                  +svg('forward-line')
-                .item__title Лицензия  
+                h4.item__title Оздоровительная путевка
+                h5.item__duration от 2-х суток
+                p.item__descr Программа общего оздоровления
               .item 
-                .item__icon
-                  +svg('forward-line')
-                .item__title Выписка из реестра к лицензии 
+                h4.item__title Уникальная путевка 
+                h5.item__duration от 7 дней
+                p.item__descr  Набор лечебных процедур по уникальному направлению (восстановительное лечение на тренажерах С.М.Бубновского, восстановительное плавание по методике О.В. Максимовой)
               .item 
-                .item__icon
-                  +svg('forward-line')
-                .item__title Уведомление к лицензии 
+                h4.item__title Курсовка
+                h5.item__duration от 2-х дней
+                p.item__descr Лечение по одной из программ («Классическая», «Уникальная», «Премиум») питание, проживает гость не в санатории
               .item 
-                .item__icon
-                  +svg('forward-line')
-                .item__title Патент №2158578
-            .special-programs__list(class='lg2:justify-center')
+                h4.item__title Реабилитация
+                h5.item__duration от 7 суток
+                p.item__descr Программа с набором восстановительных лечебных процедур, комплексом диагностики и лабораторных исследований
               .item 
+                h4.item__title Премиум
+                h5.item__duration от 7 суток
+                p.item__descr Классический набор лечебных процедур и процедуры по уникальному направлению (восстановительное лечение на тренажерах С.М.Бубновского, восстановительное плавание по методике О.В. Максимовой), комплекс диагностики и лабораторных исследований
+              .item 
+                h4.item__title Классическая
+                h5.item__duration от 7 суток
+                p.item__descr Классический набор лечебных процедур
+            
+        .section.virtualt-tour
+          .container 
+            .virtualt-tour__wrapper
+              img(src=require('/assets/images/sanatorium/lenigorodkiy/lenigorodkiy3d.png'), alt="")
+              .tour 
+                +svg('compas').tour__icon
+                .tour__title Виртуальный тур <br/> по санаторию
+        //- .section.documents
+          .container 
+            h2.title Документы 
+            .documents__wrapper
+              .special-programs__list
+                .item 
                   .item__icon
                     +svg('forward-line')
-                  .item__title Патент №2142772 
-              .item 
-                .item__icon
-                  +svg('forward-line')
-                .item__title Патент №2158574
-              .item 
-                .item__icon
-                  +svg('forward-line')
-                .item__title Патент №2158575
-              .item 
-                .item__icon
-                  +svg('forward-line')
-                .item__title Патент №2158578
-              
+                  .item__title Лицензия  
+                .item 
+                  .item__icon
+                    +svg('forward-line')
+                  .item__title Выписка из реестра к лицензии 
+                .item 
+                  .item__icon
+                    +svg('forward-line')
+                  .item__title Уведомление к лицензии 
+                .item 
+                  .item__icon
+                    +svg('forward-line')
+                  .item__title Патент №2158578
+              .special-programs__list(class='lg2:justify-center')
+                .item 
+                    .item__icon
+                      +svg('forward-line')
+                    .item__title Патент №2142772 
+                .item 
+                  .item__icon
+                    +svg('forward-line')
+                  .item__title Патент №2158574
+                .item 
+                  .item__icon
+                    +svg('forward-line')
+                  .item__title Патент №2158575
+                .item 
+                  .item__icon
+                    +svg('forward-line')
+                  .item__title Патент №2158578
+                
 
-      .section.contacts
-        .container
-          .contacts__wrapper
-            .contacts__top.relative
-              +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
-              h4.title До встречи!
-              
-              p.contacts__text  423250, РТ, г.Лениногорск, ул.Заварыкина, стр.6
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title До встречи!
+                
+                p.contacts__text  423250, РТ, г.Лениногорск, ул.Заварыкина, стр.6
 
-              div
-                a(href="tel:+78559597049").contacts__link 8(85595) 9-70-49
-                //- a(href="tel:+79196217620").contacts__link  8-919-621-76-20
-                //- a(href="tel:+78559543060").contacts__link  8(85595) 4-30-60
-                //- a(href="tel:+79872107786").contacts__link  8-987-210-77-86
+                div
+                  a(href="tel:+78559597049").contacts__link 8(85595) 9-70-49
+                  //- a(href="tel:+79196217620").contacts__link  8-919-621-76-20
+                  //- a(href="tel:+78559543060").contacts__link  8(85595) 4-30-60
+                  //- a(href="tel:+79872107786").contacts__link  8-987-210-77-86
 
-              
-              div.contacts__text
-                span E-mail: 
-                a(href="mailto:len_sanatoriy@mail.ru") len_sanatoriy@mail.ru
-              
-            .contacts__bottom
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-      
-    include ../sections/footer/index.pug
+                
+                div.contacts__text
+                  span E-mail: 
+                  a(href="mailto:len_sanatoriy@mail.ru") len_sanatoriy@mail.ru
+                
+              .contacts__bottom
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+        
+      include ../sections/footer/index.pug

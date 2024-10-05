@@ -8,222 +8,223 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    .sidebar#sidebar
-      .container
-        .sidebar__head 
-          a(href="/" class='logo' data-target='sidebar' data-action='close') 
-            +svg("logo")
-          button.close(data-target='sidebar' data-action='close') 
-            +svg("close")
-        nav.sidebar__content 
-          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
-            +svg("child" ,17,15)
-            span Дети
+    .wrapper
+      .sidebar#sidebar
+        .container
+          .sidebar__head 
+            a(href="/" class='logo' data-target='sidebar' data-action='close') 
+              +svg("logo")
+            button.close(data-target='sidebar' data-action='close') 
+              +svg("close")
+          nav.sidebar__content 
+            a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
+              +svg("child" ,17,15)
+              span Дети
 
-          a(href="/health.html" data-target='sidebar' data-action='close')  
-            +svg("health" ,17,17)
-            span Здоровье
+            a(href="/health.html" data-target='sidebar' data-action='close')  
+              +svg("health" ,17,17)
+              span Здоровье
 
-          a(href="/rest.html" data-target='sidebar' data-action='close')  
-            +svg("rest" ,17,14)
-            span Отдых
+            a(href="/rest.html" data-target='sidebar' data-action='close')  
+              +svg("rest" ,17,14)
+              span Отдых
 
-          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
-            +svg("nutrition" ,17,17)
-            span Питание
+            a(href="/restaurants.html" data-target='sidebar' data-action='close')  
+              +svg("nutrition" ,17,17)
+              span Питание
 
-          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
-            +svg("sport" ,17,17)
-            span Спорт
+            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+              +svg("sport" ,17,17)
+              span Спорт
 
-          a(href="/museum.html" data-target='sidebar' data-action='close')  
-            +svg("culture" ,17,15)
-            span Культура
+            a(href="/museum.html" data-target='sidebar' data-action='close')  
+              +svg("culture" ,17,15)
+              span Культура
 
-          a(href="/about.html" data-target='sidebar' data-action='close')  
-            +svg("about" ,17,17)
-            span О компании
-    header.header.header__sanatorium
-      .container
-        .header__wrapper 
-          a(href="/" class='logo') 
-            +svg("logo")
-          button.burger( data-target='sidebar' data-action='open')
-            +svg("burger", 35)
-          nav
-            a(href="/about.html") О компании
-            a(href="/health.html") Здоровье
-            a(href="/green-scientists.html") Дети
-            a(href="/sport-actuba.html") Спорт
-            a(href="/rest.html") Отдых
-            a(href="/restaurants.html") Питание
-            a(href="/museum.html") Культура 
-          button.call 
-            +svg("phone", 24)
-        .header__bg
-          img(src=require('/assets/images/bg/romashkino.png') alt="")
-      
+            a(href="/about.html" data-target='sidebar' data-action='close')  
+              +svg("about" ,17,17)
+              span О компании
+      header.header.header__sanatorium
+        .container
+          .header__wrapper 
+            a(href="/" class='logo') 
+              +svg("logo")
+            button.burger( data-target='sidebar' data-action='open')
+              +svg("burger", 35)
+            nav
+              a(href="/about.html") О компании
+              a(href="/health.html") Здоровье
+              a(href="/green-scientists.html") Дети
+              a(href="/sport-actuba.html") Спорт
+              a(href="/rest.html") Отдых
+              a(href="/restaurants.html") Питание
+              a(href="/museum.html") Культура 
+            button.call 
+              +svg("phone", 24)
+          .header__bg
+            img(src=require('/assets/images/bg/romashkino.png') alt="")
         
-    main
-      .section
-        .introduction-type-1.introduction-dzhalilskiy 
+          
+      main
+        .section
+          .introduction-type-1.introduction-dzhalilskiy 
+            .container
+              h2.title Ромашкино
+              .introduction__wrapper
+                .introduction__top
+                  h3.introduction__title Отдохните вдали от городского шума
+                .introduction__bottom
+                  p.introduction__text Санаторий известен внутри и за пределами Республики из-за уникальной локации. Расположенный в «Татарстанской Швейцарии» — района, где начинаются Уральские горы, он покоряет красотой своей природы: объятья высоких гор, нескончаемые лесные массивы, множество рек и родников, минеральных вод и питьевых источников. Все это бесповоротно влюбляет гостей санатория в «Ромашкино».
+                  
+                div(class='overflow-hidden introduction__slider')
+                  .accept-slider
+                    .swiper-wrapper
+                      .swiper-slide
+                        img(src=require('/assets/images/sanatorium/romashkino/romashkino-slide-1.png'))
+                      .swiper-slide
+                        img(src=require('/assets/images/sanatorium/romashkino/romashkino-slide-2.png'))
+                include ../components/select/index.pug
+                include ../components/button.pug
+                a(href="https://romashkino.tatneft.ru/?lang=ru").book 
+                  +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +button('Забронировать','orange')(type='submit')   
+        
+        .section
           .container
-            h2.title Ромашкино
-            .introduction__wrapper
-              .introduction__top
-                h3.introduction__title Отдохните вдали от городского шума
-              .introduction__bottom
-                p.introduction__text Санаторий известен внутри и за пределами Республики из-за уникальной локации. Расположенный в «Татарстанской Швейцарии» — района, где начинаются Уральские горы, он покоряет красотой своей природы: объятья высоких гор, нескончаемые лесные массивы, множество рек и родников, минеральных вод и питьевых источников. Все это бесповоротно влюбляет гостей санатория в «Ромашкино».
-                
-              div(class='overflow-hidden introduction__slider')
-                .accept-slider
-                  .swiper-wrapper
-                    .swiper-slide
-                      img(src=require('/assets/images/sanatorium/romashkino/romashkino-slide-1.png'))
-                    .swiper-slide
-                      img(src=require('/assets/images/sanatorium/romashkino/romashkino-slide-2.png'))
-              include ../components/select/index.pug
-              include ../components/button.pug
-              a(href="https://romashkino.tatneft.ru/?lang=ru").book 
-                +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +button('Забронировать','orange')(type='submit')   
-      
-      .section
-        .container
-          .grid
-            .other-slider
-              .content
-                h2.title Природа уже <br/> позаботилась
-                p.text Благодаря уникальной локации основными лечебными факторами в санатории «Ромашкино» стали природные источники. Здесь есть источник минеральной йодо-бромной воды «Ромашкинская» — ее используют для лечебных ванн и лечебные грязи, которые применяют в качестве аппликаций.<br/>В отделении физиотерапии гостей ждет современное оборудование:
-                
-                .btn-controls
-                  button.btn-prev
-                    +svg('back-line')
-                  button.btn-next
-                    +svg('forward-line')
-              .swiper-wrapper
-                .swiper-slide
-                  img(src='/assets/images/sanatorium/electrolechenie.png')
-                  .slide-content  
-                    h4.slide-content__title Аппараты для электролечения
-        
-      .section.directions-care 
-        .container
+            .grid
+              .other-slider
+                .content
+                  h2.title Природа уже <br/> позаботилась
+                  p.text Благодаря уникальной локации основными лечебными факторами в санатории «Ромашкино» стали природные источники. Здесь есть источник минеральной йодо-бромной воды «Ромашкинская» — ее используют для лечебных ванн и лечебные грязи, которые применяют в качестве аппликаций.<br/>В отделении физиотерапии гостей ждет современное оборудование:
+                  
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src='/assets/images/sanatorium/electrolechenie.png')
+                    .slide-content  
+                      h4.slide-content__title Аппараты для электролечения
           
-          h2.title Мы продумали все <br/> для вашего комфорта
-          p.text На территории санатория «Ромашкино» расположены:
-          div(class=' grid gap-5 lg2:gap-8 lg2:grid-cols-4')
+        .section.directions-care 
+          .container
             
-            .trend 
-              +svg('sofa').trend__icon
-              h4.trend__title 4 спальных корпуса (на 248 гостей)
-            .trend 
-              +svg('house').trend__icon
-              h4.trend__title 2 лечебных корпуса
-            .trend 
-              +svg('pool2').trend__icon
-              h4.trend__title Плавательные бассейны
-            .trend 
-              +svg('dumbbell').trend__icon
-              h4.trend__title Спортзал
-            .trend 
-              +svg('terrencur').trend__icon
-              h4.trend__title 4 терренкура
-            .trend 
-              +svg('book').trend__icon
-              h4.trend__title Библиотека
-            .trend 
-              +svg('sun3').trend__icon
-              h4.trend__title Бильярдная
-            .trend 
-              +svg('theater').trend__icon
-              h4.trend__title Танцевальный зал
-          div(class='content-other')
-            p.text-other(class=' text-other ') Номера представлены в категориях от класса «эконом» до класса «люкс» — каждый может выбрать подходящий вариант, исходя из своих пожеланий и возможностей.
+            h2.title Мы продумали все <br/> для вашего комфорта
+            p.text На территории санатория «Ромашкино» расположены:
+            div(class=' grid gap-5 lg2:gap-8 lg2:grid-cols-4')
               
-      
-      
-      include ../sections/team/index.pug
-      .section.select-programm 
-        .container
-          .select-programm__top
-            h2.title Выбрать <br/> программу
-            p.text В санатории «Ромашкино» вы можете подобрать персональную программу отдыха и восстановления.
-          .list
-            .item 
-              h4.item__title Санаторно-курортная путевка
-              h5.item__duration от 7 дней
-              p.item__descr Стандартная программа лечения
-            .item 
-              h4.item__title Оздоровительная путевка
-              h5.item__duration от 1 суток
-              p.item__descr Оздоровительная программа лечения
-            .item 
-              h4.item__title Тур выходного дня
-              h5.item__duration от 1 дня
-              p.item__descr Оздоровительная программа лечения
-          
-      .section.virtualt-tour
-        .container 
-          .virtualt-tour__wrapper
-            img(src=require('/assets/images/sanatorium/romashkino/romashkino3d.png'), alt="")
-            .tour 
-              +svg('compas').tour__icon
-              .tour__title Виртуальный тур <br/> по санаторию
-      
-              
+              .trend 
+                +svg('sofa').trend__icon
+                h4.trend__title 4 спальных корпуса (на 248 гостей)
+              .trend 
+                +svg('house').trend__icon
+                h4.trend__title 2 лечебных корпуса
+              .trend 
+                +svg('pool2').trend__icon
+                h4.trend__title Плавательные бассейны
+              .trend 
+                +svg('dumbbell').trend__icon
+                h4.trend__title Спортзал
+              .trend 
+                +svg('terrencur').trend__icon
+                h4.trend__title 4 терренкура
+              .trend 
+                +svg('book').trend__icon
+                h4.trend__title Библиотека
+              .trend 
+                +svg('sun3').trend__icon
+                h4.trend__title Бильярдная
+              .trend 
+                +svg('theater').trend__icon
+                h4.trend__title Танцевальный зал
+            div(class='content-other')
+              p.text-other(class=' text-other ') Номера представлены в категориях от класса «эконом» до класса «люкс» — каждый может выбрать подходящий вариант, исходя из своих пожеланий и возможностей.
+                
+        
+        
+        include ../sections/team/index.pug
+        .section.select-programm 
+          .container
+            .select-programm__top
+              h2.title Выбрать <br/> программу
+              p.text В санатории «Ромашкино» вы можете подобрать персональную программу отдыха и восстановления.
+            .list
+              .item 
+                h4.item__title Санаторно-курортная путевка
+                h5.item__duration от 7 дней
+                p.item__descr Стандартная программа лечения
+              .item 
+                h4.item__title Оздоровительная путевка
+                h5.item__duration от 1 суток
+                p.item__descr Оздоровительная программа лечения
+              .item 
+                h4.item__title Тур выходного дня
+                h5.item__duration от 1 дня
+                p.item__descr Оздоровительная программа лечения
+            
+        .section.virtualt-tour
+          .container 
+            .virtualt-tour__wrapper
+              img(src=require('/assets/images/sanatorium/romashkino/romashkino3d.png'), alt="")
+              .tour 
+                +svg('compas').tour__icon
+                .tour__title Виртуальный тур <br/> по санаторию
+        
+                
 
-      .section.merit 
-        .container 
-          .merit__wrapper
-            h2.title Наши заслуги
-            .list 
-              .item 
-                h4.item__title Диплом лауреата в номинации услуги
-                p.item__name «Лучшие товары Республики Татарстан-2009»
-              .item 
-                h4.item__title Диплом лауреата 
-                p.item__name «100 лучших товаров России» 2009
-              .item 
-                h4.item__title Диплом за активное участие в IV Специализированной выставке 
-                p.item__name «СПОРТ.ОТДЫХ.ТУРИЗМ» 2010
-              .item 
-                h4.item__title Золотая медаль и диплом в номинации «Лучший санаторий-профилакторий»
-                p.item__name Здравница-2011
-              .item 
-                h4.item__title Серебряная медаль и диплом в номинации «Лучшая здравница по использованию природных лечебных факторов»,
-                p.item__name Здравница-2011
-              .item 
-                h4.item__title Диплом 19-й международной специализированной выставки за вклад в развитие санаторно-курортного лечения в России
-                p.item__name Kazan International Exhibition <br/>of Tourism&Sport 2014
-              .item 
-                h4.item__title Золотая медаль и диплом в номинации «Лучшие технологии лечебно-профилактического применения минеральных вод»
-                p.item__name Здравница-2014
-              .item 
-                h4.item__title Диплом лауреата в номинации услуги
-                p.item__name «Лучшие товары Республики Татарстан-2014»
-              .item 
-                h4.item__title Диплом лауреата 
-                p.item__name «Лучшие товары Республики Татарстан-2014»
-      .section.contacts
-        .container
-          .contacts__wrapper
-            .contacts__top.relative
-              +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
-              h4.title До встречи!
-              div
-                p.contacts__text 423536, Республика Татарстан, Заинский район, с. Бухарай, санаторий-профилакторий «Ромашкино».
-                <br/>
-                p.contacts__text Официальное наименование объекта <br/> ПАО «Татнефть имени В.Д. Шашина»
+        .section.merit 
+          .container 
+            .merit__wrapper
+              h2.title Наши заслуги
+              .list 
+                .item 
+                  h4.item__title Диплом лауреата в номинации услуги
+                  p.item__name «Лучшие товары Республики Татарстан-2009»
+                .item 
+                  h4.item__title Диплом лауреата 
+                  p.item__name «100 лучших товаров России» 2009
+                .item 
+                  h4.item__title Диплом за активное участие в IV Специализированной выставке 
+                  p.item__name «СПОРТ.ОТДЫХ.ТУРИЗМ» 2010
+                .item 
+                  h4.item__title Золотая медаль и диплом в номинации «Лучший санаторий-профилакторий»
+                  p.item__name Здравница-2011
+                .item 
+                  h4.item__title Серебряная медаль и диплом в номинации «Лучшая здравница по использованию природных лечебных факторов»,
+                  p.item__name Здравница-2011
+                .item 
+                  h4.item__title Диплом 19-й международной специализированной выставки за вклад в развитие санаторно-курортного лечения в России
+                  p.item__name Kazan International Exhibition <br/>of Tourism&Sport 2014
+                .item 
+                  h4.item__title Золотая медаль и диплом в номинации «Лучшие технологии лечебно-профилактического применения минеральных вод»
+                  p.item__name Здравница-2014
+                .item 
+                  h4.item__title Диплом лауреата в номинации услуги
+                  p.item__name «Лучшие товары Республики Татарстан-2014»
+                .item 
+                  h4.item__title Диплом лауреата 
+                  p.item__name «Лучшие товары Республики Татарстан-2014»
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title До встречи!
+                div
+                  p.contacts__text 423536, Республика Татарстан, Заинский район, с. Бухарай, санаторий-профилакторий «Ромашкино».
+                  <br/>
+                  p.contacts__text Официальное наименование объекта <br/> ПАО «Татнефть имени В.Д. Шашина»
 
-              div
-                a(href="tel:+78555858015").contacts__link 8 (8-85558) 5-80-15
-              div.contacts__text
-                span E-mail: 
-                a(href="mailto:romashkino@inbox.ru") romashkino@inbox.ru
-              
-            .contacts__bottom
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-    include ../sections/footer/index.pug
+                div
+                  a(href="tel:+78555858015").contacts__link 8 (8-85558) 5-80-15
+                div.contacts__text
+                  span E-mail: 
+                  a(href="mailto:romashkino@inbox.ru") romashkino@inbox.ru
+                
+              .contacts__bottom
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+      include ../sections/footer/index.pug

@@ -7,82 +7,83 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    .sidebar#sidebar
-      .container
-        .sidebar__head 
-          a(href="/" class='logo' data-target='sidebar' data-action='close') 
-            +svg("logo")
-          button.close(data-target='sidebar' data-action='close') 
-            +svg("close")
-        nav.sidebar__content 
-          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
-            +svg("child" ,17,15)
-            span Дети
-
-          a(href="/health.html" data-target='sidebar' data-action='close')  
-            +svg("health" ,17,17)
-            span Здоровье
-
-          a(href="/rest.html" data-target='sidebar' data-action='close')  
-            +svg("rest" ,17,14)
-            span Отдых
-
-          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
-            +svg("nutrition" ,17,17)
-            span Питание
-
-          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
-            +svg("sport" ,17,17)
-            span Спорт
-
-          a(href="/museum.html" data-target='sidebar' data-action='close')  
-            +svg("culture" ,17,15)
-            span Культура
-
-          a(href="/about.html" data-target='sidebar' data-action='close')  
-            +svg("about" ,17,17)
-            span О компании
-    header.header.header__sanatorium
-      .container
-        .header__wrapper 
-          a(href="/" class='logo') 
-            +svg("logo")
-          button.burger( data-target='sidebar' data-action='open')
-            +svg("burger", 35)
-          nav
-            a(href="/about.html") О компании
-            a(href="/health.html") Здоровье
-            a(href="/green-scientists.html") Дети
-            a(href="/sport-actuba.html") Спорт
-            a(href="/rest.html") Отдых
-            a(href="/restaurants.html") Питание
-            a(href="/museum.html") Культура 
-          button.call 
-            +svg("phone", 24)
-        .header__bg
-          img(src=require('/assets/images/sport/sport-actuba.png') alt="")
-    main
-      .section.sport
+    .wrapper
+      .sidebar#sidebar
         .container
-          h2.title Конно-спортивная <br/>школа Актюба
-          
-          p.subtitle Спортивный комплекс
-          
-          p.text Спортивная школа с хорошей материальной базой и чутким подходом, как с учащимся, так и животным. В основе подготовки здесь лежит общение подготовки с конем: умение понять, ухаживать, выстроить отношения и в нужный момент не силой мышц, а силой воли усмирить нрав животного. Кроме основного направления, в школе развивается конный спорт на пони, проводятся занятия по иппотерапии и верховые прогулки. 
-          .accept.sport__slider
-            .grid.slider
-              div(class='overflow-hidden')
-                include ../components/acceptSlider/index.pug
-      
-      include ../sections/coachingStaff/index.pug    
-      .section.img-content
-        .container 
-          img(src=require("/assets/images/horse.png"), alt="")
-      include ../sections/prices/index.pug
-      
-      include ../sections/contacts/index.pug
-    include ../sections/footer/index.pug
+          .sidebar__head 
+            a(href="/" class='logo' data-target='sidebar' data-action='close') 
+              +svg("logo")
+            button.close(data-target='sidebar' data-action='close') 
+              +svg("close")
+          nav.sidebar__content 
+            a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
+              +svg("child" ,17,15)
+              span Дети
 
+            a(href="/health.html" data-target='sidebar' data-action='close')  
+              +svg("health" ,17,17)
+              span Здоровье
+
+            a(href="/rest.html" data-target='sidebar' data-action='close')  
+              +svg("rest" ,17,14)
+              span Отдых
+
+            a(href="/restaurants.html" data-target='sidebar' data-action='close')  
+              +svg("nutrition" ,17,17)
+              span Питание
+
+            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+              +svg("sport" ,17,17)
+              span Спорт
+
+            a(href="/museum.html" data-target='sidebar' data-action='close')  
+              +svg("culture" ,17,15)
+              span Культура
+
+            a(href="/about.html" data-target='sidebar' data-action='close')  
+              +svg("about" ,17,17)
+              span О компании
+      header.header.header__sanatorium
+        .container
+          .header__wrapper 
+            a(href="/" class='logo') 
+              +svg("logo")
+            button.burger( data-target='sidebar' data-action='open')
+              +svg("burger", 35)
+            nav
+              a(href="/about.html") О компании
+              a(href="/health.html") Здоровье
+              a(href="/green-scientists.html") Дети
+              a(href="/sport-actuba.html") Спорт
+              a(href="/rest.html") Отдых
+              a(href="/restaurants.html") Питание
+              a(href="/museum.html") Культура 
+            button.call 
+              +svg("phone", 24)
+          .header__bg
+            img(src=require('/assets/images/sport/sport-actuba.png') alt="")
+      main
+        .section.sport
+          .container
+            h2.title Конно-спортивная <br/>школа Актюба
+            
+            p.subtitle Спортивный комплекс
+            
+            p.text Спортивная школа с хорошей материальной базой и чутким подходом, как с учащимся, так и животным. В основе подготовки здесь лежит общение подготовки с конем: умение понять, ухаживать, выстроить отношения и в нужный момент не силой мышц, а силой воли усмирить нрав животного. Кроме основного направления, в школе развивается конный спорт на пони, проводятся занятия по иппотерапии и верховые прогулки. 
+            .accept.sport__slider
+              .grid.slider
+                div(class='overflow-hidden')
+                  include ../components/acceptSlider/index.pug
+        
+        include ../sections/coachingStaff/index.pug    
+        .section.img-content
+          .container 
+            img(src=require("/assets/images/horse.png"), alt="")
+        include ../sections/prices/index.pug
+        
+        include ../sections/contacts/index.pug
+      include ../sections/footer/index.pug
+
+      
     
-  
-  
+    

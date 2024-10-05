@@ -7,84 +7,86 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    .sidebar#sidebar
-      .container
-        .sidebar__head 
-          a(href="/" class='logo' data-target='sidebar' data-action='close') 
-            +svg("logo")
-          button.close(data-target='sidebar' data-action='close') 
-            +svg("close")
-        nav.sidebar__content 
-          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
-            +svg("child" ,17,15)
-            span Дети
+    .wrapper
 
-          a(href="/health.html" data-target='sidebar' data-action='close')  
-            +svg("health" ,17,17)
-            span Здоровье
-
-          a(href="/rest.html" data-target='sidebar' data-action='close')  
-            +svg("rest" ,17,14)
-            span Отдых
-
-          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
-            +svg("nutrition" ,17,17)
-            span Питание
-
-          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
-            +svg("sport" ,17,17)
-            span Спорт
-
-          a(href="/museum.html" data-target='sidebar' data-action='close')  
-            +svg("culture" ,17,15)
-            span Культура
-
-          a(href="/about.html" data-target='sidebar' data-action='close')  
-            +svg("about" ,17,17)
-            span О компании
-    header.header.header__sanatorium
-      .container
-        .header__wrapper 
-          a(href="/" class='logo') 
-            +svg("logo")
-          button.burger( data-target='sidebar' data-action='open')
-            +svg("burger", 35)
-          nav
-            a(href="/about.html") О компании
-            a(href="/health.html") Здоровье
-            a(href="/green-scientists.html") Дети
-            a(href="/sport-actuba.html") Спорт
-            a(href="/rest.html") Отдых
-            a(href="/restaurants.html") Питание
-            a(href="/museum.html") Культура 
-          button.call 
-            +svg("phone", 24)
-        .header__bg
-          img(src=require('/assets/images/sport/sport-rangout.png') alt="")
-    main
-      .section.sport
+      .sidebar#sidebar
         .container
-          h2.title Тренировочный пункт <br/>Рангоут
-          
-          p.subtitle Спортивный комплекс
-          
-          p.text В «Рангоут» содержится более 50 голов американской, французской, орловской и русской рысистской пород. Есть все необходимое для эффективных тренировок и качественного коней: тренажеры, рабочая дорожка, ингалятор, солярий, оборудованный для купания лошадей пруд.
-          p.text Тренировочный пункт назван в честь единственного рысака, который получил все основные призы в каждой возрастной группе и был четырежды коронован. Он пал в возрасте 26 лет и похоронен на территории тренировочного пункта. 
+          .sidebar__head 
+            a(href="/" class='logo' data-target='sidebar' data-action='close') 
+              +svg("logo")
+            button.close(data-target='sidebar' data-action='close') 
+              +svg("close")
+          nav.sidebar__content 
+            a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
+              +svg("child" ,17,15)
+              span Дети
 
-          .accept.sport__slider
-            .grid.slider
-              div(class='overflow-hidden')
-                include ../components/acceptSlider/index.pug
-      
-      include ../sections/coachingStaff/index.pug    
-      .section.img-content
-        .container 
-          img(src=require("/assets/images/horse2.png"), alt="")
-      include ../sections/prices/index.pug
-      
-      include ../sections/contacts/index.pug
-    include ../sections/footer/index.pug
+            a(href="/health.html" data-target='sidebar' data-action='close')  
+              +svg("health" ,17,17)
+              span Здоровье
 
+            a(href="/rest.html" data-target='sidebar' data-action='close')  
+              +svg("rest" ,17,14)
+              span Отдых
+
+            a(href="/restaurants.html" data-target='sidebar' data-action='close')  
+              +svg("nutrition" ,17,17)
+              span Питание
+
+            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+              +svg("sport" ,17,17)
+              span Спорт
+
+            a(href="/museum.html" data-target='sidebar' data-action='close')  
+              +svg("culture" ,17,15)
+              span Культура
+
+            a(href="/about.html" data-target='sidebar' data-action='close')  
+              +svg("about" ,17,17)
+              span О компании
+      header.header.header__sanatorium
+        .container
+          .header__wrapper 
+            a(href="/" class='logo') 
+              +svg("logo")
+            button.burger( data-target='sidebar' data-action='open')
+              +svg("burger", 35)
+            nav
+              a(href="/about.html") О компании
+              a(href="/health.html") Здоровье
+              a(href="/green-scientists.html") Дети
+              a(href="/sport-actuba.html") Спорт
+              a(href="/rest.html") Отдых
+              a(href="/restaurants.html") Питание
+              a(href="/museum.html") Культура 
+            button.call 
+              +svg("phone", 24)
+          .header__bg
+            img(src=require('/assets/images/sport/sport-rangout.png') alt="")
+      main
+        .section.sport
+          .container
+            h2.title Тренировочный пункт <br/>Рангоут
+            
+            p.subtitle Спортивный комплекс
+            
+            p.text В «Рангоут» содержится более 50 голов американской, французской, орловской и русской рысистской пород. Есть все необходимое для эффективных тренировок и качественного коней: тренажеры, рабочая дорожка, ингалятор, солярий, оборудованный для купания лошадей пруд.
+            p.text Тренировочный пункт назван в честь единственного рысака, который получил все основные призы в каждой возрастной группе и был четырежды коронован. Он пал в возрасте 26 лет и похоронен на территории тренировочного пункта. 
+
+            .accept.sport__slider
+              .grid.slider
+                div(class='overflow-hidden')
+                  include ../components/acceptSlider/index.pug
+        
+        include ../sections/coachingStaff/index.pug    
+        .section.img-content
+          .container 
+            img(src=require("/assets/images/horse2.png"), alt="")
+        include ../sections/prices/index.pug
+        
+        include ../sections/contacts/index.pug
+      include ../sections/footer/index.pug
+
+      
     
-  
-  
+    

@@ -8,217 +8,218 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    .sidebar#sidebar
-      .container
-        .sidebar__head 
-          a(href="/" class='logo' data-target='sidebar' data-action='close') 
-            +svg("logo")
-          button.close(data-target='sidebar' data-action='close') 
-            +svg("close")
-        nav.sidebar__content 
-          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
-            +svg("child" ,17,15)
-            span Дети
+    .wrapper
+      .sidebar#sidebar
+        .container
+          .sidebar__head 
+            a(href="/" class='logo' data-target='sidebar' data-action='close') 
+              +svg("logo")
+            button.close(data-target='sidebar' data-action='close') 
+              +svg("close")
+          nav.sidebar__content 
+            a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
+              +svg("child" ,17,15)
+              span Дети
 
-          a(href="/health.html" data-target='sidebar' data-action='close')  
-            +svg("health" ,17,17)
-            span Здоровье
+            a(href="/health.html" data-target='sidebar' data-action='close')  
+              +svg("health" ,17,17)
+              span Здоровье
 
-          a(href="/rest.html" data-target='sidebar' data-action='close')  
-            +svg("rest" ,17,14)
-            span Отдых
+            a(href="/rest.html" data-target='sidebar' data-action='close')  
+              +svg("rest" ,17,14)
+              span Отдых
 
-          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
-            +svg("nutrition" ,17,17)
-            span Питание
+            a(href="/restaurants.html" data-target='sidebar' data-action='close')  
+              +svg("nutrition" ,17,17)
+              span Питание
 
-          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
-            +svg("sport" ,17,17)
-            span Спорт
+            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+              +svg("sport" ,17,17)
+              span Спорт
 
-          a(href="/museum.html" data-target='sidebar' data-action='close')  
-            +svg("culture" ,17,15)
-            span Культура
+            a(href="/museum.html" data-target='sidebar' data-action='close')  
+              +svg("culture" ,17,15)
+              span Культура
 
-          a(href="/about.html" data-target='sidebar' data-action='close')  
-            +svg("about" ,17,17)
-            span О компании
-    header.header.header__sanatorium
-      .container
-        .header__wrapper 
-          a(href="/" class='logo') 
-            +svg("logo")
-          button.burger( data-target='sidebar' data-action='open')
-            +svg("burger", 35)
-          nav
-            a(href="/about.html") О компании
-            a(href="/health.html") Здоровье
-            a(href="/green-scientists.html") Дети
-            a(href="/sport-actuba.html") Спорт
-            a(href="/rest.html") Отдых
-            a(href="/restaurants.html") Питание
-            a(href="/museum.html") Культура 
-          button.call 
-            +svg("phone", 24)
-        .header__bg
-          img(src=require('/assets/images/bg/kosmos.png') alt="")
-      
+            a(href="/about.html" data-target='sidebar' data-action='close')  
+              +svg("about" ,17,17)
+              span О компании
+      header.header.header__sanatorium
+        .container
+          .header__wrapper 
+            a(href="/" class='logo') 
+              +svg("logo")
+            button.burger( data-target='sidebar' data-action='open')
+              +svg("burger", 35)
+            nav
+              a(href="/about.html") О компании
+              a(href="/health.html") Здоровье
+              a(href="/green-scientists.html") Дети
+              a(href="/sport-actuba.html") Спорт
+              a(href="/rest.html") Отдых
+              a(href="/restaurants.html") Питание
+              a(href="/museum.html") Культура 
+            button.call 
+              +svg("phone", 24)
+          .header__bg
+            img(src=require('/assets/images/bg/kosmos.png') alt="")
         
-    main
-      .section
-        .introduction-type-1.introduction-dzhalilskiy 
-          .container
-            h2.title Космос
-            .introduction__wrapper
-              .introduction__top
-                h3.introduction__title Шишкинские места <br/> и высокий берег Камы
-              .introduction__bottom
-                p.introduction__text Благодаря хвойному лесу, окружающему санаторий «Космос», местный воздух богат фитонцидами — натуральными антибиотиками. Они убивают микробы и бактерии. Поэтому, даже обычные прогулки здесь особенно полезны для здоровья.
-                .drop
-                  +svg('drop').drop__icon
-                  p Еще одно преимущество — собственная артезианская скважина, вода которой по составу, чистоте и вкусу близка к родниковой.
-              div(class='overflow-hidden introduction__slider')
-                .accept-slider
-                  .swiper-wrapper
-                    .swiper-slide
-                      img(src=require('/assets/images/sanatorium/kosmos/kosmos-slide-1.png'))
-                    .swiper-slide
-                      img(src=require('/assets/images/sanatorium/kosmos/kosmos-slide-2.png'))
-                  
-                  button.btn-prev
-                    +svg('back-line')
-                  button.btn-next
-                    +svg('forward-line')
-              include ../components/select/index.pug
-              include ../components/button.pug
-              a(href="https://kosmos.tatneft.ru/?lang=ru").book 
-                +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +button('Забронировать','orange')(type='submit')   
-      .section.directions-care 
-        .container
-          .directions-care__top
-            h2.title Тандем современных <br/> технологий и природы
-            p.text Одновременно санаторий «Космос» может принять до 75 гостей, обеспечив каждого должным уходом и индивидуальными программами лечения, включающими природные факторы и возможности методик современных технологий. 
-          .list 
-            div(class=" bg-orange py-4 px-3.5 text-white text-d31 lg2:text-d11 lg2:px-7.5 lg2:pt-8")
-              p Основные программы составлены для профилактики и лечения заболеваний:
-            .trend 
-              +svg('sun2').trend__icon
-              h4.trend__title Опорно-двигательного аппарата
-            .trend 
-              +svg('heart').trend__icon
-              h4.trend__title Сердечно-сосудистой системы
-            .trend 
-              +svg('rest2').trend__icon
-              h4.trend__title Хронических неспецифических заболеваний легких
-            div(class=' hidden lg2:block')
-            .trend 
-              +svg('health').trend__icon
-              h4.trend__title Эндо-кринологических
-            .trend 
-              +svg('intesine').trend__icon
-              h4.trend__title Желудочно-кишечного тракта
-            .trend 
-              +svg('professional').trend__icon
-              h4.trend__title Профессиональных патологий
-              
-      .section
-        .container
-          .grid
-            .other-slider
-              .content
-                h2.title Природа <br/> как приоритет
-                p.text Наши специалисты составляют программы лечения пациентов, учитывая возможности не только современного медицинского оборудования, но и разнообразие природных лечебных факторов. Поэтому большое внимание уделено бальнеотерапии — лечению минеральными водами и целебными грязями и физиотерапии. <br/> Помимо основных программ, в санатории можно получить платные услуги.
-                .btn-controls
-                  button.btn-prev
-                    +svg('back-line')
-                  button.btn-next
-                    +svg('forward-line')
-              .swiper-wrapper
-                .swiper-slide
-                  img(src='/assets/images/sanatorium/magnitoterapia.png')
-                  .slide-content  
-                    h4.slide-content__title Общая магнитотерапия
-                    p.slide-content__text Современная технология, которая может одновременно воздействовать на целый спектр болезней.
-      .section
-        .container
-          .grid
-            .other-slider.other-slider2
-              .content
-                h2.title Мы становимся <br/> лучше для вас
-                p.text В 2014 году провели масштабную перепланировку: теперь на месте стандартных блочных корпусов, номера с индивидуальными санузлами и душевыми кабинами. Провели косметический ремонт и обновили мебель — теперь у нас еще уютнее. Для ценителей максимально уединенного отдыха, сделали люкс-номера с отдельными спальной и гостиной комнатами.
-                .btn-controls
-                  button.btn-prev
-                    +svg('back-line')
-                  button.btn-next
-                    +svg('forward-line')
-              .swiper-wrapper
-                .swiper-slide
-                  img(src='/assets/images/sanatorium/room-1.png')
-      include ../sections/team/index.pug
-      .section.select-programm 
-        .container
-          .select-programm__top
-            h2.title Выбрать <br/> программу
-            p.text В санатории «Космос» вы можете подобрать персональную программу, которая будет отвечать вашему запросу.
-          .list
-            .item 
-              h4.item__title Стандарт
-              h5.item__duration 7 дней
-              p.item__descr Стандартная программа лечения
-            .item 
-              h4.item__title Оздоровительная путевка
-              h5.item__duration от 1 дня
-              p.item__descr Оздоровительная программа лечения
-            .item 
-              h4.item__title Курсовка
-              h5.item__duration от 5 дней
-              p.item__descr Лечение с питанием или без питания, с дневным пребыванием в санатории
           
-      .section.virtualt-tour
-        .container 
-          .virtualt-tour__wrapper
-            img(src=require('/assets/images/sanatorium/kosmos/kosmos3d.png'), alt="")
-            .tour 
-              +svg('compas').tour__icon
-              .tour__title Виртуальный тур <br/> по санаторию
-      .section.merit 
-        .container 
-          .merit__wrapper
-            h2.title Наши заслуги
+      main
+        .section
+          .introduction-type-1.introduction-dzhalilskiy 
+            .container
+              h2.title Космос
+              .introduction__wrapper
+                .introduction__top
+                  h3.introduction__title Шишкинские места <br/> и высокий берег Камы
+                .introduction__bottom
+                  p.introduction__text Благодаря хвойному лесу, окружающему санаторий «Космос», местный воздух богат фитонцидами — натуральными антибиотиками. Они убивают микробы и бактерии. Поэтому, даже обычные прогулки здесь особенно полезны для здоровья.
+                  .drop
+                    +svg('drop').drop__icon
+                    p Еще одно преимущество — собственная артезианская скважина, вода которой по составу, чистоте и вкусу близка к родниковой.
+                div(class='overflow-hidden introduction__slider')
+                  .accept-slider
+                    .swiper-wrapper
+                      .swiper-slide
+                        img(src=require('/assets/images/sanatorium/kosmos/kosmos-slide-1.png'))
+                      .swiper-slide
+                        img(src=require('/assets/images/sanatorium/kosmos/kosmos-slide-2.png'))
+                    
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                include ../components/select/index.pug
+                include ../components/button.pug
+                a(href="https://kosmos.tatneft.ru/?lang=ru").book 
+                  +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +button('Забронировать','orange')(type='submit')   
+        .section.directions-care 
+          .container
+            .directions-care__top
+              h2.title Тандем современных <br/> технологий и природы
+              p.text Одновременно санаторий «Космос» может принять до 75 гостей, обеспечив каждого должным уходом и индивидуальными программами лечения, включающими природные факторы и возможности методик современных технологий. 
             .list 
+              div(class=" bg-orange py-4 px-3.5 text-white text-d31 lg2:text-d11 lg2:px-7.5 lg2:pt-8")
+                p Основные программы составлены для профилактики и лечения заболеваний:
+              .trend 
+                +svg('sun2').trend__icon
+                h4.trend__title Опорно-двигательного аппарата
+              .trend 
+                +svg('heart').trend__icon
+                h4.trend__title Сердечно-сосудистой системы
+              .trend 
+                +svg('rest2').trend__icon
+                h4.trend__title Хронических неспецифических заболеваний легких
+              div(class=' hidden lg2:block')
+              .trend 
+                +svg('health').trend__icon
+                h4.trend__title Эндо-кринологических
+              .trend 
+                +svg('intesine').trend__icon
+                h4.trend__title Желудочно-кишечного тракта
+              .trend 
+                +svg('professional').trend__icon
+                h4.trend__title Профессиональных патологий
+                
+        .section
+          .container
+            .grid
+              .other-slider
+                .content
+                  h2.title Природа <br/> как приоритет
+                  p.text Наши специалисты составляют программы лечения пациентов, учитывая возможности не только современного медицинского оборудования, но и разнообразие природных лечебных факторов. Поэтому большое внимание уделено бальнеотерапии — лечению минеральными водами и целебными грязями и физиотерапии. <br/> Помимо основных программ, в санатории можно получить платные услуги.
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src='/assets/images/sanatorium/magnitoterapia.png')
+                    .slide-content  
+                      h4.slide-content__title Общая магнитотерапия
+                      p.slide-content__text Современная технология, которая может одновременно воздействовать на целый спектр болезней.
+        .section
+          .container
+            .grid
+              .other-slider.other-slider2
+                .content
+                  h2.title Мы становимся <br/> лучше для вас
+                  p.text В 2014 году провели масштабную перепланировку: теперь на месте стандартных блочных корпусов, номера с индивидуальными санузлами и душевыми кабинами. Провели косметический ремонт и обновили мебель — теперь у нас еще уютнее. Для ценителей максимально уединенного отдыха, сделали люкс-номера с отдельными спальной и гостиной комнатами.
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src='/assets/images/sanatorium/room-1.png')
+        include ../sections/team/index.pug
+        .section.select-programm 
+          .container
+            .select-programm__top
+              h2.title Выбрать <br/> программу
+              p.text В санатории «Космос» вы можете подобрать персональную программу, которая будет отвечать вашему запросу.
+            .list
               .item 
-                h4.item__title Серебряная медаль и диплом в номинации «Лучшая здравница по использованию природных лечебных факторов»
-                p.item__name Здравница-2012
+                h4.item__title Стандарт
+                h5.item__duration 7 дней
+                p.item__descr Стандартная программа лечения
               .item 
-                h4.item__title Серебряная медаль и диплом в номинации «Лучшая здравница для пострадавших вследствие несчастных случаев на производстве»
-                p.item__name Здравница-2013
+                h4.item__title Оздоровительная путевка
+                h5.item__duration от 1 дня
+                p.item__descr Оздоровительная программа лечения
               .item 
-                h4.item__title Золотая медаль и диплом в номинации «Лучшие физиотерапевтические технологии»
-                p.item__name Здравница-2014
-              .item 
-                h4.item__title Золотая медаль и диплом в номинации «Лучшая здравница для пострадавших вследствие несчастных случаев на производстве»
-                p.item__name Здравница-2016
-      .section.contacts
-        .container
-          .contacts__wrapper
-            .contacts__top.relative
-              +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
-              h4.title До встречи!
-              
-              p.contacts__text  Адрес: г. Елабуга, Танайский лес, Национальный парк «Нижняя Кама» 7 км. Почтовый адрес: 423458, Республика Татарстан, район Альметьевский, город Альметьевск, улица Маяковского,68
+                h4.item__title Курсовка
+                h5.item__duration от 5 дней
+                p.item__descr Лечение с питанием или без питания, с дневным пребыванием в санатории
+            
+        .section.virtualt-tour
+          .container 
+            .virtualt-tour__wrapper
+              img(src=require('/assets/images/sanatorium/kosmos/kosmos3d.png'), alt="")
+              .tour 
+                +svg('compas').tour__icon
+                .tour__title Виртуальный тур <br/> по санаторию
+        .section.merit 
+          .container 
+            .merit__wrapper
+              h2.title Наши заслуги
+              .list 
+                .item 
+                  h4.item__title Серебряная медаль и диплом в номинации «Лучшая здравница по использованию природных лечебных факторов»
+                  p.item__name Здравница-2012
+                .item 
+                  h4.item__title Серебряная медаль и диплом в номинации «Лучшая здравница для пострадавших вследствие несчастных случаев на производстве»
+                  p.item__name Здравница-2013
+                .item 
+                  h4.item__title Золотая медаль и диплом в номинации «Лучшие физиотерапевтические технологии»
+                  p.item__name Здравница-2014
+                .item 
+                  h4.item__title Золотая медаль и диплом в номинации «Лучшая здравница для пострадавших вследствие несчастных случаев на производстве»
+                  p.item__name Здравница-2016
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title До встречи!
+                
+                p.contacts__text  Адрес: г. Елабуга, Танайский лес, Национальный парк «Нижняя Кама» 7 км. Почтовый адрес: 423458, Республика Татарстан, район Альметьевский, город Альметьевск, улица Маяковского,68
 
 
-              div
-                a(href="tel:+78555726689").contacts__link +7(85557) 26-6-89 (отдел бронирования)
-                a(href="tel:+79196400490").contacts__link  +7(919) 640-04-90 (бронирование в праздничные дни)
-              div.contacts__text
-                span E-mail: 
-                a(href="mailto:sanat.kosmos@mail.ru") sanat.kosmos@mail.ru
-              
-            .contacts__bottom
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-      
-    include ../sections/footer/index.pug
+                div
+                  a(href="tel:+78555726689").contacts__link +7(85557) 26-6-89 (отдел бронирования)
+                  a(href="tel:+79196400490").contacts__link  +7(919) 640-04-90 (бронирование в праздничные дни)
+                div.contacts__text
+                  span E-mail: 
+                  a(href="mailto:sanat.kosmos@mail.ru") sanat.kosmos@mail.ru
+                
+              .contacts__bottom
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+        
+      include ../sections/footer/index.pug

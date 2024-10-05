@@ -7,203 +7,204 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    .sidebar#sidebar
-      .container
-        .sidebar__head 
-          a(href="/" class='logo' data-target='sidebar' data-action='close') 
-            +svg("logo")
-          button.close(data-target='sidebar' data-action='close') 
-            +svg("close")
-        nav.sidebar__content 
-          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
-            +svg("child" ,17,15)
-            span Дети
-
-          a(href="/health.html" data-target='sidebar' data-action='close')  
-            +svg("health" ,17,17)
-            span Здоровье
-
-          a(href="/rest.html" data-target='sidebar' data-action='close')  
-            +svg("rest" ,17,14)
-            span Отдых
-
-          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
-            +svg("nutrition" ,17,17)
-            span Питание
-
-          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
-            +svg("sport" ,17,17)
-            span Спорт
-
-          a(href="/museum.html" data-target='sidebar' data-action='close')  
-            +svg("culture" ,17,15)
-            span Культура
-
-          a(href="/about.html" data-target='sidebar' data-action='close')  
-            +svg("about" ,17,17)
-            span О компании
-    header.header.header__sanatorium
-      .container
-        .header__wrapper 
-          a(href="/" class='logo') 
-            +svg("logo")
-          button.burger( data-target='sidebar' data-action='open')
-            +svg("burger", 35)
-          nav
-            a(href="/about.html") О компании
-            a(href="/health.html") Здоровье
-            a(href="/green-scientists.html") Дети
-            a(href="/sport-actuba.html") Спорт
-            a(href="/rest.html") Отдых
-            a(href="/restaurants.html") Питание
-            a(href="/museum.html") Культура 
-          button.call 
-            +svg("phone", 24)
-        .header__bg
-          img(src=require('/assets/images/rest/rest-ivushka.png') alt="")
-    main
-      .rest 
-        .container 
-          .rest__top 
-            .rest__top-left 
-              h2.title Зелёный берег
-              p.text База отдыха
-            .rest__top-right  
-              p.text База расположена в лесополосе на живописном берегу Карабашского водохранилища. Одновременно здесь могут остановиться 96 отдыхающих. На базе можно провести выходные, отметить день рождения, выпускной, свадьбу или другое важное событие.
-
-      .section.accept
+    .wrapper
+      .sidebar#sidebar
         .container
-          .grid.slider
-            div(class='overflow-hidden introduction__slider')
-              include ../components/acceptSlider/index.pug
-      .section.directions-care 
+          .sidebar__head 
+            a(href="/" class='logo' data-target='sidebar' data-action='close') 
+              +svg("logo")
+            button.close(data-target='sidebar' data-action='close') 
+              +svg("close")
+          nav.sidebar__content 
+            a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
+              +svg("child" ,17,15)
+              span Дети
+
+            a(href="/health.html" data-target='sidebar' data-action='close')  
+              +svg("health" ,17,17)
+              span Здоровье
+
+            a(href="/rest.html" data-target='sidebar' data-action='close')  
+              +svg("rest" ,17,14)
+              span Отдых
+
+            a(href="/restaurants.html" data-target='sidebar' data-action='close')  
+              +svg("nutrition" ,17,17)
+              span Питание
+
+            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+              +svg("sport" ,17,17)
+              span Спорт
+
+            a(href="/museum.html" data-target='sidebar' data-action='close')  
+              +svg("culture" ,17,15)
+              span Культура
+
+            a(href="/about.html" data-target='sidebar' data-action='close')  
+              +svg("about" ,17,17)
+              span О компании
+      header.header.header__sanatorium
         .container
-          
-          h2.title Инфраструктура
-          p.text Чтобы отдых в «Чайке» запомнился, здесь созданы все условия: 
-          div(class=' grid gap-5 lg2:gap-8 lg2:grid-cols-3')
+          .header__wrapper 
+            a(href="/" class='logo') 
+              +svg("logo")
+            button.burger( data-target='sidebar' data-action='open')
+              +svg("burger", 35)
+            nav
+              a(href="/about.html") О компании
+              a(href="/health.html") Здоровье
+              a(href="/green-scientists.html") Дети
+              a(href="/sport-actuba.html") Спорт
+              a(href="/rest.html") Отдых
+              a(href="/restaurants.html") Питание
+              a(href="/museum.html") Культура 
+            button.call 
+              +svg("phone", 24)
+          .header__bg
+            img(src=require('/assets/images/rest/rest-ivushka.png') alt="")
+      main
+        .rest 
+          .container 
+            .rest__top 
+              .rest__top-left 
+                h2.title Зелёный берег
+                p.text База отдыха
+              .rest__top-right  
+                p.text База расположена в лесополосе на живописном берегу Карабашского водохранилища. Одновременно здесь могут остановиться 96 отдыхающих. На базе можно провести выходные, отметить день рождения, выпускной, свадьбу или другое важное событие.
+
+        .section.accept
+          .container
+            .grid.slider
+              div(class='overflow-hidden introduction__slider')
+                include ../components/acceptSlider/index.pug
+        .section.directions-care 
+          .container
             
-            .trend 
-              +svg('sun2').trend__icon
-              h4.trend__title Парковка на территории, чтобы вы не беспокоились
-            .trend 
-              +svg('heart').trend__icon
-              h4.trend__title Летняя душевая с горячей водой
-            .trend 
-              +svg('star').trend__icon
-              h4.trend__title Место для отдыха на берегу с шезлонгами
-            .trend 
-              +svg('sex2').trend__icon
-              h4.trend__title Пирс с выходом на воду
-            .trend 
-              +svg('lock').trend__icon
-              h4.trend__title Площадка с уличными тренажерами
-            .trend 
-              +svg('grass-blue').trend__icon
-              h4.trend__title Футбольная и волейбольная площадки
-            .trend 
-              +svg('grass-blue').trend__icon
-              h4.trend__title Велосипеды
-            .trend 
-              +svg('grass-blue').trend__icon
-              h4.trend__title Детская площадка
-            .trend 
-              +svg('grass-blue').trend__icon
-              h4.trend__title Возможность отправиться на рыбалку со своим инвентарем
-      .section 
-        .container
-          include ../components/book/index.pug
-      
-      .section.img-content
-        .container 
-          img(src=require("/assets/images/tennis2.png"), alt="")
-      .section.price-book
-        .container
-          h2.title Цены и бронирование
-          .price-book__wrapper
-            .price-book__top
-              .price-book__list 
-                .item
-                  .item__title Вагон-домик
-                  .item__count 2-местный (+1 гость)
-                  .item__prices 
-                    div 
-                      span 1 500 ₽
-                      span будни
-                    div 
-                      span 1 900 ₽
-                      span выходные
-                .item
-                  .item__title Вагон-домик
-                  .item__count 2-местный (+1 гость)
-                  .item__prices 
-                    div 
-                      span 1 500 ₽
-                      span будни
-                    div 
-                      span 1 900 ₽
-                      span выходные
-                .item
-                  .item__title Вагон-домик
-                  .item__count 2-местный (+1 гость)
-                  .item__prices 
-                    div 
-                      span 1 500 ₽
-                      span будни
-                    div 
-                      span 1 900 ₽
-                      span выходные
-                .item
-                  .item__title Вагон-домик
-                  .item__count 2-местный (+1 гость)
-                  .item__prices 
-                    div 
-                      span 1 500 ₽
-                      span будни
-                    div 
-                      span 1 900 ₽
-                      span выходные
-                .item
-                  .item__title Вагон-домик
-                  .item__count 2-местный (+1 гость)
-                  .item__prices 
-                    div 
-                      span 1 500 ₽
-                      span будни
-                    div 
-                      span 1 900 ₽
-                      span выходные
-                .item-other
-                  div
-                    .item__title Ранний заезд/поздний выезд
+            h2.title Инфраструктура
+            p.text Чтобы отдых в «Чайке» запомнился, здесь созданы все условия: 
+            div(class=' grid gap-5 lg2:gap-8 lg2:grid-cols-3')
+              
+              .trend 
+                +svg('sun2').trend__icon
+                h4.trend__title Парковка на территории, чтобы вы не беспокоились
+              .trend 
+                +svg('heart').trend__icon
+                h4.trend__title Летняя душевая с горячей водой
+              .trend 
+                +svg('star').trend__icon
+                h4.trend__title Место для отдыха на берегу с шезлонгами
+              .trend 
+                +svg('sex2').trend__icon
+                h4.trend__title Пирс с выходом на воду
+              .trend 
+                +svg('lock').trend__icon
+                h4.trend__title Площадка с уличными тренажерами
+              .trend 
+                +svg('grass-blue').trend__icon
+                h4.trend__title Футбольная и волейбольная площадки
+              .trend 
+                +svg('grass-blue').trend__icon
+                h4.trend__title Велосипеды
+              .trend 
+                +svg('grass-blue').trend__icon
+                h4.trend__title Детская площадка
+              .trend 
+                +svg('grass-blue').trend__icon
+                h4.trend__title Возможность отправиться на рыбалку со своим инвентарем
+        .section 
+          .container
+            include ../components/book/index.pug
+        
+        .section.img-content
+          .container 
+            img(src=require("/assets/images/tennis2.png"), alt="")
+        .section.price-book
+          .container
+            h2.title Цены и бронирование
+            .price-book__wrapper
+              .price-book__top
+                .price-book__list 
+                  .item
+                    .item__title Вагон-домик
+                    .item__count 2-местный (+1 гость)
                     .item__prices 
                       div 
-                        span 400/500 ₽ 
-                        span будни/выходной
-                  div
-                    .item__title Дополнительное место
+                        span 1 500 ₽
+                        span будни
+                      div 
+                        span 1 900 ₽
+                        span выходные
+                  .item
+                    .item__title Вагон-домик
+                    .item__count 2-местный (+1 гость)
                     .item__prices 
                       div 
-                        span 800/1 000 ₽ 
-                        span будни/выходной
+                        span 1 500 ₽
+                        span будни
+                      div 
+                        span 1 900 ₽
+                        span выходные
+                  .item
+                    .item__title Вагон-домик
+                    .item__count 2-местный (+1 гость)
+                    .item__prices 
+                      div 
+                        span 1 500 ₽
+                        span будни
+                      div 
+                        span 1 900 ₽
+                        span выходные
+                  .item
+                    .item__title Вагон-домик
+                    .item__count 2-местный (+1 гость)
+                    .item__prices 
+                      div 
+                        span 1 500 ₽
+                        span будни
+                      div 
+                        span 1 900 ₽
+                        span выходные
+                  .item
+                    .item__title Вагон-домик
+                    .item__count 2-местный (+1 гость)
+                    .item__prices 
+                      div 
+                        span 1 500 ₽
+                        span будни
+                      div 
+                        span 1 900 ₽
+                        span выходные
+                  .item-other
+                    div
+                      .item__title Ранний заезд/поздний выезд
+                      .item__prices 
+                        div 
+                          span 400/500 ₽ 
+                          span будни/выходной
+                    div
+                      .item__title Дополнительное место
+                      .item__prices 
+                        div 
+                          span 800/1 000 ₽ 
+                          span будни/выходной
 
-              .price-book__info
-                p * В праздничные и выходные дни стоимость и графики заезда могут меняться.
-                br
-                p В стоимость номера входит: проживание, пользование инфраструктурой (игровые площадки), пользование спорт. инвентарем, спортивно-развлекательные мероприятия.
-                br
-                p Дети до 2-х лет (включительно) проживают без оплаты и предоставления койко-места
-      
-      .camp-info 
-        .container
-          h2.title Информация 
-          .list.special-programs__list
-            .item 
-              .item__icon
-                +svg('forward-line')
-              .item__title Анкета «Мой ребенок»
-      include ../sections/contacts/index.pug
-      
-    include ../sections/footer/index.pug
-  
-  
+                .price-book__info
+                  p * В праздничные и выходные дни стоимость и графики заезда могут меняться.
+                  br
+                  p В стоимость номера входит: проживание, пользование инфраструктурой (игровые площадки), пользование спорт. инвентарем, спортивно-развлекательные мероприятия.
+                  br
+                  p Дети до 2-х лет (включительно) проживают без оплаты и предоставления койко-места
+        
+        .camp-info 
+          .container
+            h2.title Информация 
+            .list.special-programs__list
+              .item 
+                .item__icon
+                  +svg('forward-line')
+                .item__title Анкета «Мой ребенок»
+        include ../sections/contacts/index.pug
+        
+      include ../sections/footer/index.pug
+    
+    

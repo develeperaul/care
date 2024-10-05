@@ -7,103 +7,104 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    .sidebar#sidebar
-      .container
-        .sidebar__head 
-          a(href="/" class='logo' data-target='sidebar' data-action='close') 
-            +svg("logo")
-          button.close(data-target='sidebar' data-action='close') 
-            +svg("close")
-        nav.sidebar__content 
-          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
-            +svg("child" ,17,15)
-            span Дети
-
-          a(href="/health.html" data-target='sidebar' data-action='close')  
-            +svg("health" ,17,17)
-            span Здоровье
-
-          a(href="/rest.html" data-target='sidebar' data-action='close')  
-            +svg("rest" ,17,14)
-            span Отдых
-
-          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
-            +svg("nutrition" ,17,17)
-            span Питание
-
-          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
-            +svg("sport" ,17,17)
-            span Спорт
-
-          a(href="/museum.html" data-target='sidebar' data-action='close')  
-            +svg("culture" ,17,15)
-            span Культура
-
-          a(href="/about.html" data-target='sidebar' data-action='close')  
-            +svg("about" ,17,17)
-            span О компании
-    header.header.header__sanatorium
-      .container
-        .header__wrapper 
-          a(href="/" class='logo') 
-            +svg("logo")
-          button.burger( data-target='sidebar' data-action='open')
-            +svg("burger", 35)
-          nav
-            a(href="/about.html") О компании
-            a(href="/health.html") Здоровье
-            a(href="/green-scientists.html") Дети
-            a(href="/sport-actuba.html") Спорт
-            a(href="/rest.html") Отдых
-            a(href="/restaurants.html") Питание
-            a(href="/museum.html") Культура 
-          button.call 
-            +svg("phone", 24)
-        .header__bg
-          img(src=require('/assets/images/sport/sport-fitness.png') alt="")
-    main
-      .section.sport
+    .wrapper
+      .sidebar#sidebar
         .container
-          h2.title Фитнес-центр <br/>Стиль жизни
-          
-          p.subtitle Спортивный комплекс
-          
-          p.text Спортивный комплекс в центре Альметьевска, который уже40 лет даёт возможность жителям вести активный образ жизни.В 14 спортивных залах с 7 утра до 10 вечера проходят занятияв 18 секциях по разным видам спорта.
+          .sidebar__head 
+            a(href="/" class='logo' data-target='sidebar' data-action='close') 
+              +svg("logo")
+            button.close(data-target='sidebar' data-action='close') 
+              +svg("close")
+          nav.sidebar__content 
+            a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
+              +svg("child" ,17,15)
+              span Дети
+
+            a(href="/health.html" data-target='sidebar' data-action='close')  
+              +svg("health" ,17,17)
+              span Здоровье
+
+            a(href="/rest.html" data-target='sidebar' data-action='close')  
+              +svg("rest" ,17,14)
+              span Отдых
+
+            a(href="/restaurants.html" data-target='sidebar' data-action='close')  
+              +svg("nutrition" ,17,17)
+              span Питание
+
+            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+              +svg("sport" ,17,17)
+              span Спорт
+
+            a(href="/museum.html" data-target='sidebar' data-action='close')  
+              +svg("culture" ,17,15)
+              span Культура
+
+            a(href="/about.html" data-target='sidebar' data-action='close')  
+              +svg("about" ,17,17)
+              span О компании
+      header.header.header__sanatorium
+        .container
+          .header__wrapper 
+            a(href="/" class='logo') 
+              +svg("logo")
+            button.burger( data-target='sidebar' data-action='open')
+              +svg("burger", 35)
+            nav
+              a(href="/about.html") О компании
+              a(href="/health.html") Здоровье
+              a(href="/green-scientists.html") Дети
+              a(href="/sport-actuba.html") Спорт
+              a(href="/rest.html") Отдых
+              a(href="/restaurants.html") Питание
+              a(href="/museum.html") Культура 
+            button.call 
+              +svg("phone", 24)
+          .header__bg
+            img(src=require('/assets/images/sport/sport-fitness.png') alt="")
+      main
+        .section.sport
+          .container
+            h2.title Фитнес-центр <br/>Стиль жизни
             
+            p.subtitle Спортивный комплекс
             
-    
+            p.text Спортивный комплекс в центре Альметьевска, который уже40 лет даёт возможность жителям вести активный образ жизни.В 14 спортивных залах с 7 утра до 10 вечера проходят занятияв 18 секциях по разным видам спорта.
+              
+              
+      
 
-          .accept.sport__slider
-            .grid.slider
-              div(class='overflow-hidden')
-                include ../components/acceptSlider/index.pug
-      include ../sections/treatmentPrograms/index.pug
-      .section.img-content
-        .container 
-          img(src=require("/assets/images/tennis2.png"), alt="")
-          h2.title.img-content__text(class=" right-0 bottom-0 text-right lg2:right-auto lg2:left-0  lg2:top-0 lg2:bottom-auto lg2:text-left") Площадки <br/>для большого <br/>тенниса
-      include ../sections/coachingStaff/index.pug    
-      .section
-        .container
-          .grid
-            include ../components/otherSlider/index.pug
-      .section
-        .container
-          .grid
-            include ../components/otherSlider/index2.pug
-      .section.img-content
-        .container 
-          img(src=require("/assets/images/karate.png"), alt="")
-          h2.title.img-content__text(class=" left-0 bottom-0  lg2:right-0 lg2:left-auto") вольная борьба <br/>кикбоксинга <br/>айкидо
-      include ../sections/coachingStaff/index.pug
-      .section.img-content
-        .container 
-          img(src=require("/assets/images/pool2.png"), alt="")
-          h2.title.img-content__text(class=" left-0 bottom-0  lg2:right-0 lg2:left-auto") Детские <br/>занятия
-      include ../sections/prices/index.pug
-      include ../sections/contacts/index.pug
-    include ../sections/footer/index.pug
+            .accept.sport__slider
+              .grid.slider
+                div(class='overflow-hidden')
+                  include ../components/acceptSlider/index.pug
+        include ../sections/treatmentPrograms/index.pug
+        .section.img-content
+          .container 
+            img(src=require("/assets/images/tennis2.png"), alt="")
+            h2.title.img-content__text(class=" right-0 bottom-0 text-right lg2:right-auto lg2:left-0  lg2:top-0 lg2:bottom-auto lg2:text-left") Площадки <br/>для большого <br/>тенниса
+        include ../sections/coachingStaff/index.pug    
+        .section
+          .container
+            .grid
+              include ../components/otherSlider/index.pug
+        .section
+          .container
+            .grid
+              include ../components/otherSlider/index2.pug
+        .section.img-content
+          .container 
+            img(src=require("/assets/images/karate.png"), alt="")
+            h2.title.img-content__text(class=" left-0 bottom-0  lg2:right-0 lg2:left-auto") вольная борьба <br/>кикбоксинга <br/>айкидо
+        include ../sections/coachingStaff/index.pug
+        .section.img-content
+          .container 
+            img(src=require("/assets/images/pool2.png"), alt="")
+            h2.title.img-content__text(class=" left-0 bottom-0  lg2:right-0 lg2:left-auto") Детские <br/>занятия
+        include ../sections/prices/index.pug
+        include ../sections/contacts/index.pug
+      include ../sections/footer/index.pug
 
+      
     
-  
-  
+    

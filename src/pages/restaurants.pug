@@ -7,22 +7,23 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    include ../sections/header/restaurants.pug
-    main
-      - var listLink = ['Ресторан «Бьорк»','Выездное обслуживание']
-      section.cards-sect
-        .container 
-          div(class="links ")
-            a(href="/biork.html") Ресторан «Бьорк»
-            a(href="#") Выездное обслуживание
-          .cards
-            .card
-              img(src=require("/assets/images/restaurants/1qa.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/restaurants/2qa.png"), alt="")
-          
-    include ../sections/footer/index.pug
+    .wrapper
+      include ../sections/header/restaurants.pug
+      main
+        - var listLink = ['Ресторан «Бьорк»','Выездное обслуживание']
+        section.cards-sect
+          .container 
+            div(class="links ")
+              a(href="/biork.html") Ресторан «Бьорк»
+              a(href="#") Выездное обслуживание
+            .cards
+              .card
+                img(src=require("/assets/images/restaurants/1qa.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/restaurants/2qa.png"), alt="")
+            
+      include ../sections/footer/index.pug
 
 
-  
+    

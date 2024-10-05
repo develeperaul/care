@@ -8,196 +8,197 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    .sidebar#sidebar
-      .container
-        .sidebar__head 
-          a(href="/" class='logo' data-target='sidebar' data-action='close') 
-            +svg("logo")
-          button.close(data-target='sidebar' data-action='close') 
-            +svg("close")
-        nav.sidebar__content 
-          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
-            +svg("child" ,17,15)
-            span Дети
+    .wrapper
+      .sidebar#sidebar
+        .container
+          .sidebar__head 
+            a(href="/" class='logo' data-target='sidebar' data-action='close') 
+              +svg("logo")
+            button.close(data-target='sidebar' data-action='close') 
+              +svg("close")
+          nav.sidebar__content 
+            a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
+              +svg("child" ,17,15)
+              span Дети
 
-          a(href="/health.html" data-target='sidebar' data-action='close')  
-            +svg("health" ,17,17)
-            span Здоровье
+            a(href="/health.html" data-target='sidebar' data-action='close')  
+              +svg("health" ,17,17)
+              span Здоровье
 
-          a(href="/rest.html" data-target='sidebar' data-action='close')  
-            +svg("rest" ,17,14)
-            span Отдых
+            a(href="/rest.html" data-target='sidebar' data-action='close')  
+              +svg("rest" ,17,14)
+              span Отдых
 
-          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
-            +svg("nutrition" ,17,17)
-            span Питание
+            a(href="/restaurants.html" data-target='sidebar' data-action='close')  
+              +svg("nutrition" ,17,17)
+              span Питание
 
-          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
-            +svg("sport" ,17,17)
-            span Спорт
+            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+              +svg("sport" ,17,17)
+              span Спорт
 
-          a(href="/museum.html" data-target='sidebar' data-action='close')  
-            +svg("culture" ,17,15)
-            span Культура
+            a(href="/museum.html" data-target='sidebar' data-action='close')  
+              +svg("culture" ,17,15)
+              span Культура
 
-          a(href="/about.html" data-target='sidebar' data-action='close')  
-            +svg("about" ,17,17)
-            span О компании
-    header.header.header__sanatorium
-      .container
-        .header__wrapper 
-          a(href="/" class='logo') 
-            +svg("logo")
-          button.burger( data-target='sidebar' data-action='open')
-            +svg("burger", 35)
-          nav
-            a(href="/about.html") О компании
-            a(href="/health.html") Здоровье
-            a(href="/green-scientists.html") Дети
-            a(href="/sport-actuba.html") Спорт
-            a(href="/rest.html") Отдых
-            a(href="/restaurants.html") Питание
-            a(href="/museum.html") Культура 
-          button.call 
-            +svg("phone", 24)
-        .header__bg
-          img(src=require('/assets/images/bg/shifaly.png') alt="")
-      
+            a(href="/about.html" data-target='sidebar' data-action='close')  
+              +svg("about" ,17,17)
+              span О компании
+      header.header.header__sanatorium
+        .container
+          .header__wrapper 
+            a(href="/" class='logo') 
+              +svg("logo")
+            button.burger( data-target='sidebar' data-action='open')
+              +svg("burger", 35)
+            nav
+              a(href="/about.html") О компании
+              a(href="/health.html") Здоровье
+              a(href="/green-scientists.html") Дети
+              a(href="/sport-actuba.html") Спорт
+              a(href="/rest.html") Отдых
+              a(href="/restaurants.html") Питание
+              a(href="/museum.html") Культура 
+            button.call 
+              +svg("phone", 24)
+          .header__bg
+            img(src=require('/assets/images/bg/shifaly.png') alt="")
         
-    main
-      .section
-        .introduction-type-1.introduction-dzhalilskiy 
+          
+      main
+        .section
+          .introduction-type-1.introduction-dzhalilskiy 
+            .container
+              h2.title Шифалы
+              .introduction__wrapper
+                .introduction__top
+                  h3.introduction__title Всесторонний подход к здоровью
+                .introduction__bottom
+                  p.introduction__text В санатории «Шифалы» созданы все условия для полноценного восстановления и и отдыха. Расположенный в лесопарковой зоне и в пешей близости от Камы и Святого Ключа, он помогает забыть о суете дел. Высококвалифицированные специалисты, внимательные сотрудники, современное оборудование и сбалансированное питание помогают гостям вернуть здоровье и силы.
+                  
+                div(class='overflow-hidden introduction__slider')
+                  .accept-slider
+                    .swiper-wrapper
+                      .swiper-slide
+                        img(src=require('/assets/images/sanatorium/shifaly/shifaly-slide-1.png'))
+                      .swiper-slide
+                        img(src=require('/assets/images/sanatorium/shifaly/shifaly-slide-2.png'))
+                include ../components/select/index.pug
+                include ../components/button.pug
+                a(href="https://shifali.tatneft.ru/?lang=ru").book 
+                  +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +button('Забронировать','orange')(type='submit')   
+        .section.directions-care 
           .container
-            h2.title Шифалы
-            .introduction__wrapper
-              .introduction__top
-                h3.introduction__title Всесторонний подход к здоровью
-              .introduction__bottom
-                p.introduction__text В санатории «Шифалы» созданы все условия для полноценного восстановления и и отдыха. Расположенный в лесопарковой зоне и в пешей близости от Камы и Святого Ключа, он помогает забыть о суете дел. Высококвалифицированные специалисты, внимательные сотрудники, современное оборудование и сбалансированное питание помогают гостям вернуть здоровье и силы.
+            
+            h2.title Направления заботы
+            p.text У санатория большой и разнообразный спектр программ лечения, на которых он специализируются:
+            div(class=' grid gap-5 lg2:gap-8 lg2:grid-cols-3')
+              
+              .trend 
+                +svg('sun2').trend__icon
+                h4.trend__title Заболевания опорно-двигательного аппарата
+              .trend 
+                +svg('grass-blue').trend__icon
+                h4.trend__title Заболевания дыхательной системы
+              .trend 
+                +svg('star').trend__icon
+                h4.trend__title Заболевания нервной системы
+              .trend 
+                +svg('intesine').trend__icon
+                h4.trend__title Желудочно-кишечного тракта
+              .trend 
+                +svg('child').trend__icon
+                h4.trend__title Заболевания оздоровление беременных женщин
+              .trend 
+                +svg('heart').trend__icon
+                h4.trend__title Заболевания сердечно-сосудистой системы
+              
                 
-              div(class='overflow-hidden introduction__slider')
-                .accept-slider
-                  .swiper-wrapper
-                    .swiper-slide
-                      img(src=require('/assets/images/sanatorium/shifaly/shifaly-slide-1.png'))
-                    .swiper-slide
-                      img(src=require('/assets/images/sanatorium/shifaly/shifaly-slide-2.png'))
-              include ../components/select/index.pug
-              include ../components/button.pug
-              a(href="https://shifali.tatneft.ru/?lang=ru").book 
-                +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +button('Забронировать','orange')(type='submit')   
-      .section.directions-care 
-        .container
-          
-          h2.title Направления заботы
-          p.text У санатория большой и разнообразный спектр программ лечения, на которых он специализируются:
-          div(class=' grid gap-5 lg2:gap-8 lg2:grid-cols-3')
-            
-            .trend 
-              +svg('sun2').trend__icon
-              h4.trend__title Заболевания опорно-двигательного аппарата
-            .trend 
-              +svg('grass-blue').trend__icon
-              h4.trend__title Заболевания дыхательной системы
-            .trend 
-              +svg('star').trend__icon
-              h4.trend__title Заболевания нервной системы
-            .trend 
-              +svg('intesine').trend__icon
-              h4.trend__title Желудочно-кишечного тракта
-            .trend 
-              +svg('child').trend__icon
-              h4.trend__title Заболевания оздоровление беременных женщин
-            .trend 
-              +svg('heart').trend__icon
-              h4.trend__title Заболевания сердечно-сосудистой системы
-            
+        .section
+          .container
+            .grid
+              .other-slider
+                .content
+                  h2.title Использую <br/> пользу природы
+                  p.text В своих программах специалисты «Шифалы» щедро используют природные факторы:
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src='/assets/images/sanatorium/shifalysu.png')
+                    .slide-content  
+                      h4.slide-content__title Минеральная вода «Шифалы Су»
+                      
+        .section
+          .container
+            .grid
+              .other-slider.other-slider2
+                .content
+                  h2.title Технологии заботы
+                  p.text Для комплексного воздействия на здоровье пациентов наши специалисты тщательно подбирают оборудование, процедуры и аппараты, которые безопасно и эффективно приведут к необходимому результату.
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src='/assets/images/sanatorium/baroterapia.png')
+                    .slide-content  
+                      h4.slide-content__title Аппарат для локальной баротерапии Hadomer
+        include ../sections/team/index.pug
+        .section.select-programm 
+          .container
+            .select-programm__top
+              h2.title Выбрать <br/> программу
+              p.text В «Шифалы» можно пройти оздоровительный курс лечения, остановившись в самом санатории или в режиме дневного стационара. Санаторий предоставляет гостиничные и арендные услуги.
+            .list
               
-      .section
-        .container
-          .grid
-            .other-slider
-              .content
-                h2.title Использую <br/> пользу природы
-                p.text В своих программах специалисты «Шифалы» щедро используют природные факторы:
-                .btn-controls
-                  button.btn-prev
-                    +svg('back-line')
-                  button.btn-next
-                    +svg('forward-line')
-              .swiper-wrapper
-                .swiper-slide
-                  img(src='/assets/images/sanatorium/shifalysu.png')
-                  .slide-content  
-                    h4.slide-content__title Минеральная вода «Шифалы Су»
-                    
-      .section
-        .container
-          .grid
-            .other-slider.other-slider2
-              .content
-                h2.title Технологии заботы
-                p.text Для комплексного воздействия на здоровье пациентов наши специалисты тщательно подбирают оборудование, процедуры и аппараты, которые безопасно и эффективно приведут к необходимому результату.
-                .btn-controls
-                  button.btn-prev
-                    +svg('back-line')
-                  button.btn-next
-                    +svg('forward-line')
-              .swiper-wrapper
-                .swiper-slide
-                  img(src='/assets/images/sanatorium/baroterapia.png')
-                  .slide-content  
-                    h4.slide-content__title Аппарат для локальной баротерапии Hadomer
-      include ../sections/team/index.pug
-      .section.select-programm 
-        .container
-          .select-programm__top
-            h2.title Выбрать <br/> программу
-            p.text В «Шифалы» можно пройти оздоровительный курс лечения, остановившись в самом санатории или в режиме дневного стационара. Санаторий предоставляет гостиничные и арендные услуги.
-          .list
+                .item 
+                  h4.item__title Санаторно-курортная путевка
+                  h5.item__duration от 7 дней
+                  p.item__descr Классический набор лечебных процедур при различных заболеваниях
+                .item 
+                  h4.item__title Оздоровительная путевка
+                  h5.item__duration от 1 дня
+                  p.item__descr Оздоровительная программа лечения
+                .item 
+                  h4.item__title Программа болезни дыхательных путей
+                  h5.item__duration от 7 дней
+                  p.item__descr Комплекс медицинских процедур по программе болезни дыхательной системы
             
-              .item 
-                h4.item__title Санаторно-курортная путевка
-                h5.item__duration от 7 дней
-                p.item__descr Классический набор лечебных процедур при различных заболеваниях
-              .item 
-                h4.item__title Оздоровительная путевка
-                h5.item__duration от 1 дня
-                p.item__descr Оздоровительная программа лечения
-              .item 
-                h4.item__title Программа болезни дыхательных путей
-                h5.item__duration от 7 дней
-                p.item__descr Комплекс медицинских процедур по программе болезни дыхательной системы
-          
-      .section.virtualt-tour
-        .container 
-          .virtualt-tour__wrapper
-            img(src=require('/assets/images/sanatorium/shifaly/shifaly3d.png'), alt="")
-            .tour 
-              +svg('compas').tour__icon
-              .tour__title Виртуальный тур <br/> по санаторию
-      
-      
-              
+        .section.virtualt-tour
+          .container 
+            .virtualt-tour__wrapper
+              img(src=require('/assets/images/sanatorium/shifaly/shifaly3d.png'), alt="")
+              .tour 
+                +svg('compas').tour__icon
+                .tour__title Виртуальный тур <br/> по санаторию
+        
+        
+                
 
-      .section.contacts
-        .container
-          .contacts__wrapper
-            .contacts__top.relative
-              +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
-              h4.title До встречи!
-              
-              p.contacts__text г.Нижнекамск, ул.Мурадьяна, д.7.
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title До встречи!
+                
+                p.contacts__text г.Нижнекамск, ул.Мурадьяна, д.7.
 
-              div
-                a(href="tel:+78555240324").contacts__link 8(8555) 24-03-24
-              div.contacts__text
-                span E-mail: 
-                a(href="mailto:RegShifaly@tatneft.ru") RegShifaly@tatneft.ru
-              
-            .contacts__bottom
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-    include ../sections/footer/index.pug
+                div
+                  a(href="tel:+78555240324").contacts__link 8(8555) 24-03-24
+                div.contacts__text
+                  span E-mail: 
+                  a(href="mailto:RegShifaly@tatneft.ru") RegShifaly@tatneft.ru
+                
+              .contacts__bottom
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+      include ../sections/footer/index.pug

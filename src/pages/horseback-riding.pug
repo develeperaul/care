@@ -7,57 +7,58 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    include ../sections/header/horseback-riding.pug
-    main
-      - var listLink = ['ПАО «Татнефть» г. Альметьевск','Спорткомплекс им. И.И.Хасанова','Спорткомплекс им. М.Хузина','Шинник','Стиль жизни', 'Юбилейный','Актюба','Рангоут','Кентавр']
-      section.cards-sect
-        .container 
-          div(class="links ")
-            each item in listLink
-              a(href="/sport-almetyevsk.html") ПАО «Татнефть» г. Альметьевск
-              a(href="/sport-hasanov.html") Спорткомплекс им. И.И.Хасанова
-              a(href="/sport-huzin.html") Спорткомплекс им. М.Хузина
-              a(href="#") Шинник
-              a(href="#") Стиль жизни
-              a(href="#") Юбилейный
-              a(href="/sport-actuba.html") Актюба
-              a(href="#") Рангоут
-              a(href="/sport-kentavr.html") Кентавр
-              
-          .cards
-            .card
-              img(src=require("/assets/images/horseback-riding/1qr.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/horseback-riding/2qr.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/horseback-riding/3qr.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/horseback-riding/4qr.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/horseback-riding/5qr.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/horseback-riding/6qr.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/horseback-riding/7qr.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/horseback-riding/8qr.png"), alt="")
-              
-            .card
-              img(src=require("/assets/images/horseback-riding/9qr.png"), alt="")
-
-            .card
-              img(src=require("/assets/images/horseback-riding/10qr.png"), alt="")
-
+    .wrapper
+      include ../sections/header/horseback-riding.pug
+      main
+        - var listLink = ['ПАО «Татнефть» г. Альметьевск','Спорткомплекс им. И.И.Хасанова','Спорткомплекс им. М.Хузина','Шинник','Стиль жизни', 'Юбилейный','Актюба','Рангоут','Кентавр']
+        section.cards-sect
+          .container 
+            div(class="links ")
+              each item in listLink
+                a(href="/sport-almetyevsk.html") ПАО «Татнефть» г. Альметьевск
+                a(href="/sport-hasanov.html") Спорткомплекс им. И.И.Хасанова
+                a(href="/sport-huzin.html") Спорткомплекс им. М.Хузина
+                a(href="#") Шинник
+                a(href="#") Стиль жизни
+                a(href="#") Юбилейный
+                a(href="/sport-actuba.html") Актюба
+                a(href="#") Рангоут
+                a(href="/sport-kentavr.html") Кентавр
                 
-  
-          
-    include ../sections/footer/index.pug
+            .cards
+              .card
+                img(src=require("/assets/images/horseback-riding/1qr.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/horseback-riding/2qr.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/horseback-riding/3qr.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/horseback-riding/4qr.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/horseback-riding/5qr.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/horseback-riding/6qr.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/horseback-riding/7qr.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/horseback-riding/8qr.png"), alt="")
+                
+              .card
+                img(src=require("/assets/images/horseback-riding/9qr.png"), alt="")
 
-  
+              .card
+                img(src=require("/assets/images/horseback-riding/10qr.png"), alt="")
+
+                  
+    
+            
+      include ../sections/footer/index.pug
+
+    

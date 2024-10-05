@@ -7,116 +7,117 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    .sidebar#sidebar
-      .container
-        .sidebar__head 
-          a(href="/" class='logo' data-target='sidebar' data-action='close') 
-            +svg("logo")
-          button.close(data-target='sidebar' data-action='close') 
-            +svg("close")
-        nav.sidebar__content 
-          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
-            +svg("child" ,17,15)
-            span Дети
-
-          a(href="/health.html" data-target='sidebar' data-action='close')  
-            +svg("health" ,17,17)
-            span Здоровье
-
-          a(href="/rest.html" data-target='sidebar' data-action='close')  
-            +svg("rest" ,17,14)
-            span Отдых
-
-          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
-            +svg("nutrition" ,17,17)
-            span Питание
-
-          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
-            +svg("sport" ,17,17)
-            span Спорт
-
-          a(href="/museum.html" data-target='sidebar' data-action='close')  
-            +svg("culture" ,17,15)
-            span Культура
-
-          a(href="/about.html" data-target='sidebar' data-action='close')  
-            +svg("about" ,17,17)
-            span О компании
-    header.header.header__sanatorium
-      .container
-        .header__wrapper 
-          a(href="/" class='logo') 
-            +svg("logo")
-          button.burger( data-target='sidebar' data-action='open')
-            +svg("burger", 35)
-          nav
-            a(href="/about.html") О компании
-            a(href="/health.html") Здоровье
-            a(href="/green-scientists.html") Дети
-            a(href="/sport-actuba.html") Спорт
-            a(href="/rest.html") Отдых
-            a(href="/restaurants.html") Питание
-            a(href="/museum.html") Культура 
-          button.call 
-            +svg("phone", 24)
-        .header__bg
-          img(src=require('/assets/images/sport/sport-shinnik.png') alt="")
-    main
-      .section.sport
+    .wrapper
+      .sidebar#sidebar
         .container
-          h2.title Спорткомплекс <br/>Шинник
-          
-          p.subtitle Спортивный комплекс
-          
-          p.text Тренировочная база для тех, кто хочет заниматься легкой атлетикой, борьбой (национальной, дзюдо или самбо), футболом, фитнесом, шахматами и т.д.
-          br
-          p.text Здесь могут заниматься как профессиональные спортсмены, так и начинающие и любители. Команда из 28 высококвалифицированных тренеров ежедневно работает в «Шиннике» с 1000 детей и подростков и 100 взрослых спортсменов.
-    
+          .sidebar__head 
+            a(href="/" class='logo' data-target='sidebar' data-action='close') 
+              +svg("logo")
+            button.close(data-target='sidebar' data-action='close') 
+              +svg("close")
+          nav.sidebar__content 
+            a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
+              +svg("child" ,17,15)
+              span Дети
 
-          .accept.sport__slider
-            .grid.slider
-              div(class='overflow-hidden')
-                include ../components/acceptSlider/index.pug
-      .sport-infrastructure
+            a(href="/health.html" data-target='sidebar' data-action='close')  
+              +svg("health" ,17,17)
+              span Здоровье
+
+            a(href="/rest.html" data-target='sidebar' data-action='close')  
+              +svg("rest" ,17,14)
+              span Отдых
+
+            a(href="/restaurants.html" data-target='sidebar' data-action='close')  
+              +svg("nutrition" ,17,17)
+              span Питание
+
+            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+              +svg("sport" ,17,17)
+              span Спорт
+
+            a(href="/museum.html" data-target='sidebar' data-action='close')  
+              +svg("culture" ,17,15)
+              span Культура
+
+            a(href="/about.html" data-target='sidebar' data-action='close')  
+              +svg("about" ,17,17)
+              span О компании
+      header.header.header__sanatorium
         .container
-          .sport-infrastructure__wrapper
-            .sport-infrastructure__item
-              .sport-infrastructure__item-top
-                h2.title Инфраструктура
-                p.text При спорткомплексе работают две детско-юношеские спортивные школы с отделениями легкой атлетики, национальной борьбы, дзюдо, самбо, футбольный и шашечно-шахматный детские клубы. В «Шиннике» проходят занятия традиционного ушу, экзотического и восточного танцев. Зимой работает каток с пунктом проката коньков.
-
-              .sport-infrastructure__list 
-                .item
-                  .item__icon 
-                    +svg('river')
-                  .item__title Плавание
-                .item
-                  .item__icon 
-                    +svg('river')
-                  .item__title Волейбол
-                .item
-                  .item__icon 
-                    +svg('river')
-                  .item__title Футбол
-                .item
-                  .item__icon 
-                    +svg('river')
-                  .item__title Аэробика
+          .header__wrapper 
+            a(href="/" class='logo') 
+              +svg("logo")
+            button.burger( data-target='sidebar' data-action='open')
+              +svg("burger", 35)
+            nav
+              a(href="/about.html") О компании
+              a(href="/health.html") Здоровье
+              a(href="/green-scientists.html") Дети
+              a(href="/sport-actuba.html") Спорт
+              a(href="/rest.html") Отдых
+              a(href="/restaurants.html") Питание
+              a(href="/museum.html") Культура 
+            button.call 
+              +svg("phone", 24)
+          .header__bg
+            img(src=require('/assets/images/sport/sport-shinnik.png') alt="")
+      main
+        .section.sport
+          .container
+            h2.title Спорткомплекс <br/>Шинник
+            
+            p.subtitle Спортивный комплекс
+            
+            p.text Тренировочная база для тех, кто хочет заниматься легкой атлетикой, борьбой (национальной, дзюдо или самбо), футболом, фитнесом, шахматами и т.д.
+            br
+            p.text Здесь могут заниматься как профессиональные спортсмены, так и начинающие и любители. Команда из 28 высококвалифицированных тренеров ежедневно работает в «Шиннике» с 1000 детей и подростков и 100 взрослых спортсменов.
       
-      .section.img-content
-        .container 
-          img(src=require("/assets/images/tennis2.png"), alt="")
-          h2.title.img-content__text(class=" right-0 bottom-0 text-right lg2:right-auto lg2:left-0  lg2:top-0 lg2:bottom-auto lg2:text-left") Площадки <br/>для большого <br/>тенниса
-      include ../sections/coachingStaff/index.pug    
-      .section.img-content
-        .container 
-          img(src=require("/assets/images/box2.png"), alt="")
-          h2.title.img-content__text(class=" left-0 top-0 ") Специализированный зал <br/>для единоборств
-      include ../sections/prices/index.pug
-      
-      include ../sections/contacts/index.pug
-    include ../sections/footer/index.pug
 
+            .accept.sport__slider
+              .grid.slider
+                div(class='overflow-hidden')
+                  include ../components/acceptSlider/index.pug
+        .sport-infrastructure
+          .container
+            .sport-infrastructure__wrapper
+              .sport-infrastructure__item
+                .sport-infrastructure__item-top
+                  h2.title Инфраструктура
+                  p.text При спорткомплексе работают две детско-юношеские спортивные школы с отделениями легкой атлетики, национальной борьбы, дзюдо, самбо, футбольный и шашечно-шахматный детские клубы. В «Шиннике» проходят занятия традиционного ушу, экзотического и восточного танцев. Зимой работает каток с пунктом проката коньков.
+
+                .sport-infrastructure__list 
+                  .item
+                    .item__icon 
+                      +svg('river')
+                    .item__title Плавание
+                  .item
+                    .item__icon 
+                      +svg('river')
+                    .item__title Волейбол
+                  .item
+                    .item__icon 
+                      +svg('river')
+                    .item__title Футбол
+                  .item
+                    .item__icon 
+                      +svg('river')
+                    .item__title Аэробика
+        
+        .section.img-content
+          .container 
+            img(src=require("/assets/images/tennis2.png"), alt="")
+            h2.title.img-content__text(class=" right-0 bottom-0 text-right lg2:right-auto lg2:left-0  lg2:top-0 lg2:bottom-auto lg2:text-left") Площадки <br/>для большого <br/>тенниса
+        include ../sections/coachingStaff/index.pug    
+        .section.img-content
+          .container 
+            img(src=require("/assets/images/box2.png"), alt="")
+            h2.title.img-content__text(class=" left-0 top-0 ") Специализированный зал <br/>для единоборств
+        include ../sections/prices/index.pug
+        
+        include ../sections/contacts/index.pug
+      include ../sections/footer/index.pug
+
+      
     
-  
-  
+    

@@ -7,45 +7,46 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    include ../sections/header/rest.pug
-    main
-      - var listLink = ['Зелёный берег','Кама','Чайка','Ивушка', 'Нептун','Гостиница горнолыжного спорта','Общежитие №1','Общежитие №2','Общежитие / Альметьевск','Общежитие / Нурлат']
-      section.cards-sect
-        .container 
-          div(class="links ")
-            each item in listLink
-              a(href="#")= item 
-          .cards
-            .card
-              img(src=require("/assets/images/rest/1qw.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/rest/2qw.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/rest/3qw.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/rest/4qw.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/rest/5qw.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/rest/6qw.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/rest/7qw.png"), alt="")
-          
-            .card
-              img(src=require("/assets/images/rest/8qw.png"), alt="")
-              
-            .card
-              img(src=require("/assets/images/rest/9qw.png"), alt="")
+    .wrapper
+      include ../sections/header/rest.pug
+      main
+        - var listLink = ['Зелёный берег','Кама','Чайка','Ивушка', 'Нептун','Гостиница горнолыжного спорта','Общежитие №1','Общежитие №2','Общежитие / Альметьевск','Общежитие / Нурлат']
+        section.cards-sect
+          .container 
+            div(class="links ")
+              each item in listLink
+                a(href="#")= item 
+            .cards
+              .card
+                img(src=require("/assets/images/rest/1qw.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/rest/2qw.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/rest/3qw.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/rest/4qw.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/rest/5qw.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/rest/6qw.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/rest/7qw.png"), alt="")
+            
+              .card
+                img(src=require("/assets/images/rest/8qw.png"), alt="")
+                
+              .card
+                img(src=require("/assets/images/rest/9qw.png"), alt="")
 
-            .card
-              img(src=require("/assets/images/rest/10qw.png"), alt="")
-          
-    include ../sections/footer/index.pug
+              .card
+                img(src=require("/assets/images/rest/10qw.png"), alt="")
+            
+      include ../sections/footer/index.pug
 
-  
+    

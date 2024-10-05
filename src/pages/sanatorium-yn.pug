@@ -10,212 +10,213 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    .sidebar#sidebar
-      .container
-        .sidebar__head 
-          a(href="/" class='logo' data-target='sidebar' data-action='close') 
-            +svg("logo")
-          button.close(data-target='sidebar' data-action='close') 
-            +svg("close")
-        nav.sidebar__content 
-          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
-            +svg("child" ,17,15)
-            span Дети
+    .wrapper
+      .sidebar#sidebar
+        .container
+          .sidebar__head 
+            a(href="/" class='logo' data-target='sidebar' data-action='close') 
+              +svg("logo")
+            button.close(data-target='sidebar' data-action='close') 
+              +svg("close")
+          nav.sidebar__content 
+            a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
+              +svg("child" ,17,15)
+              span Дети
 
-          a(href="/health.html" data-target='sidebar' data-action='close')  
-            +svg("health" ,17,17)
-            span Здоровье
+            a(href="/health.html" data-target='sidebar' data-action='close')  
+              +svg("health" ,17,17)
+              span Здоровье
 
-          a(href="/rest.html" data-target='sidebar' data-action='close')  
-            +svg("rest" ,17,14)
-            span Отдых
+            a(href="/rest.html" data-target='sidebar' data-action='close')  
+              +svg("rest" ,17,14)
+              span Отдых
 
-          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
-            +svg("nutrition" ,17,17)
-            span Питание
+            a(href="/restaurants.html" data-target='sidebar' data-action='close')  
+              +svg("nutrition" ,17,17)
+              span Питание
 
-          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
-            +svg("sport" ,17,17)
-            span Спорт
+            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+              +svg("sport" ,17,17)
+              span Спорт
 
-          a(href="/museum.html" data-target='sidebar' data-action='close')  
-            +svg("culture" ,17,15)
-            span Культура
+            a(href="/museum.html" data-target='sidebar' data-action='close')  
+              +svg("culture" ,17,15)
+              span Культура
 
-          a(href="/about.html" data-target='sidebar' data-action='close')  
-            +svg("about" ,17,17)
-            span О компании
-    header.header.header__sanatorium
-      .container
-        .header__wrapper 
-          a(href="/" class='logo') 
-            +svg("logo")
-          button.burger( data-target='sidebar' data-action='open')
-            +svg("burger", 35)
-          nav
-            a(href="/about.html") О компании
-            a(href="/health.html") Здоровье
-            a(href="/green-scientists.html") Дети
-            a(href="/sport-actuba.html") Спорт
-            a(href="/rest.html") Отдых
-            a(href="/restaurants.html") Питание
-            a(href="/museum.html") Культура 
-          button.call 
-            +svg("phone", 24)
-        .header__bg
-          img(src=require('/assets/images/bg/yn.png') alt="")
-      
+            a(href="/about.html" data-target='sidebar' data-action='close')  
+              +svg("about" ,17,17)
+              span О компании
+      header.header.header__sanatorium
+        .container
+          .header__wrapper 
+            a(href="/" class='logo') 
+              +svg("logo")
+            button.burger( data-target='sidebar' data-action='open')
+              +svg("burger", 35)
+            nav
+              a(href="/about.html") О компании
+              a(href="/health.html") Здоровье
+              a(href="/green-scientists.html") Дети
+              a(href="/sport-actuba.html") Спорт
+              a(href="/rest.html") Отдых
+              a(href="/restaurants.html") Питание
+              a(href="/museum.html") Культура 
+            button.call 
+              +svg("phone", 24)
+          .header__bg
+            img(src=require('/assets/images/bg/yn.png') alt="")
         
-    main
-      .section
-        .introduction-type-1.introduction-dzhalilskiy 
-          .container
-            h2.title Ян
-            .introduction__wrapper
-              .introduction__top
-                h3.introduction__title Формируем культуру здорового человека
-              .introduction__bottom
-                p.introduction__text Санаторий «Ян» оказывает полный комплекс услуг для активного отдыха, развлечения, лечения, восстановления физических и духовных сил для всей семьи.
+          
+      main
+        .section
+          .introduction-type-1.introduction-dzhalilskiy 
+            .container
+              h2.title Ян
+              .introduction__wrapper
+                .introduction__top
+                  h3.introduction__title Формируем культуру здорового человека
+                .introduction__bottom
+                  p.introduction__text Санаторий «Ян» оказывает полный комплекс услуг для активного отдыха, развлечения, лечения, восстановления физических и духовных сил для всей семьи.
+                  
+                div(class='overflow-hidden introduction__slider')
+                  .accept-slider
+                    .swiper-wrapper
+                      .swiper-slide
+                        img(src=require('/assets/images/sanatorium/yn/yn-slide-1.png'))
+                      .swiper-slide
+                        img(src=require('/assets/images/sanatorium/yn/yn-slide-2.png'))
                 
-              div(class='overflow-hidden introduction__slider')
-                .accept-slider
-                  .swiper-wrapper
-                    .swiper-slide
-                      img(src=require('/assets/images/sanatorium/yn/yn-slide-1.png'))
-                    .swiper-slide
-                      img(src=require('/assets/images/sanatorium/yn/yn-slide-2.png'))
-              
-              a(href="https://yan.tatneft.ru/?lang=ru").book 
-                +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-                +button('Забронировать','orange')(type='submit')   
-              
-      .section.directions-care 
-        .container
-          
-          h2.title Формируем программы <br/> под любой запрос
-          p.text «Ян» — многопрофильный санаторий.Поэтому наши специалисты работают с большинством актуальных в наше время заболеваний:
-          div(class=' grid gap-5 lg2:gap-8 lg2:grid-cols-3')
+                a(href="https://yan.tatneft.ru/?lang=ru").book 
+                  +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                  +button('Забронировать','orange')(type='submit')   
+                
+        .section.directions-care 
+          .container
             
-            .trend 
-              +svg('sun2').trend__icon
-              h4.trend__title Заболевания опорно-двигательного аппарата
-            .trend 
-              +svg('heart').trend__icon
-              h4.trend__title Заболевания сердечно-сосудистой системы
-            .trend 
-              +svg('star').trend__icon
-              h4.trend__title Заболевания нервной и эндокринной системы
-            .trend 
-              +svg('sex2').trend__icon
-              h4.trend__title Урологические заболевания
-            .trend 
-              +svg('lock').trend__icon
-              h4.trend__title Стимуляция иммунного статуса
-            .trend 
-              +svg('grass-blue').trend__icon
-              h4.trend__title Заболевания органов дыхания и пищеварения
+            h2.title Формируем программы <br/> под любой запрос
+            p.text «Ян» — многопрофильный санаторий.Поэтому наши специалисты работают с большинством актуальных в наше время заболеваний:
+            div(class=' grid gap-5 lg2:gap-8 lg2:grid-cols-3')
+              
+              .trend 
+                +svg('sun2').trend__icon
+                h4.trend__title Заболевания опорно-двигательного аппарата
+              .trend 
+                +svg('heart').trend__icon
+                h4.trend__title Заболевания сердечно-сосудистой системы
+              .trend 
+                +svg('star').trend__icon
+                h4.trend__title Заболевания нервной и эндокринной системы
+              .trend 
+                +svg('sex2').trend__icon
+                h4.trend__title Урологические заболевания
+              .trend 
+                +svg('lock').trend__icon
+                h4.trend__title Стимуляция иммунного статуса
+              .trend 
+                +svg('grass-blue').trend__icon
+                h4.trend__title Заболевания органов дыхания и пищеварения
+              
+                
+        .section
+          .container
+            .grid
+              .other-slider
+                .content
+                  h2.title С заботой <br/>о здоровье и красоте
+                  p.text Специалисты санатория «Ян» создают программы, направленные не только на улучшения физических показателей здоровья гостей, но и влияющие на их омоложение, состояние кожи и настроение.
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src='/assets/images/sanatorium/spa.png')
+                    .slide-content  
+                      h4.slide-content__title SPA-процедуры
+                      p.slide-content__text активизируют обмен веществ, улучшают лимфо- и кровоток, очищая организм и наполняя его силой и энергией. Снижается избыточный вес,кожа становится более мягкой и упругой.
+        include ../sections/team/index.pug
+        .section.select-programm 
+          .container
+            .select-programm__top
+              h2.title Выбрать <br/> программу
+              p.text В «Шифалы» можно пройти оздоровительный курс лечения, остановившись в самом санатории или в режиме дневного стационара. Санаторий предоставляет гостиничные и арендные услуги.
+            .list
+              .item 
+                h4.item__title Санаторно-курортная путевка
+                h5.item__duration от 7 дней
+                p.item__descr Классический набор лечебных процедур при различных заболеваниях
+              .item 
+                h4.item__title Оздоровительная путевка
+                h5.item__duration от 2 дня
+                p.item__descr Оздоровительная программа лечения
+              .item 
+                h4.item__title Специализированная санаторно-курортная путевка
+                h5.item__duration от 10 дней
+                p.item__descr На выбор программа «Здоровая спина», «Женское здоровье», «Коррекция фигуры и безопасное снижение веса», «Антистресс», «Мужское здоровье»
             
-              
-      .section
-        .container
-          .grid
-            .other-slider
-              .content
-                h2.title С заботой <br/>о здоровье и красоте
-                p.text Специалисты санатория «Ян» создают программы, направленные не только на улучшения физических показателей здоровья гостей, но и влияющие на их омоложение, состояние кожи и настроение.
-                .btn-controls
-                  button.btn-prev
-                    +svg('back-line')
-                  button.btn-next
-                    +svg('forward-line')
-              .swiper-wrapper
-                .swiper-slide
-                  img(src='/assets/images/sanatorium/spa.png')
-                  .slide-content  
-                    h4.slide-content__title SPA-процедуры
-                    p.slide-content__text активизируют обмен веществ, улучшают лимфо- и кровоток, очищая организм и наполняя его силой и энергией. Снижается избыточный вес,кожа становится более мягкой и упругой.
-      include ../sections/team/index.pug
-      .section.select-programm 
-        .container
-          .select-programm__top
-            h2.title Выбрать <br/> программу
-            p.text В «Шифалы» можно пройти оздоровительный курс лечения, остановившись в самом санатории или в режиме дневного стационара. Санаторий предоставляет гостиничные и арендные услуги.
-          .list
-            .item 
-              h4.item__title Санаторно-курортная путевка
-              h5.item__duration от 7 дней
-              p.item__descr Классический набор лечебных процедур при различных заболеваниях
-            .item 
-              h4.item__title Оздоровительная путевка
-              h5.item__duration от 2 дня
-              p.item__descr Оздоровительная программа лечения
-            .item 
-              h4.item__title Специализированная санаторно-курортная путевка
-              h5.item__duration от 10 дней
-              p.item__descr На выбор программа «Здоровая спина», «Женское здоровье», «Коррекция фигуры и безопасное снижение веса», «Антистресс», «Мужское здоровье»
-          
-      .section.virtualt-tour
-        .container 
-          .virtualt-tour__wrapper
-            img(src=require('/assets/images/sanatorium/yn/yn3d.png'), alt="")
-            .tour 
-              +svg('compas').tour__icon
-              .tour__title Виртуальный тур <br/> по санаторию
-      
-              
+        .section.virtualt-tour
+          .container 
+            .virtualt-tour__wrapper
+              img(src=require('/assets/images/sanatorium/yn/yn3d.png'), alt="")
+              .tour 
+                +svg('compas').tour__icon
+                .tour__title Виртуальный тур <br/> по санаторию
+        
+                
 
-      .section.merit 
-        .container 
-          .merit__wrapper
-            h2.title Наши заслуги
-            .list 
-              .item 
-                h4.item__title Победитель конкурса в номинации «Лучший оздоровительный центр 2007»
-                p.item__name Международного конгресса Горнолыжной индустрии
-              .item 
-                h4.item__title Золотая медаль и диплом в номинации «Лучший физкультурно-оздоровительный комплекс»
-                p.item__name «Здравница-2012»
-              .item 
-                h4.item__title Диплом I степени в номинации «Услуги горнолыжного комплекса»
-                p.item__name «Лучшие товары Республики Татарстан-2009»
-              .item 
-                h4.item__title Диплом лауреата в номинации «Санаторно-оздоровительные услуги»
-                p.item__name «Лучшие товары Республики Татарстан-2009»
-              .item 
-                h4.item__title Дипломант в номинации «Услуги горнолыжного комплекса»
-                p.item__name «100 лучших товаров России-2009»
-              .item 
-                h4.item__title Лауреат в номинации «Санаторно-оздоровительные услуги»
-                p.item__name «100 лучших товаров России-2009»
-              .item 
-                h4.item__title Диплом 15-й международной специализированной выставки за вклад в развитие санаторно-курортного лечения в России
-                p.item__name Kazan International Exhibition of Tourism&Sport 2011
-              .item 
-                h4.item__title Лауреат в номинации «Лучший санаторий»
-                p.item__name «Лучшие курорты России — 2011»
-              .item 
-                h4.item__title Золотая медаль и диплом в номинации «Лучший физкультурно-оздоровительный комплекс»
-                p.item__name «Здравница-2011»
-      .section.contacts
-        .container
-          .contacts__wrapper
-            .contacts__top.relative
-              +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
-              h4.title До встречи!
-              
-              p.contacts__text Адрес: Республика Татарстан, Альметьевский район, Новоникольское сельское поселение, посёлок Поташная Поляна, Сосновая улица
+        .section.merit 
+          .container 
+            .merit__wrapper
+              h2.title Наши заслуги
+              .list 
+                .item 
+                  h4.item__title Победитель конкурса в номинации «Лучший оздоровительный центр 2007»
+                  p.item__name Международного конгресса Горнолыжной индустрии
+                .item 
+                  h4.item__title Золотая медаль и диплом в номинации «Лучший физкультурно-оздоровительный комплекс»
+                  p.item__name «Здравница-2012»
+                .item 
+                  h4.item__title Диплом I степени в номинации «Услуги горнолыжного комплекса»
+                  p.item__name «Лучшие товары Республики Татарстан-2009»
+                .item 
+                  h4.item__title Диплом лауреата в номинации «Санаторно-оздоровительные услуги»
+                  p.item__name «Лучшие товары Республики Татарстан-2009»
+                .item 
+                  h4.item__title Дипломант в номинации «Услуги горнолыжного комплекса»
+                  p.item__name «100 лучших товаров России-2009»
+                .item 
+                  h4.item__title Лауреат в номинации «Санаторно-оздоровительные услуги»
+                  p.item__name «100 лучших товаров России-2009»
+                .item 
+                  h4.item__title Диплом 15-й международной специализированной выставки за вклад в развитие санаторно-курортного лечения в России
+                  p.item__name Kazan International Exhibition of Tourism&Sport 2011
+                .item 
+                  h4.item__title Лауреат в номинации «Лучший санаторий»
+                  p.item__name «Лучшие курорты России — 2011»
+                .item 
+                  h4.item__title Золотая медаль и диплом в номинации «Лучший физкультурно-оздоровительный комплекс»
+                  p.item__name «Здравница-2011»
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title До встречи!
+                
+                p.contacts__text Адрес: Республика Татарстан, Альметьевский район, Новоникольское сельское поселение, посёлок Поташная Поляна, Сосновая улица
 
-              div
-              
+                div
+                
 
-                a(href="tel:+78553375333").contacts__link 8(8553) 375-333 (круглосуточно)
-                a(href="tel:+78553375105").contacts__link 8 (8553) 375-105 (понедельник-пятница с 08.00 до 17.00)
-              div.contacts__text
-                span E-mail: 
-                a(href="mailto:yan@tatneft.ru") yan@tatneft.ru
-              
-            .contacts__bottom
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-    include ../sections/footer/index.pug
+                  a(href="tel:+78553375333").contacts__link 8(8553) 375-333 (круглосуточно)
+                  a(href="tel:+78553375105").contacts__link 8 (8553) 375-105 (понедельник-пятница с 08.00 до 17.00)
+                div.contacts__text
+                  span E-mail: 
+                  a(href="mailto:yan@tatneft.ru") yan@tatneft.ru
+                
+              .contacts__bottom
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+      include ../sections/footer/index.pug
