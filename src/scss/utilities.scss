@@ -1,7 +1,10 @@
 @tailwind utilities;
 @layer utilities {
   main {
-    @apply grid gap-15 overflow-hidden;
+    @apply grid gap-15;
+  }
+  .wrapper {
+    overflow: hidden;
   }
 
   .introduction-dzhalilskiy,

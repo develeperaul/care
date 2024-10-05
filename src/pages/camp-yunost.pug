@@ -76,15 +76,30 @@ html(lang="ru")
             .directions__wrapper
               .item 
                 .item__title Первая
-                .item__date 1 июня — 21 июня
+                .item__date 31 мая - 13 июня <br/>(14-дневная смена)
+
               .item 
-                .item__title Первая
-                .item__date 1 июня — 21 июня
+                .item__title Вторая
+                .item__date  15 июня - 5 июля
               .item 
-                .item__title Первая
-                .item__date 1 июня — 21 июня
-          .camp__slider.grid
-              include ../components/otherSlider/index3.pug
+                .item__title Третья
+                .item__date 19 июля - 8 августа
+              .item 
+                .item__title Четвертая
+                .item__date 10 - 30 августа
+
+            .camp__slider.grid
+              .other-slider.other-slider3
+                .content
+                  h2.title Игровая программа «Детского государства» 
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src=require('/assets/images/childs6.png'))
           .camp__req        
             include ../components/select/index.pug
             include ../components/button.pug
@@ -156,11 +171,36 @@ html(lang="ru")
       .section
         .container
           .grid
-            include ../components/otherSlider/index.pug
+            .other-slider
+              .content
+                h2.title Размещение
+                p.text За одну смену лагерь может посетить до 260 детей. Они живут в комфортабельных номерах под бдительным присмотром двух педагогов. На каждой смене работает три медика — врач, медсестра и диетолога. Все объекты оборудованы системой охранной и пожарной сигнализации и находятся под постоянным видеонаблюдением. Территория лагеря круглосуточно охраняют сотрудники ЧОП и МВД.
+
+                .btn-controls
+                  button.btn-prev
+                    +svg('back-line')
+                  button.btn-next
+                    +svg('forward-line')
+              .swiper-wrapper
+                .swiper-slide
+                  img(src=require('/assets/images/planted-tree.png'))
+      //- include ../sections/campInfo/index.pug
       .section
         .container
           .grid
-            include ../components/otherSlider/index2.pug
+            .other-slider.other-slider2
+              .content
+                h2.title Профориентация
+                div
+                  p.text Татарстан и в частности Альметьевск — важная часть нефтяной промышленности. Чтобы дети могли заранее узнать многообразие профессий в этой сфере и их особенности, в лагере предусмотрены множество вариантов работы с программами «Татнефти»: 
+                .btn-controls
+                  button.btn-prev
+                    +svg('back-line')
+                  button.btn-next
+                    +svg('forward-line')
+              .swiper-wrapper
+                .swiper-slide
+                  img(src=require('/assets/images/childs8.png'))
       include ../sections/campInfo/index.pug
       .section.accept
         .container
@@ -172,14 +212,23 @@ html(lang="ru")
           .contacts__wrapper
             .contacts__top.relative
               +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
-              h4.title До встречи!
-              
-              p.contacts__text  Адрес: Татарстан, 423450, северо-западнее города Альметьевска (микрорайона Красноармейка)
+              h4.title Увидимся <br/>в «Юности»!
+              div
+                p.contacts__text  Татарстан, 423450, северо-западнее города Альметьевска (микрорайона Красноармейка)
+                br
+                p.contacts__text Схема проезда <br/>
+                  | Ежедневно в 7.30 от магазина «Корона» по ул. Автомобилистов отправляется вахтовый автобус ПАЗ-953.На личном автомобиле следовать по маршруту: г. Альметьевск – ул. Бигаш – Сабан-Туй – с. Красноармейка – Детский оздоровительный лагерь «Юность».
               
               div
-                a(href="tel:+78553386901").contacts__link +7 (8553) 38 69 01
+                a(href="tel:+78553386887").contacts__link +7 (8553) 38 68 87 директор
+                a(href="tel:+78553386901").contacts__link +7 (8553) 38 69 01  администратор
                 a(href="tel:+78553386902").contacts__link +7 (8553) 38 69 02
                 a(href="tel:+79196407199").contacts__link +7 (919) 640 71 99
+
+                
+
+
+
                 
 
               //- div.contacts__text

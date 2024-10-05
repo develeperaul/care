@@ -6,11 +6,12 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    include ./sections/header/index.pug
-    main
-      include ./sections/descriptionFirst/index
-          
-    include ./sections/footer/index.pug
+    .wrapper
+      include ./sections/header/index.pug
+      main
+        include ./sections/descriptionFirst/index
+            
+      include ./sections/footer/index.pug
     //- div()
     //-   svg(width='20' height='20' )
     //-       use(xlink:href=`/svg/sprite.svg#about`)

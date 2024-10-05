@@ -8,182 +8,214 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    .sidebar#sidebar
-      .container
-        .sidebar__head 
-          a(href="/" class='logo' data-target='sidebar' data-action='close') 
-            +svg("logo")
-          button.close(data-target='sidebar' data-action='close') 
-            +svg("close")
-        nav.sidebar__content 
-          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
-            +svg("child" ,17,15)
-            span Дети
-
-          a(href="/health.html" data-target='sidebar' data-action='close')  
-            +svg("health" ,17,17)
-            span Здоровье
-
-          a(href="/rest.html" data-target='sidebar' data-action='close')  
-            +svg("rest" ,17,14)
-            span Отдых
-
-          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
-            +svg("nutrition" ,17,17)
-            span Питание
-
-          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
-            +svg("sport" ,17,17)
-            span Спорт
-
-          a(href="/museum.html" data-target='sidebar' data-action='close')  
-            +svg("culture" ,17,15)
-            span Культура
-
-          a(href="/about.html" data-target='sidebar' data-action='close')  
-            +svg("about" ,17,17)
-            span О компании
-    header.header.header__sanatorium
-      .container
-        .header__wrapper 
-          a(href="/" class='logo') 
-            +svg("logo")
-          button.burger( data-target='sidebar' data-action='open')
-            +svg("burger", 35)
-          nav
-            a(href="/about.html") О компании
-            a(href="/health.html") Здоровье
-            a(href="/green-scientists.html") Дети
-            a(href="/sport-actuba.html") Спорт
-            a(href="/rest.html") Отдых
-            a(href="/restaurants.html") Питание
-            a(href="/museum.html") Культура 
-          button.call 
-            +svg("phone", 24)
-      .container.relative
-        +svg('figures')(class=" lg2:w-[470px] hidden lg2:block lg2:h-[517px] z-10 lg2:z-0 absolute right-0 lg2:top-0")        
-        .header__bg
-          img(src=require('/assets/images/camp/camp-yubileynyy.png') alt="")
-    main
-      .section.camp.relative
-        +svg('cup')(class=" w-[84px] h-[80px] lg2:w-[262px] lg2:h-[250px] z-10 lg2:z-0 absolute right-[42px] top-[-70px] lg2:right-[380px] lg2:top-[-40px]") 
-        .container 
-          .camp__top
-            h2.title Юбилейный
-            p.text Детский оздоровительный лагерь
-          .camp__directions.directions
-            p.directions__title Лето 2023 года — Лагерь креативных индустрий
-            .directions__wrapper
-              .item 
-                .item__title Первая
-                .item__date 1 июня — 21 июня
-              .item 
-                .item__title Первая
-                .item__date 1 июня — 21 июня
-              .item 
-                .item__title Первая
-                .item__date 1 июня — 21 июня
-          .camp__slider.grid
-              include ../components/otherSlider/index3.pug
-          .camp__req        
-            include ../components/select/index.pug
-            include ../components/button.pug
-            a(href="https://social.tatneft.ru/deti/yubileyniy").book 
-              +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-              +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-              +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-              +button('Забронировать','orange')(type='submit')  
-      .camp-about
-        .container.relative 
-          +svg('home-people')(class=" lg2:w-[329px] hidden lg2:block lg2:h-[251px]  absolute right-[300px] lg2:top-[20px]")       
-          .camp-about__top  
-            h2.title О лагере
-            p.text «Юбилейный» находится в 10 км от города Лениногорск. За год здесь отдыхает около 800 детей. Его выбирают из-за бытовых условий: комфортабельные жилые корпуса, собственная котельная, обустроенная огороженная территория под круглосуточной охраной ЧОП «Витязь».
-          .camp-about__img 
-            img(src=require('/assets/images/about-yubileynyy.png'), alt="")
-      .camp-infrastructure 
-        .container 
-          .camp-infrastructure__top.camp-infrastructure__top-col2
-            h2.title Инфраструктура
-            p.text Для отличного и активного отдыха детей всех возрастов, в лагере создана разнообразная спортивная и культурная инфраструктура: 
-
-
-          .camp-infrastructure__list 
-            .item
-              .item__icon 
-                +svg('river')
-              .item__title Крытый бассейн
-            .item
-              .item__icon 
-                +svg('river')
-              .item__title Баскетбольная площадка
-            .item
-              .item__icon 
-                +svg('river')
-              .item__title Танцевальные площадки
-            .item
-              .item__icon 
-                +svg('river')
-              .item__title Многофункциональное футбольное поле с беговыми дорожками
-            .item
-              .item__icon 
-                +svg('river')
-              .item__title Флорбольная площадка
-            .item
-              .item__icon 
-                +svg('river')
-              .item__title Миниконюшня
-            .item
-              .item__icon 
-                +svg('river')
-              .item__title Крытый амфитеатр с возможностью кинопоказов
-            .item
-              .item__icon 
-                +svg('river')
-              .item__title Просторный спортзал
-            .item
-              .item__icon 
-                +svg('river')
-              .item__title Площадка для игр в волейбол и пионербол
-            .item
-              .item__icon 
-                +svg('river')
-              .item__title Спортивная площадка с уличными тренажерами
-      .section
+    .wrapper
+      .sidebar#sidebar
         .container
-          .grid
-            include ../components/otherSlider/index.pug
-      .section.accept
-        .container
-          .grid.slider
-            div(class='overflow-hidden introduction__slider')
-              include ../components/acceptSlider/index.pug
-      include ../sections/campInfo/index.pug
-      .section.contacts
-        .container
-          .contacts__wrapper
-            .contacts__top.relative
-              +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
-              h4.title До встречи!
-              
-              p.contacts__text Татарстан, Лениногорский район, с.Тимяшево
+          .sidebar__head 
+            a(href="/" class='logo' data-target='sidebar' data-action='close') 
+              +svg("logo")
+            button.close(data-target='sidebar' data-action='close') 
+              +svg("close")
+          nav.sidebar__content 
+            a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
+              +svg("child" ,17,15)
+              span Дети
 
-              
-              div
-                a(href="tel:+78553304177").contacts__link +7 (855-3) 304177 доб.60263
+            a(href="/health.html" data-target='sidebar' data-action='close')  
+              +svg("health" ,17,17)
+              span Здоровье
+
+            a(href="/rest.html" data-target='sidebar' data-action='close')  
+              +svg("rest" ,17,14)
+              span Отдых
+
+            a(href="/restaurants.html" data-target='sidebar' data-action='close')  
+              +svg("nutrition" ,17,17)
+              span Питание
+
+            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+              +svg("sport" ,17,17)
+              span Спорт
+
+            a(href="/museum.html" data-target='sidebar' data-action='close')  
+              +svg("culture" ,17,15)
+              span Культура
+
+            a(href="/about.html" data-target='sidebar' data-action='close')  
+              +svg("about" ,17,17)
+              span О компании
+      header.header.header__sanatorium
+        .container
+          .header__wrapper 
+            a(href="/" class='logo') 
+              +svg("logo")
+            button.burger( data-target='sidebar' data-action='open')
+              +svg("burger", 35)
+            nav
+              a(href="/about.html") О компании
+              a(href="/health.html") Здоровье
+              a(href="/green-scientists.html") Дети
+              a(href="/sport-actuba.html") Спорт
+              a(href="/rest.html") Отдых
+              a(href="/restaurants.html") Питание
+              a(href="/museum.html") Культура 
+            button.call 
+              +svg("phone", 24)
+        .container.relative
+          +svg('figures')(class=" lg2:w-[470px] hidden lg2:block lg2:h-[517px] z-10 lg2:z-0 absolute right-0 lg2:top-0")        
+          .header__bg
+            img(src=require('/assets/images/camp/camp-yubileynyy.png') alt="")
+      main
+        .section.camp.relative
+          +svg('cup')(class=" w-[84px] h-[80px] lg2:w-[262px] lg2:h-[250px] z-10 lg2:z-0 absolute right-[42px] top-[-70px] lg2:right-[380px] lg2:top-[-40px]") 
+          .container 
+            .camp__top
+              h2.title Юбилейный
+              p.text Детский оздоровительный лагерь
+            .camp__directions.directions
+              p.directions__title Лето 2023 года — Лагерь креативных индустрий
+              .directions__wrapper
+                .item 
+                  .item__title Первая
+                  .item__date 1 июня — 21 июня
+                .item 
+                  .item__title Вторая
+                  .item__date 24 июня — 14 июля
+                .item 
+                  .item__title Третья
+                  .item__date 17 июля — 6 августа
+                .item 
+                  .item__title Четвертая
+                  .item__date 9 августа — 29 августа
+            .camp__slider.grid
+              .other-slider.other-slider3
+                .content
+                  h2.title Программа с внедрением креативных индустрий
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src=require('/assets/images/childs6.png'))
+            .camp__req        
+              include ../components/select/index.pug
+              include ../components/button.pug
+              a(href="https://social.tatneft.ru/deti/yubileyniy").book 
+                +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                +button('Забронировать','orange')(type='submit')  
+        .camp-about
+          .container.relative 
+            +svg('home-people')(class=" lg2:w-[329px] hidden lg2:block lg2:h-[251px]  absolute right-[300px] lg2:top-[20px]")       
+            .camp-about__top  
+              h2.title О лагере
+              p.text «Юбилейный» находится в 10 км от города Лениногорск. За год здесь отдыхает около 800 детей. Его выбирают из-за бытовых условий: комфортабельные жилые корпуса, собственная котельная, обустроенная огороженная территория под круглосуточной охраной ЧОП «Витязь».
+            .camp-about__img 
+              img(src=require('/assets/images/about-yubileynyy.png'), alt="")
+        .camp-infrastructure 
+          .container 
+            .camp-infrastructure__top.camp-infrastructure__top-col2
+              h2.title Инфраструктура
+              p.text Для отличного и активного отдыха детей всех возрастов, в лагере создана разнообразная спортивная и культурная инфраструктура: 
+
+
+            .camp-infrastructure__list 
+              .item
+                .item__icon 
+                  +svg('river')
+                .item__title Крытый бассейн
+              .item
+                .item__icon 
+                  +svg('river')
+                .item__title Баскетбольная площадка
+              .item
+                .item__icon 
+                  +svg('river')
+                .item__title Танцевальные площадки
+              .item
+                .item__icon 
+                  +svg('river')
+                .item__title Многофункциональное футбольное поле с беговыми дорожками
+              .item
+                .item__icon 
+                  +svg('river')
+                .item__title Флорбольная площадка
+              .item
+                .item__icon 
+                  +svg('river')
+                .item__title Миниконюшня
+              .item
+                .item__icon 
+                  +svg('river')
+                .item__title Крытый амфитеатр с возможностью кинопоказов
+              .item
+                .item__icon 
+                  +svg('river')
+                .item__title Просторный спортзал
+              .item
+                .item__icon 
+                  +svg('river')
+                .item__title Площадка для игр в волейбол и пионербол
+              .item
+                .item__icon 
+                  +svg('river')
+                .item__title Спортивная площадка с уличными тренажерами
+        .section
+          .container
+            .grid
+              .other-slider
+                .content
+                  h2.title Размещение
+                  p.text Номера в жилых корпусах могут быть трех- или четырех местными, в каждом из них есть отдельный санузел. На каждом этаже расположены женская и мужская душевые комнаты. Также на этажах есть общие холлы и игровые комнаты, где отдыхающие проводят время вечерами или в непогоду. 
+
+
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src=require('/assets/images/room3.png'))
+        //- include ../sections/campInfo/index.pug
+        .section.accept
+          .container
+            .grid.slider
+              div(class='overflow-hidden introduction__slider')
+                include ../components/acceptSlider/index.pug
+        include ../sections/campInfo/index.pug
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title Увидимся <br/> в «Юбилейном»!
                 
+                p.contacts__text Татарстан, Лениногорский район, с.Тимяшево
 
-              //- div.contacts__text
-                span E-mail: 
-                a(href="mailto:sanat_djalil@tatneft.tatar") sanat_djalil@tatneft.tatar
-              //- div.contacts__soc 
-                a(href="" class="soc bg-green")
-                  +svg('whatsapp',  33)
-                  span WhatsApp
-                a(href="" class="soc bg-[#5181B8]")
-                  +svg('vk',  33)
-                  span Вконтакте
-            .contacts__bottom
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-    include ../sections/footer/index.pug
-  
+                
+                div
+                  a(href="tel:+78553304177").contacts__link +7 (855-3) 304177 доб.60263 бронирование
+                  a(href="tel:+78559591006").contacts__link +7 (85595) 9 10 06 администрация
+                  a(href="tel:+78559591003").contacts__link +7 (85595) 9 10 03 столовая
+                  
+
+
+
+                //- div.contacts__text
+                  span E-mail: 
+                  a(href="mailto:sanat_djalil@tatneft.tatar") sanat_djalil@tatneft.tatar
+                //- div.contacts__soc 
+                  a(href="" class="soc bg-green")
+                    +svg('whatsapp',  33)
+                    span WhatsApp
+                  a(href="" class="soc bg-[#5181B8]")
+                    +svg('vk',  33)
+                    span Вконтакте
+              .contacts__bottom
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+      include ../sections/footer/index.pug
+    

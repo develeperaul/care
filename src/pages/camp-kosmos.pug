@@ -8,173 +8,226 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    .sidebar#sidebar
-      .container
-        .sidebar__head 
-          a(href="/" class='logo' data-target='sidebar' data-action='close') 
-            +svg("logo")
-          button.close(data-target='sidebar' data-action='close') 
-            +svg("close")
-        nav.sidebar__content 
-          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
-            +svg("child" ,17,15)
-            span Дети
-
-          a(href="/health.html" data-target='sidebar' data-action='close')  
-            +svg("health" ,17,17)
-            span Здоровье
-
-          a(href="/rest.html" data-target='sidebar' data-action='close')  
-            +svg("rest" ,17,14)
-            span Отдых
-
-          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
-            +svg("nutrition" ,17,17)
-            span Питание
-
-          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
-            +svg("sport" ,17,17)
-            span Спорт
-
-          a(href="/museum.html" data-target='sidebar' data-action='close')  
-            +svg("culture" ,17,15)
-            span Культура
-
-          a(href="/about.html" data-target='sidebar' data-action='close')  
-            +svg("about" ,17,17)
-            span О компании
-    header.header.header__sanatorium
-      .container
-        .header__wrapper 
-          a(href="/" class='logo') 
-            +svg("logo")
-          button.burger( data-target='sidebar' data-action='open')
-            +svg("burger", 35)
-          nav
-            a(href="/about.html") О компании
-            a(href="/health.html") Здоровье
-            a(href="/green-scientists.html") Дети
-            a(href="/sport-actuba.html") Спорт
-            a(href="/rest.html") Отдых
-            a(href="/restaurants.html") Питание
-            a(href="/museum.html") Культура 
-          button.call 
-            +svg("phone", 24)
-      .container.relative
-        +svg('figures')(class=" lg2:w-[470px] hidden lg2:block lg2:h-[517px] z-10 lg2:z-0 absolute right-0 lg2:top-0")        
-        .header__bg
-          img(src=require('/assets/images/camp/camp-kosmos.png') alt="")
-    main
-      .section.camp.relative
-        +svg('rocket')(class=" w-[84px] h-[80px] lg2:w-[262px] lg2:h-[250px] z-10 lg2:z-0 absolute right-[42px] top-[-70px] lg2:right-[380px] lg2:top-[-40px]")
-        .container 
-          .camp__top
-            h2.title Космос
-            p.text Детский оздоровительный лагерь
-          .camp__directions.directions
-            p.directions__title Оздоровительное направление летних смен — здоровое питание
-            .directions__wrapper
-              .item 
-                .item__title Первая
-                .item__date 1 июня — 21 июня
-              .item 
-                .item__title Первая
-                .item__date 1 июня — 21 июня
-              .item 
-                .item__title Первая
-                .item__date 1 июня — 21 июня
-          .camp__slider.grid
-              include ../components/otherSlider/index3.pug
-          .camp__req        
-            include ../components/select/index.pug
-            include ../components/button.pug
-            a(href="https://social.tatneft.ru/deti/kosmos").book 
-              +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-              +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-              +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-              +button('Забронировать','orange')(type='submit')   
-      .camp-about
-        .container.relative 
-          +svg('home-people')(class=" lg2:w-[329px] hidden lg2:block lg2:h-[251px]  absolute right-[300px] lg2:top-[20px]")       
-          .camp-about__top  
-            h2.title О лагере
-            p.text Один из лучших лагерей в Республике Татарстан, «Иволга» каждый год встречает все больше и больше гостей. Одновременно здесь могут отдыхать до 120 детей — их расселяют в 3 комфортабельных спальных корпуса по 3-5 человек. В каждой комнате — прихожая, кровати, тумбочки, шкаф, туалет и душ.
-          .camp-about__img 
-            img(src=require('/assets/images/about-vishnevaya-polyana.png'), alt="")
-      .camp-infrastructure 
-        .container 
-          .camp-infrastructure__top
-            h2.title Через игру к здоровому образу жизни
-            p.text Главная идея лагеря и его педагогов — легкое встраивание принципов здорового образа жизни в ежедневные привычки отдыхающих детей. Поэтому, воспитатели и вожатые проводят самые разные развивающие занятия:
-
-          .camp-infrastructure__list 
-            .item
-              .item__icon 
-                +svg('river')
-              .item__title Интеллектуальные игры
-            .item
-              .item__icon 
-                +svg('ball')
-              .item__title Концерты коллективов художественной самодеятельности
-            .item
-              .item__icon 
-                +svg('batute')
-              .item__title Экскурсии по музеям и историческим местам города
-            .item
-              .item__icon 
-                +svg('kikboks')
-              .item__title Надувная полоса препятствий
-            .item
-              .item__icon 
-                +svg('bitter')
-              .item__title Катание на лошадях
-            .item
-              .item__icon 
-                +svg('note')
-              .item__title Спортивные соревнования и занятия в секциях
-            .item
-              .item__icon 
-                +svg('note')
-              .item__title Работа в творческих студиях 
-            .item
-              .item__icon 
-                +svg('note')
-              .item__title Речные прогулки на теплоходе по реке Кама
-            .item
-              .item__icon 
-                +svg('note')
-              .item__title Танцевальные вечера
-      .section
+    .wrapper
+      .sidebar#sidebar
         .container
-          .grid
-            include ../components/otherSlider/index2.pug
-      include ../sections/campInfo/index.pug
-      .section.contacts
+          .sidebar__head 
+            a(href="/" class='logo' data-target='sidebar' data-action='close') 
+              +svg("logo")
+            button.close(data-target='sidebar' data-action='close') 
+              +svg("close")
+          nav.sidebar__content 
+            a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
+              +svg("child" ,17,15)
+              span Дети
+
+            a(href="/health.html" data-target='sidebar' data-action='close')  
+              +svg("health" ,17,17)
+              span Здоровье
+
+            a(href="/rest.html" data-target='sidebar' data-action='close')  
+              +svg("rest" ,17,14)
+              span Отдых
+
+            a(href="/restaurants.html" data-target='sidebar' data-action='close')  
+              +svg("nutrition" ,17,17)
+              span Питание
+
+            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+              +svg("sport" ,17,17)
+              span Спорт
+
+            a(href="/museum.html" data-target='sidebar' data-action='close')  
+              +svg("culture" ,17,15)
+              span Культура
+
+            a(href="/about.html" data-target='sidebar' data-action='close')  
+              +svg("about" ,17,17)
+              span О компании
+      header.header.header__sanatorium
         .container
-          .contacts__wrapper
-            .contacts__top.relative
-              +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
-              h4.title До встречи!
-              
-              p.contacts__text  Республика Татарстан, Елабужский район, Танаевский лес, 7-й км
-              
-              div
-                a(href="tel:+78555726689").contacts__link +7 (85557) 26-6-89
-                a(href="tel:+79196400490").contacts__link +7 (919)640-04-90
+          .header__wrapper 
+            a(href="/" class='logo') 
+              +svg("logo")
+            button.burger( data-target='sidebar' data-action='open')
+              +svg("burger", 35)
+            nav
+              a(href="/about.html") О компании
+              a(href="/health.html") Здоровье
+              a(href="/green-scientists.html") Дети
+              a(href="/sport-actuba.html") Спорт
+              a(href="/rest.html") Отдых
+              a(href="/restaurants.html") Питание
+              a(href="/museum.html") Культура 
+            button.call 
+              +svg("phone", 24)
+        .container.relative
+          +svg('figures')(class=" lg2:w-[470px] hidden lg2:block lg2:h-[517px] z-10 lg2:z-0 absolute right-0 lg2:top-0")        
+          .header__bg
+            img(src=require('/assets/images/camp/camp-kosmos.png') alt="")
+      main
+        .section.camp.relative
+          +svg('rocket')(class=" w-[84px] h-[80px] lg2:w-[262px] lg2:h-[250px] z-10 lg2:z-0 absolute right-[42px] top-[-70px] lg2:right-[380px] lg2:top-[-40px]")
+          .container 
+            .camp__top
+              h2.title Космос
+              p.text Детский оздоровительный лагерь
+            .camp__directions.directions
+              p.directions__title Оздоровительное направление летних смен — здоровое питание
+              .directions__wrapper
+                .item 
+                  .item__title Первая
+                  .item__date 1 июня — 21 июня
+                .item 
+                  .item__title Вторая
+                  .item__date 24 июня — 14 июля
+                .item 
+                  .item__title Третья
+                  .item__date 17 июля — 6 августа
+                .item 
+                  .item__title Четвертая
+                  .item__date 9 августа — 29 августа
+            .camp__slider.grid
+              .other-slider.other-slider3
+                .content
+                  h2.title Интенсивная оздоровительная программа с упором на равильное питание
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src=require('/assets/images/intensive3.png'))
+            .camp__req        
+              include ../components/select/index.pug
+              include ../components/button.pug
+              a(href="https://social.tatneft.ru/deti/kosmos").book 
+                +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                +button('Забронировать','orange')(type='submit')   
+        .camp-about
+          .container.relative 
+            +svg('home-people')(class=" lg2:w-[329px] hidden lg2:block lg2:h-[251px]  absolute right-[300px] lg2:top-[20px]")       
+            .camp-about__top  
+              h2.title О лагере
+              p.text Один из лучших лагерей в Республике Татарстан, «Иволга» каждый год встречает все больше и больше гостей. Одновременно здесь могут отдыхать до 120 детей — их расселяют в 3 комфортабельных спальных корпуса по 3-5 человек. В каждой комнате — прихожая, кровати, тумбочки, шкаф, туалет и душ.
+            .camp-about__img 
+              img(src=require('/assets/images/about-kosmos.png'), alt="")
+        .camp-infrastructure 
+          .container 
+            .camp-infrastructure__top
+              h2.title Через игру к здоровому образу жизни
+              p.text Главная идея лагеря и его педагогов — легкое встраивание принципов здорового образа жизни в ежедневные привычки отдыхающих детей. Поэтому, воспитатели и вожатые проводят самые разные развивающие занятия:
+
+            .camp-infrastructure__list 
+              .item
+                .item__icon 
+                  +svg('river')
+                .item__title Интеллектуальные игры
+              .item
+                .item__icon 
+                  +svg('ball')
+                .item__title Концерты коллективов художественной самодеятельности
+              .item
+                .item__icon 
+                  +svg('batute')
+                .item__title Экскурсии по музеям и историческим местам города
+              .item
+                .item__icon 
+                  +svg('kikboks')
+                .item__title Надувная полоса препятствий
+              .item
+                .item__icon 
+                  +svg('bitter')
+                .item__title Катание на лошадях
+              .item
+                .item__icon 
+                  +svg('note')
+                .item__title Спортивные соревнования и занятия в секциях
+              .item
+                .item__icon 
+                  +svg('note')
+                .item__title Работа в творческих студиях 
+              .item
+                .item__icon 
+                  +svg('note')
+                .item__title Речные прогулки на теплоходе по реке Кама
+              .item
+                .item__icon 
+                  +svg('note')
+                .item__title Танцевальные вечера
+        .section
+          .container
+            .grid
+              .other-slider.other-slider2
+                .content
+                  h2.title Комфорт в быту
+                  p.text За одну смену лагерь может принять до 160 детей. Они живут в двух трехэтажных комфортабельных корпусах в трехместных однокомнатных номерах. Для комфорта и удобства отдыхающих в каждом номере предусмотрены туалет и душ. Кормят детей шесть раз в день по сбалансированному меню  с большим количеством фруктов и овощей. 
+
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src=require('/assets/images/room2.png'), alt="")
+        //- include ../sections/campInfo/index.pug
+        .section.accept
+          .container
+            .grid.slider
+              div(class='overflow-hidden introduction__slider')
+                .accept-slider
+                  .swiper-wrapper
+                    .swiper-slide
+                      img(src=require('/assets/images/childs.png'))
+                    .swiper-slide
+                      img(src=require('/assets/images/childs2.png'))
+                  
+                  button.btn-prev
+                    +svg('back-line')
+                  button.btn-next
+                    +svg('forward-line')
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title До встречи!
+                div              
+                  p.contacts__text  Республика Татарстан, Елабужский район, Танаевский лес, 7-й км.
+                  br
+                  br
+                  p.contacts__text  Схема проезда
+                  br
+                  br
+                  p.contacts__text От железнодорожной станции «Набережные Челны, от аэропорта Бегишево (г. Набережные Челны) или аэропорта г. Казани — до автовокзала г. Елабуга. Далее — проезд автобусом до санатория-профилактория «Космос» (в пути 10 минут). Автобус отправляется ежедневно в буднии дни: 7:40, 15:00, 16:40, 19:05, в субботу в 7:50, 12:45, 19:05, в воскресенье в 7:05, 19:05
+
+
                 
+                div
+                  a(href="tel:+78555726626").contacts__link (85557) 26-6-26 начальник ДОЛ «Космос»6
+                  a(href="tel:+78555726689").contacts__link (85557) 26-6-89 администратор
+                  a(href="tel:+79196400490 ").contacts__link 8(919)640-04-90 
+                  
 
-              //- div.contacts__text
-                span E-mail: 
-                a(href="mailto:sanat_djalil@tatneft.tatar") sanat_djalil@tatneft.tatar
-              //- div.contacts__soc 
-                a(href="" class="soc bg-green")
-                  +svg('whatsapp',  33)
-                  span WhatsApp
-                a(href="" class="soc bg-[#5181B8]")
-                  +svg('vk',  33)
-                  span Вконтакте
-            .contacts__bottom
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-    include ../sections/footer/index.pug
   
-  
+
+
+                //- div.contacts__text
+                  span E-mail: 
+                  a(href="mailto:sanat_djalil@tatneft.tatar") sanat_djalil@tatneft.tatar
+                //- div.contacts__soc 
+                  a(href="" class="soc bg-green")
+                    +svg('whatsapp',  33)
+                    span WhatsApp
+                  a(href="" class="soc bg-[#5181B8]")
+                    +svg('vk',  33)
+                    span Вконтакте
+              .contacts__bottom
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+      include ../sections/footer/index.pug
+    
+    
