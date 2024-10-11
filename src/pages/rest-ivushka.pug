@@ -32,7 +32,7 @@ html(lang="ru")
               +svg("nutrition" ,17,17)
               span Питание
 
-            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+            a(href="/horseback-riding.html" data-target='sidebar' data-action='close')  
               +svg("sport" ,17,17)
               span Спорт
 
@@ -54,7 +54,7 @@ html(lang="ru")
               a(href="/about.html") О компании
               a(href="/health.html") Здоровье
               a(href="/green-scientists.html") Дети
-              a(href="/sport-actuba.html") Спорт
+              a(href="/horseback-riding.html") Спорт
               a(href="/rest.html") Отдых
               a(href="/restaurants.html") Питание
               a(href="/museum.html") Культура 
@@ -67,16 +67,27 @@ html(lang="ru")
           .container 
             .rest__top 
               .rest__top-left 
-                h2.title Зелёный берег
+                h2.title Ивушка
                 p.text База отдыха
               .rest__top-right  
-                p.text База расположена в лесополосе на живописном берегу Карабашского водохранилища. Одновременно здесь могут остановиться 96 отдыхающих. На базе можно провести выходные, отметить день рождения, выпускной, свадьбу или другое важное событие.
+                p.text База отдыха расположена на левом берегу Карабашского водохранилища в 27 км от Бугульмы. За один заезд база может принять до 92 человек — их размещают в 4-х местных двухэтажных, или 4-х и 6-ти местных одноэтажных домиках. Все они оборудованы мебелью, кондиционерами и холодильниками. Кухня — общая на лагерь и оборудована всем необходимым. Туалеты и душевые находятся на территории.
+
 
         .section.accept
           .container
             .grid.slider
               div(class='overflow-hidden introduction__slider')
-                include ../components/acceptSlider/index.pug
+                .accept-slider
+                  .swiper-wrapper
+                    .swiper-slide
+                      img(src=require('/assets/images/rest4.png'))
+                    .swiper-slide
+                      img(src=require('/assets/images/rest5.png'))
+                  
+                  button.btn-prev
+                    +svg('back-line')
+                  button.btn-next
+                    +svg('forward-line')
         .section.directions-care 
           .container
             
@@ -113,11 +124,17 @@ html(lang="ru")
                 h4.trend__title Возможность отправиться на рыбалку со своим инвентарем
         .section 
           .container
-            include ../components/book/index.pug
+            include ../components/select/index.pug
+            include ../components/button.pug
+            a(href="https://social.tatneft.ru/deti/ivolga/?lang=ru").book 
+              +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+              +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+              +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+              +button('Забронировать','orange')(type='submit')  
         
         .section.img-content
           .container 
-            img(src=require("/assets/images/tennis2.png"), alt="")
+            img(src=require("/assets/images/rest10.png"), alt="")
         .section.price-book
           .container
             h2.title Цены и бронирование
@@ -136,43 +153,43 @@ html(lang="ru")
                         span выходные
                   .item
                     .item__title Вагон-домик
-                    .item__count 2-местный (+1 гость)
+                    .item__count 2-местный 
                     .item__prices 
                       div 
-                        span 1 500 ₽
+                        span 1 700 ₽
                         span будни
                       div 
-                        span 1 900 ₽
+                        span 2 000 ₽
                         span выходные
                   .item
                     .item__title Вагон-домик
-                    .item__count 2-местный (+1 гость)
+                    .item__count 4-местный (1 этаж)
                     .item__prices 
                       div 
-                        span 1 500 ₽
+                        span 3 100 ₽
                         span будни
                       div 
-                        span 1 900 ₽
+                        span 3 900 ₽
                         span выходные
                   .item
                     .item__title Вагон-домик
-                    .item__count 2-местный (+1 гость)
+                    .item__count 4-местный (2 этажа)
                     .item__prices 
                       div 
-                        span 1 500 ₽
+                        span 3 300 ₽
                         span будни
                       div 
-                        span 1 900 ₽
+                        span 4 000 ₽
                         span выходные
                   .item
-                    .item__title Вагон-домик
-                    .item__count 2-местный (+1 гость)
+                    .item__title Деревянный VIP-дом
+                    .item__count 6-местный (2 этажа)
                     .item__prices 
                       div 
-                        span 1 500 ₽
+                        span 10 400 ₽
                         span будни
                       div 
-                        span 1 900 ₽
+                        span 12 700 ₽
                         span выходные
                   .item-other
                     div
@@ -186,7 +203,9 @@ html(lang="ru")
                       .item__prices 
                         div 
                           span 800/1 000 ₽ 
-                          span будни/выходной
+                          span Дополнительное место
+
+              
 
                 .price-book__info
                   p * В праздничные и выходные дни стоимость и графики заезда могут меняться.
@@ -195,7 +214,7 @@ html(lang="ru")
                   br
                   p Дети до 2-х лет (включительно) проживают без оплаты и предоставления койко-места
         
-        .camp-info 
+        //- .camp-info 
           .container
             h2.title Информация 
             .list.special-programs__list
@@ -203,7 +222,19 @@ html(lang="ru")
                 .item__icon
                   +svg('forward-line')
                 .item__title Анкета «Мой ребенок»
-        include ../sections/contacts/index.pug
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title Увидимся!
+                
+                p.contacts__text  г. Лениногорск, ул. Промышленная, д.9, Лениногорский филиал УСО ПАО «Татнефть».
+                div
+                  a(href="tel:+78553304191").contacts__link +7 (8553) 304191 доб. 60263
+                
+              .contacts__bottom
+                img(src=require('/assets/images/maps/rest-ivushka-map.png'), alt="")
         
       include ../sections/footer/index.pug
     

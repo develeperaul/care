@@ -10,229 +10,230 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
-    .sidebar#sidebar
-      .container
-        .sidebar__head 
-          a(href="/" class='logo' data-target='sidebar' data-action='close') 
-            +svg("logo")
-          button.close(data-target='sidebar' data-action='close') 
-            +svg("close")
-        nav.sidebar__content 
-          a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
-            +svg("child" ,17,15)
-            span Дети
-
-          a(href="/health.html" data-target='sidebar' data-action='close')  
-            +svg("health" ,17,17)
-            span Здоровье
-
-          a(href="/rest.html" data-target='sidebar' data-action='close')  
-            +svg("rest" ,17,14)
-            span Отдых
-
-          a(href="/restaurants.html" data-target='sidebar' data-action='close')  
-            +svg("nutrition" ,17,17)
-            span Питание
-
-          a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
-            +svg("sport" ,17,17)
-            span Спорт
-
-          a(href="/museum.html" data-target='sidebar' data-action='close')  
-            +svg("culture" ,17,15)
-            span Культура
-
-          a(href="/about.html" data-target='sidebar' data-action='close')  
-            +svg("about" ,17,17)
-            span О компании
-    header.header.header__sanatorium
-      .container
-        .header__wrapper 
-          a(href="/" class='logo') 
-            +svg("logo")
-          button.burger( data-target='sidebar' data-action='open')
-            +svg("burger", 35)
-          nav
-            a(href="/about.html") О компании
-            a(href="/health.html") Здоровье
-            a(href="/green-scientists.html") Дети
-            a(href="/sport-actuba.html") Спорт
-            a(href="/rest.html") Отдых
-            a(href="/restaurants.html") Питание
-            a(href="/museum.html") Культура 
-          button.call 
-            +svg("phone", 24)
-        .header__bg
-          img(src=require('/assets/images/bg/ivolga.png') alt="")
-      
-        
-    main
-
-  
-      .section.introduction-type-2.introduction-ivolga
+    .wrapper
+      .sidebar#sidebar
         .container
-          h2.title иволга
-          .introduction__wrapper
-            
-              h3.introduction__title В окружении <br/> нетронутой природы
-            
-              p.introduction__text «Иволга» — это современный санаторий, вмещающий одновременно до 75 гостей. Помимо жилого и лечебного корпуса, расположенных в одном здании, посетителей ждут:
-          .directions-care 
-            .list 
-              
-              .trend 
-                +svg('pool').trend__icon
-                h4.trend__title Крытый бассейн 
-              .trend 
-                +svg('dumbbell').trend__icon
-                h4.trend__title Современный тренажерный зал
-              .trend 
-                +svg('terrencur').trend__icon
-                h4.trend__title Терренкур
-              .trend 
-                +svg('sun').trend__icon
-                h4.trend__title Корт для большого тенниса
-              .trend 
-                +svg('child').trend__icon
-                h4.trend__title Детская игровая площадка
-              .trend 
-                +svg('volleyball-net').trend__icon
-                h4.trend__title Волейбольное поле
-              .trend 
-                +svg('sport').trend__icon
-                h4.trend__title Футбольное поле
-              .trend 
-                +svg('tennis2').trend__icon
-                h4.trend__title Настольный теннис
-          .grid.introduction__slider
-            div(class='overflow-hidden ')
-              .accept-slider
-                .swiper-wrapper
-                  .swiper-slide
-                    img(src=require('/assets/images/sanatorium/ivolga/slide-1.png'))
-                  .swiper-slide
-                    img(src=require('/assets/images/sanatorium/ivolga/slide-2.png'))
-                
-                button.btn-prev
-                  +svg('back-line')
-                button.btn-next
-                  +svg('forward-line')
+          .sidebar__head 
+            a(href="/" class='logo' data-target='sidebar' data-action='close') 
+              +svg("logo")
+            button.close(data-target='sidebar' data-action='close') 
+              +svg("close")
+          nav.sidebar__content 
+            a(href="/green-scientists.html" data-target='sidebar' data-action='close')  
+              +svg("child" ,17,15)
+              span Дети
 
+            a(href="/health.html" data-target='sidebar' data-action='close')  
+              +svg("health" ,17,17)
+              span Здоровье
+
+            a(href="/rest.html" data-target='sidebar' data-action='close')  
+              +svg("rest" ,17,14)
+              span Отдых
+
+            a(href="/restaurants.html" data-target='sidebar' data-action='close')  
+              +svg("nutrition" ,17,17)
+              span Питание
+
+            a(href="/horseback-riding.html" data-target='sidebar' data-action='close')  
+              +svg("sport" ,17,17)
+              span Спорт
+
+            a(href="/museum.html" data-target='sidebar' data-action='close')  
+              +svg("culture" ,17,15)
+              span Культура
+
+            a(href="/about.html" data-target='sidebar' data-action='close')  
+              +svg("about" ,17,17)
+              span О компании
+      header.header.header__sanatorium
+        .container
+          .header__wrapper 
+            a(href="/" class='logo') 
+              +svg("logo")
+            button.burger( data-target='sidebar' data-action='open')
+              +svg("burger", 35)
+            nav
+              a(href="/about.html") О компании
+              a(href="/health.html") Здоровье
+              a(href="/green-scientists.html") Дети
+              a(href="/horseback-riding.html") Спорт
+              a(href="/rest.html") Отдых
+              a(href="/restaurants.html") Питание
+              a(href="/museum.html") Культура 
+            button.call 
+              +svg("phone", 24)
+          .header__bg
+            img(src=require('/assets/images/bg/ivolga.png') alt="")
+        
           
-          a(href="http://ivolga.tatneft.ru/?lang=ru").book 
-            +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-            +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-            +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
-            +button('Забронировать','orange')(type='submit')   
-      .section.directions-care
-        .container       
-          h2.title Повышаем качество <br/> вашей жизни
-          p.text Санаторий «Иволга» специализируется на лечении заболеваний органов дыхания, костно-мышечной и нервной систем, и сопутствующих заболеваний:
-          .list 
-            .trend 
-              +svg('heart').trend__icon
-              h4.trend__title Сердечно-сосудистой системы
-            .trend 
-              +svg('sun2').trend__icon
-              h4.trend__title Мочеполовой системы
-            .trend 
-              +svg('grass-blue').trend__icon
-              h4.trend__title Бронхо-легочной системы
-            .trend 
-              +svg('semi-circle-yellow').trend__icon
-              h4.trend__title Желудочно-кишечного тракта
-            
-          div(class='content-other')
-            p.text-other(class=' text-other ') Особенность санатория — в уникальных методиках лечения заболеваний позвоночника под присмотром квалифицированного врача-невролога. Комплексный подход, высококвалифицированные специалисты и современное оборудование позволяют улучшить качество жизни без хирургического вмешательства.
-      .section 
-        .container  
-          .grid
-            .other-slider
-              .content
-                h2.title Комплексный <br/> подход к заботе
-                p.text Специалисты санаторий-профилактория составляют индивидуальные планы лечения, которые направлены не только на решение основной проблемы здоровья, но и воздействуют на общее состояние организма гостя. Среди инструментов работы наших сотрудников достижения традиционной медицины и альтернативные методики:
-                .btn-controls
+      main
+
+    
+        .section.introduction-type-2.introduction-ivolga
+          .container
+            h2.title иволга
+            .introduction__wrapper
+              
+                h3.introduction__title В окружении <br/> нетронутой природы
+              
+                p.introduction__text «Иволга» — это современный санаторий, вмещающий одновременно до 75 гостей. Помимо жилого и лечебного корпуса, расположенных в одном здании, посетителей ждут:
+            .directions-care 
+              .list 
+                
+                .trend 
+                  +svg('pool').trend__icon
+                  h4.trend__title Крытый бассейн 
+                .trend 
+                  +svg('dumbbell').trend__icon
+                  h4.trend__title Современный тренажерный зал
+                .trend 
+                  +svg('terrencur').trend__icon
+                  h4.trend__title Терренкур
+                .trend 
+                  +svg('sun').trend__icon
+                  h4.trend__title Корт для большого тенниса
+                .trend 
+                  +svg('child').trend__icon
+                  h4.trend__title Детская игровая площадка
+                .trend 
+                  +svg('volleyball-net').trend__icon
+                  h4.trend__title Волейбольное поле
+                .trend 
+                  +svg('sport').trend__icon
+                  h4.trend__title Футбольное поле
+                .trend 
+                  +svg('tennis2').trend__icon
+                  h4.trend__title Настольный теннис
+            .grid.introduction__slider
+              div(class='overflow-hidden ')
+                .accept-slider
+                  .swiper-wrapper
+                    .swiper-slide
+                      img(src=require('/assets/images/sanatorium/ivolga/slide-1.png'))
+                    .swiper-slide
+                      img(src=require('/assets/images/sanatorium/ivolga/slide-2.png'))
+                  
                   button.btn-prev
                     +svg('back-line')
                   button.btn-next
                     +svg('forward-line')
-              .swiper-wrapper
-                .swiper-slide
-                  img(src='/assets/images/sanatorium/medicinalbaths.png')
-                  .slide-content  
-                    h4.slide-content__title Лечебные ванны
 
-
-      include ../sections/team/index.pug
-      .section.select-programm 
-        .container
-          .select-programm__top
-            h2.title Выбор путевок
-            p.text Санаторий «Иволга» предлагает на выбор несколько программ на выбор, вы можете подобрать направление в зависимости от вашего запроса.
-          .list
             
-            .item 
-              h4.item__title Стандарт
-              h5.item__duration 7 дней
-              p.item__descr Стандартная программа лечения
-            .item 
-              h4.item__title Оздоровительная путевка
-              h5.item__duration от 1 дня
-              p.item__descr Оздоровительная программа лечения
-            .item 
-              h4.item__title Курсовка
-              h5.item__duration от 5 дней
-              p.item__descr Лечение с питанием или без питания, с дневным пребыванием в санатории
-          .special-programs
-            .special-programs__descr 
-              +svg('calendar').special-programs__descr-icon
-              p.special-programs__descr-text Помимо стандартных путевок, «Иволга» предлагает специальные выгодные программы.
-            .special-programs__list
-              .item 
-                .item__icon
-                  +svg('forward-line')
-                .item__title Программа «Дышу свободно»
-              .item 
-                .item__icon
-                  +svg('forward-line')
-                .item__title Программа по заболеваниям нервной системы 
-              .item 
-                .item__icon
-                  +svg('forward-line')
-                .item__title Программа по костно-мышечной системе
-              
-      //- include ../sections/documents/index.pug
-      .section.virtualt-tour
-        .container 
-          .virtualt-tour__wrapper
-            img(src=require('/assets/images/sanatorium/ivolga/ivolga3d.png'), alt="")
-            .tour 
-              +svg('compas').tour__icon
-              .tour__title Виртуальный тур <br/> по санаторию
-      .section.merit 
-        .container 
-          .merit__wrapper
-            h2.title Наши заслуги
+            a(href="http://ivolga.tatneft.ru/?lang=ru").book 
+              +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+              +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+              +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+              +button('Забронировать','orange')(type='submit')   
+        .section.directions-care
+          .container       
+            h2.title Повышаем качество <br/> вашей жизни
+            p.text Санаторий «Иволга» специализируется на лечении заболеваний органов дыхания, костно-мышечной и нервной систем, и сопутствующих заболеваний:
             .list 
+              .trend 
+                +svg('heart').trend__icon
+                h4.trend__title Сердечно-сосудистой системы
+              .trend 
+                +svg('sun2').trend__icon
+                h4.trend__title Мочеполовой системы
+              .trend 
+                +svg('grass-blue').trend__icon
+                h4.trend__title Бронхо-легочной системы
+              .trend 
+                +svg('semi-circle-yellow').trend__icon
+                h4.trend__title Желудочно-кишечного тракта
+              
+            div(class='content-other')
+              p.text-other(class=' text-other ') Особенность санатория — в уникальных методиках лечения заболеваний позвоночника под присмотром квалифицированного врача-невролога. Комплексный подход, высококвалифицированные специалисты и современное оборудование позволяют улучшить качество жизни без хирургического вмешательства.
+        .section 
+          .container  
+            .grid
+              .other-slider
+                .content
+                  h2.title Комплексный <br/> подход к заботе
+                  p.text Специалисты санаторий-профилактория составляют индивидуальные планы лечения, которые направлены не только на решение основной проблемы здоровья, но и воздействуют на общее состояние организма гостя. Среди инструментов работы наших сотрудников достижения традиционной медицины и альтернативные методики:
+                  .btn-controls
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src='/assets/images/sanatorium/medicinalbaths.png')
+                    .slide-content  
+                      h4.slide-content__title Лечебные ванны
+
+
+        include ../sections/team/index.pug
+        .section.select-programm 
+          .container
+            .select-programm__top
+              h2.title Выбор путевок
+              p.text Санаторий «Иволга» предлагает на выбор несколько программ на выбор, вы можете подобрать направление в зависимости от вашего запроса.
+            .list
+              
               .item 
-                h4.item__title Серебряная медаль и диплом в номинации «Лучший руководитель здравницы»
-                p.item__name Здравница-2012
-      .section.contacts
-        .container
-          .contacts__wrapper
-            .contacts__top.relative
-              +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
-              h4.title До встречи!
-              
-              p.contacts__text  423930, Республика Татарстан г.Бавлы, санаторий-профилакторий «Иволга»
-              div
-                a(href="tel:+79872146716").contacts__link +7(987)214-67-16 (отдел бронирования)
-                a(href="tel:+78556940903").contacts__link +7(85569)4-09-03 (администратор)
-                a(href="tel:+78556940954").contacts__link +7(85569)4-09-54 (главная медсестра)
-              div.contacts__text
-                span E-mail: 
-                a(href="mailto:ivolga.bavly@mail.ru") ivolga.bavly@mail.ru
-              
-            .contacts__bottom
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2009424f30fe10513eda0c4ee12378b3ccf6d66c287eff5862674bb234a35a82&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-    include ../sections/footer/index.pug
+                h4.item__title Стандарт
+                h5.item__duration 7 дней
+                p.item__descr Стандартная программа лечения
+              .item 
+                h4.item__title Оздоровительная путевка
+                h5.item__duration от 1 дня
+                p.item__descr Оздоровительная программа лечения
+              .item 
+                h4.item__title Курсовка
+                h5.item__duration от 5 дней
+                p.item__descr Лечение с питанием или без питания, с дневным пребыванием в санатории
+            .special-programs
+              .special-programs__descr 
+                +svg('calendar').special-programs__descr-icon
+                p.special-programs__descr-text Помимо стандартных путевок, «Иволга» предлагает специальные выгодные программы.
+              .special-programs__list
+                .item 
+                  .item__icon
+                    +svg('forward-line')
+                  .item__title Программа «Дышу свободно»
+                .item 
+                  .item__icon
+                    +svg('forward-line')
+                  .item__title Программа по заболеваниям нервной системы 
+                .item 
+                  .item__icon
+                    +svg('forward-line')
+                  .item__title Программа по костно-мышечной системе
+                
+        //- include ../sections/documents/index.pug
+        .section.virtualt-tour
+          .container 
+            .virtualt-tour__wrapper
+              img(src=require('/assets/images/sanatorium/ivolga/ivolga3d.png'), alt="")
+              .tour 
+                +svg('compas').tour__icon
+                .tour__title Виртуальный тур <br/> по санаторию
+        .section.merit 
+          .container 
+            .merit__wrapper
+              h2.title Наши заслуги
+              .list 
+                .item 
+                  h4.item__title Серебряная медаль и диплом в номинации «Лучший руководитель здравницы»
+                  p.item__name Здравница-2012
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title До встречи!
+                
+                p.contacts__text  423930, Республика Татарстан г.Бавлы, санаторий-профилакторий «Иволга»
+                div
+                  a(href="tel:+79872146716").contacts__link +7(987)214-67-16 (отдел бронирования)
+                  a(href="tel:+78556940903").contacts__link +7(85569)4-09-03 (администратор)
+                  a(href="tel:+78556940954").contacts__link +7(85569)4-09-54 (главная медсестра)
+                div.contacts__text
+                  span E-mail: 
+                  a(href="mailto:ivolga.bavly@mail.ru") ivolga.bavly@mail.ru
+                
+              .contacts__bottom
+                img(src=require('/assets/images/maps/sanatorium-ivolga-map.png'), alt="")
+      include ../sections/footer/index.pug

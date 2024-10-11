@@ -36,6 +36,10 @@
           line-height: 120%;
         }
       }
+      &__count {
+        display: flex;
+        justify-content: space-between;
+      }
       &__prices,
       &__count {
         font-size: 0.88rem;
@@ -52,8 +56,12 @@
       &__prices {
         @apply grid gap-1.5;
         @apply lg2:font-medium;
-        & * {
-          @apply grid grid-cols-[minmax(59px,110px)_1fr] gap-2;
+        .small {
+          font-size: 24px;
+          font-weight: 400;
+        }
+        & > * {
+          @apply grid grid-cols-[minmax(59px,140px)_1fr] gap-2;
         }
       }
       &-other {

@@ -32,7 +32,7 @@ html(lang="ru")
               +svg("nutrition" ,17,17)
               span Питание
 
-            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+            a(href="/horseback-riding.html" data-target='sidebar' data-action='close')  
               +svg("sport" ,17,17)
               span Спорт
 
@@ -54,7 +54,7 @@ html(lang="ru")
               a(href="/about.html") О компании
               a(href="/health.html") Здоровье
               a(href="/green-scientists.html") Дети
-              a(href="/sport-actuba.html") Спорт
+              a(href="/horseback-riding.html") Спорт
               a(href="/rest.html") Отдых
               a(href="/restaurants.html") Питание
               a(href="/museum.html") Культура 
@@ -75,29 +75,122 @@ html(lang="ru")
           .container
             .grid.slider
               div(class='overflow-hidden introduction__slider')
-                include ../components/acceptSlider/index.pug
+                .accept-slider
+                  .swiper-wrapper
+                    .swiper-slide
+                      img(src=require('/assets/images/rest1.png'))
+                    .swiper-slide
+                      img(src=require('/assets/images/rest2.png'))
+                  
+                  button.btn-prev
+                    +svg('back-line')
+                  button.btn-next
+                    +svg('forward-line')
         .section.placement
           .container
             h2.title Размещение
             p.text 
             .placement__list 
               .item 
-                img(src=require('/assets/images/box.png'), alt="")
-                .item__title Прокат лодок и катамаранов
+                img(src=require('/assets/images/service5.png'), alt="")
+                .item__title Стандартный 2-х местный домик вагонного типа
               .item 
-                img(src=require('/assets/images/box.png'), alt="")
-                .item__title Прокат лодок и катамаранов
+                img(src=require('/assets/images/service6.png'), alt="")
+                .item__title Стандартный 4-х местный домик вагонного типа
               .item 
-                img(src=require('/assets/images/box.png'), alt="")
-                .item__title Прокат лодок и катамаранов
-        include ../sections/services/index.pug
+                img(src=require('/assets/images/service7.png'), alt="")
+                .item__title Двухэтажный деревянный дом (6 мест)
+        
         .section.img-content
           .container 
-            img(src=require("/assets/images/tennis2.png"), alt="")
-            h2.title.img-content__text(class="  bottom-0 lg2:top-0 lg2:bottom-auto ") беседка <br/>на берегу реки <br/> с мангалом
-        include ../sections/priceBook/index.pug
+            img(src=require("/assets/images/rest8.png"), alt="")
+            h2.title.img-content__text(class="  bottom-0 lg2:top-0 lg2:bottom-auto ") оборудованые <br/> причалы
+        .section.price-book
+          .container
+            h2.title Цены и бронирование
+            .price-book__wrapper
+              .price-book__top
+                .price-book__list 
+                  .item
+                    .item__title Вагон-домик
+                    .item__count 2-местный (+1 гость)
+                    .item__prices 
+                      div 
+                        span 1 500 ₽
+                        span будни
+                      div 
+                        span 1 900 ₽
+                        span выходные
+                  .item
+                    .item__title Вагон-домик
+                    .item__count 2-местный 
+                    .item__prices 
+                      div 
+                        span 1 700 ₽
+                        span будни
+                      div 
+                        span 2 000 ₽
+                        span выходные
+                  .item
+                    .item__title Вагон-домик
+                    .item__count 4-местный (1 этаж)
+                    .item__prices 
+                      div 
+                        span 3 100 ₽
+                        span будни
+                      div 
+                        span 3 900 ₽
+                        span выходные
+                  .item
+                    .item__title Вагон-домик
+                    .item__count 4-местный (2 этажа)
+                    .item__prices 
+                      div 
+                        span 3 300 ₽
+                        span будни
+                      div 
+                        span 4 000 ₽
+                        span выходные
+                  .item
+                    .item__title Деревянный VIP-дом
+                    .item__count 6-местный (2 этажа)
+                    .item__prices 
+                      div 
+                        span 10 400 ₽
+                        span будни
+                      div 
+                        span 12 700 ₽
+                        span выходные
+                  .item-other
+                    div
+                      .item__title Ранний заезд/поздний выезд
+                      .item__prices 
+                        div 
+                          span 400/500 ₽ 
+                          span будни/выходной
+                    div
+                      .item__title Дополнительное место
+                      .item__prices 
+                        div 
+                          span 800/1 000 ₽ 
+                          span Дополнительное место
+
+                .price-book__info
+                  p * В праздничные и выходные дни стоимость и графики заезда могут меняться.
+                  br
+                  p В стоимость номера входит: проживание, пользование инфраструктурой (игровые площадки), пользование спорт. инвентарем, спортивно-развлекательные мероприятия.
+                  br
+                  p Дети до 2-х лет (включительно) проживают без оплаты и предоставления койко-места
+              include ../components/select/index.pug
+              include ../components/button.pug
+              a(href="https://social.tatneft.ru/deti/ivolga/?lang=ru").book 
+                +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                +button('Забронировать','orange')(type='submit')  
+
         
-        .camp-info 
+        //- .camp-info 
           .container
             h2.title Информация 
             .list.special-programs__list
@@ -105,7 +198,23 @@ html(lang="ru")
                 .item__icon
                   +svg('forward-line')
                 .item__title Анкета «Мой ребенок»
-        include ../sections/contacts/index.pug
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title Увидимся!
+                
+
+                div
+                  p.contacts__text г. Альметьевск, ул. Белоглазова, 62А <br/> (Спорткомплекс ПАО «Татнефть»)
+                  a(href="tel:+78553312654").contacts__link +7 (8553) 31-26-54
+                div
+                  p.contacts__text г. Альметьевск, ул. Маяковского, 68, каб. 1-52, <br/> Управление социальными объектами
+                  a(href="tel:+78553386428").contacts__link +7 (8553) 38-64-28
+                
+              .contacts__bottom
+                img(src=require('/assets/images/maps/rest-kama-map.png'), alt="")
         
       include ../sections/footer/index.pug
     

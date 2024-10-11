@@ -32,7 +32,7 @@ html(lang="ru")
               +svg("nutrition" ,17,17)
               span Питание
 
-            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+            a(href="/horseback-riding.html" data-target='sidebar' data-action='close')  
               +svg("sport" ,17,17)
               span Спорт
 
@@ -54,7 +54,7 @@ html(lang="ru")
               a(href="/about.html") О компании
               a(href="/health.html") Здоровье
               a(href="/green-scientists.html") Дети
-              a(href="/sport-actuba.html") Спорт
+              a(href="/horseback-riding.html") Спорт
               a(href="/rest.html") Отдых
               a(href="/restaurants.html") Питание
               a(href="/museum.html") Культура 
@@ -67,14 +67,36 @@ html(lang="ru")
           .container 
             .rest__top 
               .rest__top-left 
-                h2.title Общежитие №2 
+                h2.title Общежитие 
                 p.text Г. Нижнекамск
         .section
           .container
             .grid
-              include ../components/otherSlider/index2.pug
+              .other-slider.other-slider2
+                .content
+                  p.text В Общежитии № 1 можно выбрать комнаты из двух вариантов размещения: жилые комнаты с местами общего пользования и изолированные комнаты (это 2-3 комнаты с совмещенным санузлом). Прилегающая территория всегда убрана и ухожена, а в самом здании расположен Центр активного долголетия. В шаговой доступности торгово-развлекательный центр «СитиМолл», где можно купить все необходимое, и парк для «Велики», оборудованный для велопрогулок.
+
+                  
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src=require('/assets/images/obsh2.png'))
+                    
         
-        include ../sections/contacts/index.pug
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title Увидимся!
+                
+                p.contacts__text  Россия, Республика Татарстан, <br/>г. Нижнекамск проспект Химиков, 16.
+                div
+                  
+                  a(href="tel:+78555301202").contacts__link 8(8555) 30-12-02
+                  a(href="tel:+7855503893").contacts__link 8(8555) 30-38-93.
+                
+              .contacts__bottom
+                img(src=require('/assets/images/maps/rest-obsh2-map.png'), alt="")
         
       include ../sections/footer/index.pug
     

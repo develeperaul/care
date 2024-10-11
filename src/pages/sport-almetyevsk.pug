@@ -32,7 +32,7 @@ html(lang="ru")
               +svg("nutrition" ,17,17)
               span Питание
 
-            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+            a(href="/horseback-riding.html" data-target='sidebar' data-action='close')  
               +svg("sport" ,17,17)
               span Спорт
 
@@ -54,14 +54,14 @@ html(lang="ru")
               a(href="/about.html") О компании
               a(href="/health.html") Здоровье
               a(href="/green-scientists.html") Дети
-              a(href="/sport-actuba.html") Спорт
+              a(href="/horseback-riding.html") Спорт
               a(href="/rest.html") Отдых
               a(href="/restaurants.html") Питание
               a(href="/museum.html") Культура 
             button.call 
               +svg("phone", 24)
           .header__bg
-            img(src=require('/assets/images/field-childs.png') alt="")
+            img(src=require('/assets/images/velo1.png') alt="")
       main
         include ../sections/sport/index.pug
         include ../sections/sportInfrastructure/index.pug
@@ -74,9 +74,75 @@ html(lang="ru")
           .container 
             img(src=require("/assets/images/tennis.png"), alt="")
             h2.title.img-content__text(class=" bottom-0 lg2:left-0 lg2:top-0 lg2:bottom-auto lg2:text-left") 2 игровых зала <br/> для занятий <br/> большим <br/> теннисом
-        include ../sections/prices/index.pug
-        include ../sections/contacts/index.pug
-      include ../sections/footer/index.pug
+        
+        .section.prices 
+          .container 
+            h2.title Абонементы и цены
+            .prices__wrapper
+              .prices__content
+                .prices__content-title Бассейн
+                .prices__content-list 
+                  .item 
+                    .item__top 1 месяц
+                    .item__bottom 
+                      div 1 600 рублей
+                      div 1 200 рублей — льготный
+                  .item 
+                    .item__top 3 месяц
+                    .item__bottom 
+                      div 3 700 рублей
+                      div 2 800 рублей — льготный
+                  .item 
+                    .item__top 6 месяц
+                    .item__bottom 
+                      div 7 000 рублей
+                      div 5 200 рублей — льготный
+              .prices__content
+                .prices__content-title Тренажерный зал / групповые занятия
+                .prices__content-list 
+                  .item 
+                    .item__top 1 месяц
+                    .item__bottom 
+                      div 1 600 рублей
+                      div 1 200 рублей — льготный
+                  .item 
+                    .item__top 3 месяц
+                    .item__bottom 
+                      div 2 800 рублей
+                      div 1 850 рублей — льготный
+                  .item 
+                    .item__top 6 месяц
+                    .item__bottom 
+                      div 5 200 рублей
+                      div 3 400 рублей — льготный
+            .prices__bottom
+              .prices__info-list          
+                p * льготный абонемент — для пенсионеров и школьников
+              .prices__info
+                +svg('home')
+                p Абонемент действует со дня покупки в течении первого (трех, шести) месяца. По нему вы можете посещать занятия 1 раз в день по расписанию залов или бассейна.
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title Увидимся!
+                
+                p.contacts__text  423450, Республика Татарстан, г. Альметьевск, ул. Белоглазова 62а
+                div
+                  p.contacts__text спорткомплекс
+                  a(href="tel:+78553312649").contacts__link +7 (8553) 31-26-49
+                div
+                  p.contacts__text бассейн
+                  a(href="tel:+78553312648").contacts__link +7 (8553) 31-26-48
+                div
+                  p.contacts__text приемная
+                  a(href="tel:+78553312198").contacts__link +7 (8553) 31-21-98
+                
+                
+              .contacts__bottom
+                img(src=require('/assets/images/maps/sport-almetyevsk-map.png'), alt="")
+      
 
       
     

@@ -35,7 +35,7 @@ https://raul.2apps.ru/camp-vishnevaya-polyana.html
 https://raul.2apps.ru/camp-yubileynyy.html
 https://raul.2apps.ru/camp-yunost.html
 
-https://raul.2apps.ru/sport-actuba.html
+https://raul.2apps.ru/horseback-riding.html
 https://raul.2apps.ru/sport-almetyevsk.html
 https://raul.2apps.ru/sport-fitness.html
 https://raul.2apps.ru/sport-hasanov.html

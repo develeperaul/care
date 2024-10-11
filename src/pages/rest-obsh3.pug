@@ -32,7 +32,7 @@ html(lang="ru")
               +svg("nutrition" ,17,17)
               span Питание
 
-            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+            a(href="/horseback-riding.html" data-target='sidebar' data-action='close')  
               +svg("sport" ,17,17)
               span Спорт
 
@@ -54,7 +54,7 @@ html(lang="ru")
               a(href="/about.html") О компании
               a(href="/health.html") Здоровье
               a(href="/green-scientists.html") Дети
-              a(href="/sport-actuba.html") Спорт
+              a(href="/horseback-riding.html") Спорт
               a(href="/rest.html") Отдых
               a(href="/restaurants.html") Питание
               a(href="/museum.html") Культура 
@@ -68,13 +68,33 @@ html(lang="ru")
             .rest__top 
               .rest__top-left 
                 h2.title Общежитие №2 
-                p.text Г. Нижнекамск
+                p.text г. Альметьевск
         .section
           .container
             .grid
-              include ../components/otherSlider/index2.pug
+              .other-slider.other-slider2
+                .content
+                  p.text На 9 этажах здания общежития №2 расположено 128 комфортных номеров. В однокомнатных номерах 12-17 кв.м. размещаются по 2-3 человека. Туалетные комнаты расположены на этаже, а душевая — на первом этаже здания. Кухня оборудована мебелью, плитой и микроволновкой — вы можете готовить сами. А привести вещи в порядок можно в прачечной комнате. В каждом номере есть:
+
+                  
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src=require('/assets/images/obsh3.png'))
+                    .slide-content 
+                      h4.slide-content__title шкаф для одежды
         
-        include ../sections/contacts/index.pug
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title Увидимся!
+                
+                p.contacts__text  г. Альметьевск, ул. Тельмана 53.
+                
+                
+              .contacts__bottom
+                img(src=require('/assets/images/maps/rest-obsh3-map.png'), alt="")
         
       include ../sections/footer/index.pug
     

@@ -32,7 +32,7 @@ html(lang="ru")
               +svg("nutrition" ,17,17)
               span Питание
 
-            a(href="/sport-actuba.html" data-target='sidebar' data-action='close')  
+            a(href="/horseback-riding.html" data-target='sidebar' data-action='close')  
               +svg("sport" ,17,17)
               span Спорт
 
@@ -54,7 +54,7 @@ html(lang="ru")
               a(href="/about.html") О компании
               a(href="/health.html") Здоровье
               a(href="/green-scientists.html") Дети
-              a(href="/sport-actuba.html") Спорт
+              a(href="/horseback-riding.html") Спорт
               a(href="/rest.html") Отдых
               a(href="/restaurants.html") Питание
               a(href="/museum.html") Культура 
@@ -64,15 +64,136 @@ html(lang="ru")
             img(src=require('/assets/images/rest/rest-greencoast.png') alt="")
       main
         include ../sections/rest/index.pug
-        include ../sections/placement/index.pug
-        include ../sections/services/index.pug
+        .section.placement
+          .container
+            h2.title Размещение
+            p.text Гости живут в одном из 8 летних вагончиков. В каждом из них могут две двухместные комнаты, разделенные общим коридором. В общем пользовании четыре душевых кабины (без подогрева воды) и туалеты.
+            .accept
+              .grid.slider
+                div(class='overflow-hidden')
+                  .accept-slider
+                    .swiper-wrapper
+                      .swiper-slide
+                        img(src=require('/assets/images/gitarist.png'), alt="")
+                      .swiper-slide
+                        img(src=require('/assets/images/ribalka.png'), alt="")
+                    
+                    button.btn-prev
+                      +svg('back-line')
+                    button.btn-next
+                      +svg('forward-line')
+        .section.services 
+          .container 
+            .services__wrapper
+              h2.title Услуги
+              p.text Централизованного питания и развлекательной программы на «Зелёном берегу» нет, но есть столовая с кухонным оборудованием и беседка на берегу реки, оборудованная под готовку на мангале. Также в стоимость путевки входят:
+              .services__list 
+                .item 
+                  img(src=require('/assets/images/service1.png'), alt="")
+                  .item__title Прокат лодок и катамаранов
+                .item 
+                  img(src=require('/assets/images/service2.png'), alt="")
+                  .item__title Прогулки и рыбалка
+                .item 
+                  img(src=require('/assets/images/service3.png'), alt="")
+                  .item__title Детские качели
+                .item 
+                  img(src=require('/assets/images/service4.png'), alt="")
+                  .item__title Мангал и барбекю
+              .services__info
+                +svg('home')
+                p Пожалуйста, обратите внимание, что территория базы не оборудована под нахождение питомцев. Поэтому, пожалуйста, оставьте их дома!
+                  
         .section.img-content
           .container 
-            img(src=require("/assets/images/tennis2.png"), alt="")
+            img(src=require("/assets/images/mangal.png"), alt="")
             h2.title.img-content__text(class="  bottom-0 lg2:top-0 lg2:bottom-auto ") беседка <br/>на берегу реки <br/> с мангалом
-        include ../sections/priceBook/index.pug
+        .price-book
+          .container
+            h2.title Цены и бронирование
+            .price-book__wrapper
+              .price-book__top
+                .price-book__list 
+                  .item
+                    .item__title Вагон-домик
+                    .item__count 2-местный (+1 гость)
+                    .item__prices 
+                      div 
+                        span 1 500 ₽
+                        span будни
+                      div 
+                        span 1 900 ₽
+                        span выходные
+                  .item
+                    .item__title Вагон-домик
+                    .item__count 2-местный 
+                    .item__prices 
+                      div 
+                        span 1 700 ₽
+                        span будни
+                      div 
+                        span 2 000 ₽
+                        span выходные
+                  .item
+                    .item__title Вагон-домик
+                    .item__count 4-местный (1 этаж)
+                    .item__prices 
+                      div 
+                        span 3 100 ₽
+                        span будни
+                      div 
+                        span 3 900 ₽
+                        span выходные
+                  .item
+                    .item__title Вагон-домик
+                    .item__count 4-местный (2 этажа)
+                    .item__prices 
+                      div 
+                        span 3 300 ₽
+                        span будни
+                      div 
+                        span 4 000 ₽
+                        span выходные
+                  .item
+                    .item__title Деревянный VIP-дом
+                    .item__count 6-местный (2 этажа)
+                    .item__prices 
+                      div 
+                        span 10 400 ₽
+                        span будни
+                      div 
+                        span 12 700 ₽
+                        span выходные
+                  .item-other
+                    div
+                      .item__title Ранний заезд/поздний выезд
+                      .item__prices 
+                        div 
+                          span 400/500 ₽ 
+                          span будни/выходной
+                    div
+                      .item__title Дополнительное место
+                      .item__prices 
+                        div 
+                          span 800/1 000 ₽ 
+                          span Дополнительное место
+
+                .price-book__info
+                  p * В праздничные и выходные дни стоимость и графики заезда могут меняться.
+                  br
+                  p В стоимость номера входит: проживание, пользование инфраструктурой (игровые площадки), пользование спорт. инвентарем, спортивно-развлекательные мероприятия.
+                  br
+                  p Дети до 2-х лет (включительно) проживают без оплаты и предоставления койко-места
+              include ../components/select/index.pug
+              include ../components/button.pug
+              a(href="https://social.tatneft.ru/deti/ivolga/?lang=ru").book 
+                +select('Заезд / Выезд', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                +select('Гости', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                +select('Промокод', {name:1,val:'0'},{name:2,val:'01'},{name:3,val:'02'})
+                +button('Забронировать','orange')(type='submit')  
+
         
-        .camp-info 
+        //- .camp-info 
           .container
             h2.title Информация 
             .list.special-programs__list
@@ -80,7 +201,20 @@ html(lang="ru")
                 .item__icon
                   +svg('forward-line')
                 .item__title Анкета «Мой ребенок»
-        include ../sections/contacts/index.pug
+        .section.contacts
+          .container
+            .contacts__wrapper
+              .contacts__top.relative
+                +svg('call')(class=" lg2:w-[130px] hidden lg2:block lg2:h-[130px]  absolute lg2:right-[-130px] lg2:bottom-[180px]")    
+                h4.title Увидимся!
+                
+                p.contacts__text  г. Лениногорск, ул. Промышленная 9 (ЖКЦ)
+                div
+                  p.contacts__text Телефоны для бронирования <br/> пн-пт 07:30—16:30, обед 13:00—13:30
+                  a(href="tel:+78559597206").contacts__link +7 (85595) 97-206
+                
+              .contacts__bottom
+                img(src=require('/assets/images/maps/rest-greencoast-map.png'), alt="")
         
       include ../sections/footer/index.pug
     

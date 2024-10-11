@@ -1,3 +1,4 @@
+include ../../components/svg.pug
 .section.sport
   .container
     h2.title ПАО «Татнефть» <br/> г. Альметьевск
@@ -7,4 +8,14 @@
     .accept.sport__slider
       .grid.slider
         div(class='overflow-hidden')
-          include ../../components/acceptSlider/index.pug
+          .accept-slider
+            .swiper-wrapper
+              .swiper-slide
+                img(src=require('/assets/images/sport-childs1.png'))
+              .swiper-slide
+                img(src=require('/assets/images/sport-armresling.png'))
+            
+            button.btn-prev
+              +svg('back-line')
+            button.btn-next
+              +svg('forward-line')
